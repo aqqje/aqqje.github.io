@@ -1,0 +1,1872 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="oracle," />
+
+
+
+
+
+  <link rel="alternate" href="/lover-time.html" title="aqqje's note" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="此文章是oracle学习系例第十四章，主要是用来复习和巩固在课堂学习的知识！">
+<meta name="keywords" content="oracle">
+<meta property="og:type" content="article">
+<meta property="og:title" content="oracle学习十四">
+<meta property="og:url" content="http://aqqje.github.com/2017/12/13/oracle学习十四/index.html">
+<meta property="og:site_name" content="aqqje&#39;s note">
+<meta property="og:description" content="此文章是oracle学习系例第十四章，主要是用来复习和巩固在课堂学习的知识！">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://github.com/aqqje/Personal-repository/raw/master/images/oracle1.jpg">
+<meta property="og:image" content="https://github.com/aqqje/Personal-repository/raw/master/images/oracle22.jpg">
+<meta property="og:image" content="https://github.com/aqqje/Personal-repository/raw/master/images/oracle23.jpg">
+<meta property="og:updated_time" content="2018-03-10T14:37:17.816Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="oracle学习十四">
+<meta name="twitter:description" content="此文章是oracle学习系例第十四章，主要是用来复习和巩固在课堂学习的知识！">
+<meta name="twitter:image" content="https://github.com/aqqje/Personal-repository/raw/master/images/oracle1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+  <link rel="canonical" href="http://aqqje.github.com/2017/12/13/oracle学习十四/"/>
+
+
+
+
+
+  <title>oracle学习十四 | aqqje's note</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?777e0089fe26d63f9837de61308deecc";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">aqqje's note</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">相见亦无事，不遇长相思！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photos">
+          <a href="/photos/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-camera"></i> <br />
+            
+            photos
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+	  <!-- 自定义High一下的功能 -->
+      <li class="menu-item"> <a title="High一下" href='javascript:(
+    /*
+     * Copyright (C) 2016 Never_yu (Neveryu.github.io) <React.dong.yu@gmail.com>
+     * Sina Weibo (http://weibo.com/Neveryu)
+     *
+     * Licensed under the Apache License, Version 2.0 (the "License");
+     * you may not use this file except in compliance with the License.
+     * You may obtain a copy of the License at
+     *
+     *      http://www.apache.org/licenses/LICENSE-2.0
+     *
+     * Unless required by applicable law or agreed to in writing, software
+     * distributed under the License is distributed on an "AS IS" BASIS,
+     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     * See the License for the specific language governing permissions and
+     * limitations under the License.
+     */
+    function go() {
+
+
+    var songs = [
+                "http://bdyun.65dj.com:8090/2015/06/28/84791C997D8C55023DAD0D5690E48C28/%D1%A6%D6%AE%C7%AB%20-%20%D1%DD%D4%B1.mp3",
+                "http://music.163.com/song/media/outer/url?id=526464293.mp3",
+				"http://music.163.com/song/media/outer/url?id=191722.mp3",
+				"http://music.163.com/song/media/outer/url?id=516657140.mp3",
+				"http://music.163.com/song/media/outer/url?id=507502138.mp3",
+				"http://music.163.com/song/media/outer/url?id=167799.mp3",
+				"http://music.163.com/song/media/outer/url?id=233882.mp3",
+    ];
+
+    
+    function c() {
+        var e = document.createElement("link");
+        e.setAttribute("type", "text/css");
+        e.setAttribute("rel", "stylesheet");
+        e.setAttribute("href", f);
+        e.setAttribute("class", l);
+        document.body.appendChild(e)
+    }
+ 
+    function h() {
+        var e = document.getElementsByClassName(l);
+        for (var t = 0; t < e.length; t++) {
+            document.body.removeChild(e[t])
+        }
+    }
+ 
+    function p() {
+        var e = document.createElement("div");
+        e.setAttribute("class", a);
+        document.body.appendChild(e);
+        setTimeout(function() {
+            document.body.removeChild(e)
+        }, 100)
+    }
+ 
+    function d(e) {
+        return {
+            height : e.offsetHeight,
+            width : e.offsetWidth
+        }
+    }
+ 
+    function v(i) {
+        var s = d(i);
+        return s.height > e && s.height < n && s.width > t && s.width < r
+    }
+ 
+    function m(e) {
+        var t = e;
+        var n = 0;
+        while (!!t) {
+            n += t.offsetTop;
+            t = t.offsetParent
+        }
+        return n
+    }
+ 
+    function g() {
+        var e = document.documentElement;
+        if (!!window.innerWidth) {
+            return window.innerHeight
+        } else if (e && !isNaN(e.clientHeight)) {
+            return e.clientHeight
+        }
+        return 0
+    }
+ 
+    function y() {
+        if (window.pageYOffset) {
+            return window.pageYOffset
+        }
+        return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+    }
+ 
+    function E(e) {
+        var t = m(e);
+        return t >= w && t <= b + w
+    }
+
+    function S() {
+        var e = document.getElementById("audio_element_id");
+        if(e != null){
+            var index = parseInt(e.getAttribute("curSongIndex"));
+            if(index > songs.length - 2) {
+                index = 0;
+            } else {
+                index++;
+            }
+            e.setAttribute("curSongIndex", index);
+            N();
+        }
+
+        e.src = i;
+        e.play()
+    }
+ 
+    function x(e) {
+        e.className += " " + s + " " + o
+    }
+ 
+    function T(e) {
+        e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+    }
+ 
+    function N() {
+        var e = document.getElementsByClassName(s);
+        var t = new RegExp("\\b" + s + "\\b");
+        for (var n = 0; n < e.length; ) {
+            e[n].className = e[n].className.replace(t, "")
+        }
+    }
+
+    function initAudioEle() {
+        var e = document.getElementById("audio_element_id");
+        if(e === null){
+            e = document.createElement("audio");
+            e.setAttribute("class", l);
+            e.setAttribute("curSongIndex", 0);
+            e.id = "audio_element_id";
+            e.loop = false;
+            e.bgcolor = 0;
+            e.addEventListener("canplay", function() {
+            setTimeout(function() {
+                x(k)
+            }, 500);
+            setTimeout(function() {
+                N();
+                p();
+                for (var e = 0; e < O.length; e++) {
+                    T(O[e])
+                }
+            }, 15500)
+        }, true);
+        e.addEventListener("ended", function() {
+            N();
+            h();
+            go();
+        }, true);
+        e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+        document.body.appendChild(e);
+        }
+    }
+    
+    initAudioEle();
+    var e = 30;
+    var t = 30;
+    var n = 350;
+    var r = 350;
+
+    var curSongIndex = parseInt(document.getElementById("audio_element_id").getAttribute("curSongIndex"));
+    var i = songs[curSongIndex];
+    
+    var s = "mw-harlem_shake_me";
+    var o = "im_first";
+    var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+    var a = "mw-strobe_light";
+
+    /* harlem-shake-style.css，替换成你的位置，也可以直接使用：//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css */
+    var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+    
+    var l = "mw_added_css";
+    var b = g();
+    var w = y();
+    var C = document.getElementsByTagName("*");
+    var k = null;
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            if (E(A)) {
+                k = A;
+                break
+            }
+        }
+    }
+    if (A === null) {
+        console.warn("Could not find a node of the right size. Please try a different page.");
+        return
+    }
+    c();
+    S();
+    var O = [];
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            O.push(A)
+        }
+    }
+    })()'><i class="menu-item-icon fa fa-music fa-fw"></i>High一下</a> </li>
+      <!-- end High一下 -->
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aqqje.github.com/2017/12/13/oracle学习十四/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="梦不若星辰">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="aqqje's note">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">oracle学习十四</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-13T23:02:26+08:00">
+                2017-12-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/12/13/oracle学习十四/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/12/13/oracle学习十四/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <div class="note info"><p><img src="https://github.com/aqqje/Personal-repository/raw/master/images/oracle1.jpg" alt="" title="oracle1"><br></p>
+<ul>
+<li>此文章是oracle学习系例第十四章，主要是用来复习和巩固在课堂学习的知识！<a id="more"></a></li>
+</ul></div>
+<hr>
+<h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><p>一、游标参数的传递</p>
+<p>例：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></span><br><span class="line">    <span class="keyword">DECLARE</span></span><br><span class="line">        V_empno <span class="built_in">NUMBER</span>(<span class="number">5</span>);</span><br><span class="line">  	V_ename VARCHAR2(10);</span><br><span class="line">    	CURSOR 	emp_cursor(p_deptno NUMBER,p_job VARCHAR2) IS <span class="keyword">SELECT</span> empno,ename <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span>	deptno = p_deptno <span class="keyword">AND</span> job = p_job;</span><br><span class="line">    <span class="keyword">BEGIN</span></span><br><span class="line"> 	<span class="keyword">OPEN</span> emp_cursor(<span class="number">10</span>, <span class="string">'CLERK'</span>);</span><br><span class="line">  	LOOP</span><br><span class="line">  	   FETCH emp_cursor INTO v_empno,v_ename;</span><br><span class="line">  	EXIT WHEN emp_cursor%NOTFOUND;</span><br><span class="line">  	   DBMS_OUTPUT.PUT_LINE(v_empno||','||v_ename);</span><br><span class="line">	<span class="keyword">END</span> <span class="keyword">LOOP</span>;</span><br><span class="line">    <span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>二、异常处理<br>错误处理的语法如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> EXCEPTION</span><br><span class="line">WHEN 错误1[OR 错误2] THEN 语句序列1;</span><br><span class="line">WHEN 错误3[OR 错误4] THEN 语句序列2;</span><br><span class="line">...</span><br><span class="line">WHEN OTHERS 语句序列n;</span><br><span class="line"> <span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>例：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></span><br><span class="line">    <span class="keyword">DECLARE</span></span><br><span class="line">        v_name VARCHAR2(<span class="number">10</span>);</span><br><span class="line">    <span class="keyword">BEGIN</span></span><br><span class="line">        <span class="keyword">SELECT</span>	ename  <span class="keyword">INTO</span> v_name  <span class="keyword">FROM</span> emp  <span class="keyword">WHERE</span>	empno = <span class="number">1234</span>;</span><br><span class="line">	DBMS_OUTPUT.PUT_LINE('该雇员名字为：'|| v_name);</span><br><span class="line">	EXCEPTION</span><br><span class="line">  		WHEN NO_DATA_FOUND THEN	DBMS_OUTPUT.PUT_LINE('编号错误，没有找到相应雇员！');</span><br><span class="line">  		WHEN OTHERS THEN DBMS_OUTPUT.PUT_LINE('发生其他错误！');</span><br><span class="line">    <span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>三、存储过程<br>1.创建和删除存储过程<br>格式：  </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> [<span class="keyword">OR</span> <span class="keyword">REPLACE</span>] <span class="keyword">PROCEDURE</span> 存储过程名[(参数[<span class="keyword">IN</span>|<span class="keyword">OUT</span>|<span class="keyword">IN</span> <span class="keyword">OUT</span>] 数据类型...)]</span><br><span class="line">	&#123;<span class="keyword">AS</span>|<span class="keyword">IS</span>&#125;</span><br><span class="line">		[说明部分]   <span class="comment">--定义需要使用的临时变量</span></span><br><span class="line">	<span class="keyword">BEGIN</span></span><br><span class="line">		语句集;</span><br><span class="line">		[EXCEPTION]</span><br><span class="line">		    [错误处理部分]</span><br><span class="line">	<span class="keyword">END</span> [过程名];</span><br></pre></td></tr></table></figure>
+<p>删除： </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">procedure</span> 存储过程名;</span><br></pre></td></tr></table></figure>
+<h2 id="调用存储过程"><a href="#调用存储过程" class="headerlink" title="调用存储过程"></a>调用存储过程</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">方法1： </span><br><span class="line"><span class="keyword">EXECUTE</span> 模式名.存储过程名[(参数...)];   (适用于命今行窗口及sql窗口)</span><br><span class="line">方法2： </span><br><span class="line">(适用于sql窗口)</span><br><span class="line"><span class="keyword">BEGIN</span>   </span><br><span class="line">  模式名.存储过程名[(参数...)];</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>例：编写显示雇员信息的存储过程EMP_LIST，并引用EMP_COUNT存储过程(无参存储过程 )。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">OR</span> <span class="keyword">REPLACE</span> <span class="keyword">PROCEDURE</span> EMP_LIST</span><br><span class="line"><span class="keyword">AS</span></span><br><span class="line"><span class="keyword">CURSOR</span> emp_cursor <span class="keyword">IS</span> <span class="keyword">SELECT</span> empno,ename <span class="keyword">FROM</span> emp;</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">	<span class="keyword">FOR</span> Emp_record <span class="keyword">IN</span> emp_cursor <span class="keyword">LOOP</span>   </span><br><span class="line"> 	DBMS_OUTPUT.PUT_LINE(Emp_record.empno||Emp_record.ename);</span><br><span class="line">	<span class="keyword">END</span> <span class="keyword">LOOP</span>;</span><br><span class="line">	EMP_COUNT;	</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>调用：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">begin</span></span><br><span class="line">	EMP_LIST;</span><br><span class="line"><span class="keyword">end</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h2><p>  a.输入参数: 参数名     IN     数据类型     DEFAULT    值；<br>      例：编写给雇员增加工资的存储过程CHANGE_SALARY，通过IN类型的参数传递要增加工资的雇员编号和增加的工资额。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">OR</span> <span class="keyword">REPLACE</span> <span class="keyword">PROCEDURE</span> CHANGE_SALARY(P_EMPNO <span class="keyword">IN</span> <span class="built_in">NUMBER</span> <span class="keyword">DEFAULT</span> <span class="number">7788</span>,P_RAISE <span class="built_in">NUMBER</span> <span class="keyword">DEFAULT</span> <span class="number">10</span>)  <span class="comment">--形参P_EMPNO及P_RAISE</span></span><br><span class="line"><span class="keyword">AS</span></span><br><span class="line">   V_ENAME VARCHAR2(<span class="number">10</span>);</span><br><span class="line">   V_SAL NUMBER(5);</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">	   <span class="keyword">SELECT</span> ENAME,SAL <span class="keyword">INTO</span> V_ENAME,V_SAL <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> EMPNO=P_EMPNO;</span><br><span class="line">   <span class="keyword">UPDATE</span> EMP <span class="keyword">SET</span> SAL=SAL+P_RAISE <span class="keyword">WHERE</span> EMPNO=P_EMPNO;</span><br><span class="line">   DBMS_OUTPUT.PUT_LINE('雇员'||V_ENAME||'的工资被改为'||TO_CHAR(V_SAL+P_RAISE));</span><br><span class="line">   <span class="keyword">COMMIT</span>;</span><br><span class="line">EXCEPTION</span><br><span class="line">  WHEN OTHERS THEN DBMS_OUTPUT.PUT_LINE('发生错误，修改失败！');</span><br><span class="line">  <span class="keyword">ROLLBACK</span>; <span class="comment">--如果出了异常则撤消</span></span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>调用：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">begin</span></span><br><span class="line">	CHANGE_SALARY(<span class="number">7788</span>,<span class="number">80</span>)</span><br><span class="line"><span class="keyword">end</span>;</span><br></pre></td></tr></table></figure>
+<p>b.输出参数: 参数名     OUT    数据类型     DEFAULT    值；</p>
+<p>例：统计雇员的人数</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">OR</span> <span class="keyword">REPLACE</span> <span class="keyword">PROCEDURE</span> EMP_COUNT(P_TOTAL <span class="keyword">OUT</span> <span class="built_in">NUMBER</span>)   <span class="comment">--P_TOTAL为输出参数</span></span><br><span class="line"><span class="keyword">AS</span></span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">INTO</span> P_TOTAL <span class="keyword">FROM</span> EMP;</span><br><span class="line"> <span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>调用：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span></span><br><span class="line">	V_EMPCOUNT <span class="built_in">NUMBER</span>;   <span class="comment">--定义变量接收过程求出的结果</span></span><br><span class="line">	     <span class="keyword">BEGIN</span></span><br><span class="line">		 EMP_COUNT(V_EMPCOUNT);</span><br><span class="line">		 DBMS_OUTPUT.PUT_LINE('雇员总人数为：'||V_EMPCOUNT);</span><br><span class="line"> <span class="keyword">END</span>;</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+<p>  c.输入输出参数： 参数名  IN OUT   数据类型   DEFAULT   值；</p>
+<p>例：使用IN OUT类型的参数，给电话号码增加区码。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">OR</span> <span class="keyword">REPLACE</span> <span class="keyword">PROCEDURE</span> ADD_REGION(P_HPONE_NUM <span class="keyword">IN</span> <span class="keyword">OUT</span> VARCHAR2)</span><br><span class="line">		<span class="keyword">AS</span></span><br><span class="line">		<span class="keyword">BEGIN</span></span><br><span class="line">		   P_HPONE_NUM:=<span class="string">'024-'</span>||P_HPONE_NUM;</span><br><span class="line">		<span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>调用： </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span></span><br><span class="line">	V_PHONE_NUM VARCHAR2(<span class="number">15</span>);</span><br><span class="line">     <span class="keyword">BEGIN</span></span><br><span class="line"> V_PHONE_NUM:=<span class="string">'26731092'</span>;</span><br><span class="line">   	ADD_REGION(V_PHONE_NUM);</span><br><span class="line">	DBMS_OUTPUT.PUT_LINE('新的电话号码：'||V_PHONE_NUM);</span><br><span class="line"> <span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h2><p>错误处理部分位于程序的可执行部分之后，是由WHEN语句引导的多个分支构成的。错误处理的语法如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">EXCEPTION</span><br><span class="line">WHEN 错误1[OR 错误2] THEN</span><br><span class="line">语句序列1；</span><br><span class="line">WHEN 错误3[OR 错误4] THEN</span><br></pre></td></tr></table></figure>
+<p>语句序列2；</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">WHEN OTHERS</span><br><span class="line">语句序列n；</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>其中：<br>错误是在标准包中由系统预定义的标准错误，或是由用户在程序的说明部分自定义的错误，参见下一节系统预定义的错误类型。<br>语句序列就是不同分支的错误处理部分。</p>
+<p>凡是出现在WHEN后面的错误都是可以捕捉到的错误，其他未被捕捉到的错误，将在WHEN OTHERS部分进行统一处理，OTHENS必须是EXCEPTION部分的最后一个错误处理分支。如要在该分支中进一步判断错误种类，可以通过使用预定义函数SQLCODE( )和SQLERRM( )来获得系统错误号和错误信息。</p>
+<p>如果在程序的子块中发生了错误，但子块没有错误处理部分，则错误会传递到主程序中。</p>
+<p>下面是由于查询编号错误而引起系统预定义异常的例子。</p>
+<p>【训练1】  查询编号为1234的雇员名字。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></span><br><span class="line"><span class="keyword">DECLARE</span></span><br><span class="line">v_name VARCHAR2(<span class="number">10</span>);</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">   <span class="keyword">SELECT</span>	ename</span><br><span class="line">   <span class="keyword">INTO</span>		v_name</span><br><span class="line">   <span class="keyword">FROM</span>		emp</span><br><span class="line">   <span class="keyword">WHERE</span>	empno = <span class="number">1234</span>;</span><br><span class="line">DBMS_OUTPUT.PUT_LINE('该雇员名字为：'|| v_name);</span><br><span class="line">EXCEPTION</span><br><span class="line">  WHEN NO_DATA_FOUND THEN</span><br><span class="line">    DBMS_OUTPUT.PUT_LINE('编号错误，没有找到相应雇员！');</span><br><span class="line">  WHEN OTHERS THEN</span><br><span class="line">    DBMS_OUTPUT.PUT_LINE('发生其他错误！');</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>说明：在以上查询中，因为编号为1234的雇员不存在，所以将发生类型为“NO_DATA_    FOUND”的异常。“NO_DATA_FOUND”是系统预定义的错误类型，EXCEPTION部分下的WHEN语句将捕捉到该异常，并执行相应代码部分。在本例中，输出用户自定义的错误信息“编号错误，没有找到相应雇员!”。如果发生其他类型的错误，将执行OTHERS条件下的代码部分，显示“发生其他错误!”。</p>
+<p>【训练2】  由程序代码显示系统错误。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></span><br><span class="line"><span class="keyword">DECLARE</span></span><br><span class="line">v_temp <span class="built_in">NUMBER</span>(<span class="number">5</span>):=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">v_temp:=v_temp/<span class="number">0</span>;</span><br><span class="line">EXCEPTION</span><br><span class="line">  WHEN OTHERS THEN</span><br><span class="line">DBMS_OUTPUT.PUT_LINE('发生系统错误！');</span><br><span class="line">    DBMS_OUTPUT.PUT_LINE('错误代码：'|| SQLCODE( ));</span><br><span class="line">    DBMS_OUTPUT.PUT_LINE('错误信息：' ||SQLERRM( ));</span><br><span class="line">		<span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>说明：程序运行中发生除零错误，由WHEN OTHERS捕捉到，执行用户自己的输出语句显示错误信息，然后正常结束。在错误处理部分使用了预定义函数SQLCODE( )和SQLERRM( )来进一步获得错误的代码和种类信息。</p>
+<h2 id="预定义错误"><a href="#预定义错误" class="headerlink" title="预定义错误"></a>预定义错误</h2><p>Oracle的系统错误很多，但只有一部分常见错误在标准包中予以定义。定义的错误可以在EXCEPTION部分通过标准的错误名来进行判断，并进行异常处理。</p>
+<p><img src="https://github.com/aqqje/Personal-repository/raw/master/images/oracle22.jpg" alt="" title="oracle22"><br></p>
+<p>比如，如果程序向表的主键列插入重复值，则将发生DUP_VAL_ON_INDEX错误。</p>
+<p>如果一个系统错误没有在标准包中定义，则需要在说明部分定义，语法如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">错误名 EXCEPTION;</span><br></pre></td></tr></table></figure>
+<p>定义后使用PRAGMA EXCEPTION_INIT来将一个定义的错误同一个特别的Oracle错误代码相关联，就可以同系统预定义的错误一样使用了。语法如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">PRAGMA</span> EXCEPTION_INIT(错误名，- 错误代码)；</span><br></pre></td></tr></table></figure>
+<p>【训练1】  定义新的系统错误类型。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">	<span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></span><br><span class="line">	<span class="keyword">DECLARE</span></span><br><span class="line">	V_ENAME VARCHAR2(<span class="number">10</span>);</span><br><span class="line">	NULL_INSERT_ERROR EXCEPTION;</span><br><span class="line">	<span class="keyword">PRAGMA</span> EXCEPTION_INIT(NULL_INSERT_ERROR,<span class="number">-1400</span>);</span><br><span class="line">	<span class="keyword">BEGIN</span></span><br><span class="line">	<span class="keyword">INSERT</span> <span class="keyword">INTO</span> EMP(EMPNO) <span class="keyword">VALUES</span>(<span class="literal">NULL</span>);</span><br><span class="line">EXCEPTION</span><br><span class="line">WHEN NULL_INSERT_ERROR THEN</span><br><span class="line">    DBMS_OUTPUT.PUT_LINE('无法插入NULL值！');</span><br><span class="line">  WHEN OTHERS  THEN</span><br><span class="line">    DBMS_OUTPUT.PUT_LINE('发生其他系统错误！');</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>说明：NULL_INSERT_ERROR是自定义异常，同系统错误1400相关联。</p>
+<h2 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h2><p>程序设计者可以利用引发异常的机制来进行程序设计，自己定义异常类型。可以在声明部分定义新的异常类型，定义的语法是：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">错误名 EXCEPTION;</span><br></pre></td></tr></table></figure>
+<p>用户定义的错误不能由系统来触发，必须由程序显式地触发，触发的语法是：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RAISE 错误名；</span><br></pre></td></tr></table></figure>
+<p>RAISE也可以用来引发模拟系统错误，比如，RAISE ZERO_DIVIDE将引发模拟的除零错误。</p>
+<p>使用RAISE_APPLICATION_ERROR函数也可以引发异常。该函数要传递两个参数，第一个是用户自定义的错误编号，第二个参数是用户自定义的错误信息。使用该函数引发的异常的编号应该在20 000和20 999之间选择。</p>
+<p>自定义异常处理错误的方式同前。</p>
+<p>【训练1】  插入新雇员，限定插入雇员的编号在7000～8000之间。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></span><br><span class="line"><span class="keyword">DECLARE</span></span><br><span class="line">new_no <span class="built_in">NUMBER</span>(<span class="number">10</span>);</span><br><span class="line">new_excp1 EXCEPTION;</span><br><span class="line">new_excp2 EXCEPTION;</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"> new_no:=<span class="number">6789</span>;</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span>	emp(empno,ename)</span><br><span class="line">  <span class="keyword">VALUES</span>(new_no, <span class="string">'小郑'</span>);</span><br><span class="line">  IF new_no&lt;7000 THEN</span><br><span class="line">    RAISE new_excp1;</span><br><span class="line">  <span class="keyword">END</span> <span class="keyword">IF</span>;</span><br><span class="line">  IF new_no&gt;8000 THEN</span><br><span class="line">    RAISE new_excp2;</span><br><span class="line">  <span class="keyword">END</span> <span class="keyword">IF</span>;</span><br><span class="line">  <span class="keyword">COMMIT</span>;</span><br><span class="line">EXCEPTION</span><br><span class="line">WHEN new_excp1  THEN</span><br><span class="line">    <span class="keyword">ROLLBACK</span>;</span><br><span class="line">    DBMS_OUTPUT.PUT_LINE('雇员编号小于7000的下限！');</span><br><span class="line">  	WHEN new_excp2  THEN</span><br><span class="line">    <span class="keyword">ROLLBACK</span>;</span><br><span class="line">    DBMS_OUTPUT.PUT_LINE('雇员编号超过8000的上限！');</span><br><span class="line">	<span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>说明：在此例中，自定义了两个异常：new_excp1和new_excp2，分别代表编号小于7000和编号大于8000的错误。在程序中通过判断编号大小，产生对应的异常，并在异常处理部分回退插入操作，然后显示相应的错误信息。</p>
+<p>【训练2】  使用RAISE_APPLICATION_ERROR函数引发系统异常。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></span><br><span class="line"><span class="keyword">DECLARE</span></span><br><span class="line">New_no <span class="built_in">NUMBER</span>(<span class="number">10</span>);</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">  New_no:=<span class="number">6789</span>;</span><br><span class="line"> <span class="keyword">INSERT</span> <span class="keyword">INTO</span>	emp(empno,ename)</span><br><span class="line">  <span class="keyword">VALUES</span>(new_no, <span class="string">'JAMES'</span>);</span><br><span class="line">IF new_no&lt;7000 THEN</span><br><span class="line">    <span class="keyword">ROLLBACK</span>;</span><br><span class="line">    RAISE_APPLICATION_ERROR(-20001, '编号小于7000的下限！');</span><br><span class="line">  <span class="keyword">END</span> <span class="keyword">IF</span>;</span><br><span class="line">  IF new_no&gt;8000 THEN</span><br><span class="line">    <span class="keyword">ROLLBACK</span>;</span><br><span class="line">    RAISE_APPLICATION_ERROR (-20002, '编号大于8000的下限！');</span><br><span class="line">  <span class="keyword">END</span> <span class="keyword">IF</span>;</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>说明：在本训练中，使用RAISE_APPLICATION_ERROR引发自定义异常，并以系统错误的方式进行显示。错误编号为20001和20002。</p>
+<p>注意：同上一个训练比较，此种方法不需要事先定义异常，可直接引发。</p>
+<p>可以参考下面的程序片断将出错信息记录到表中，其中，errors为记录错误信息的表，SQLCODE为发生异常的错误编号，SQLERRM为发生异常的错误信息。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span></span><br><span class="line">  v_error_code      <span class="built_in">NUMBER</span>;</span><br><span class="line">  v_error_message   VARCHAR2(255);</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">EXCEPTION</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">WHEN</span> OTHERS <span class="keyword">THEN</span></span><br><span class="line">    v_error_code := <span class="keyword">SQLCODE</span> ;</span><br><span class="line">    v_error_message := SQLERRM ;</span><br><span class="line">    <span class="keyword">INSERT</span> <span class="keyword">INTO</span> <span class="keyword">errors</span> </span><br><span class="line">    <span class="keyword">VALUES</span>(v_error_code, v_error_message);</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="阶段训练"><a href="#阶段训练" class="headerlink" title="阶段训练"></a>阶段训练</h2><p>【训练1】  将雇员从一个表复制到另一个表。</p>
+<p>步骤1：创建一个结构同EMP表一样的新表EMP1：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> emp1 <span class="keyword">AS</span> <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> SCOTT.EMP <span class="keyword">WHERE</span> <span class="number">1</span>=<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
+<p>步骤2：通过指定雇员编号，将雇员由EMP表移动到EMP1表：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span> </span><br><span class="line"><span class="keyword">DECLARE</span></span><br><span class="line">v_empno <span class="built_in">NUMBER</span>(<span class="number">5</span>):=<span class="number">7788</span>;</span><br><span class="line">emp_rec emp%ROWTYPE;</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"> <span class="keyword">SELECT</span> * <span class="keyword">INTO</span> emp_rec <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span> empno=v_empno;</span><br><span class="line"> <span class="keyword">DELETE</span> <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span> empno=v_empno;</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp1 <span class="keyword">VALUES</span> emp_rec;</span><br><span class="line"> IF SQL%FOUND THEN</span><br><span class="line">  <span class="keyword">COMMIT</span>;</span><br><span class="line">  DBMS_OUTPUT.PUT_LINE('雇员复制成功！');</span><br><span class="line"> ELSE </span><br><span class="line">  <span class="keyword">ROLLBACK</span>;</span><br><span class="line">  DBMS_OUTPUT.PUT_LINE('雇员复制失败！');</span><br><span class="line"> <span class="keyword">END</span> <span class="keyword">IF</span>;</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>步骤2：显示复制结果：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> empno,ename,job <span class="keyword">FROM</span> emp1;</span><br></pre></td></tr></table></figure>
+<p>说明：emp_rec变量是根据emp表定义的记录变量，SELECT…INTO…语句将整个记录传给该变量。INSERT语句将整个记录变量插入emp1表，如果插入成功(SQL%FOUND为真)，则提交事务，否则回滚撤销事务。试修改雇员编号为7902，重新执行以上程序。</p>
+<p>【训练2】  输出雇员工资，雇员工资用不同高度的█表示。</p>
+<p>输入并执行以下程序：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span> </span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"> <span class="keyword">FOR</span> re <span class="keyword">IN</span> (<span class="keyword">SELECT</span> ename,sal <span class="keyword">FROM</span> EMP)  <span class="keyword">LOOP</span></span><br><span class="line">  DBMS_OUTPUT.PUT_LINE(rpad(re.ename,<span class="number">12</span>,<span class="string">' '</span>)||rpad(<span class="string">' █ '</span>,re.sal/<span class="number">100</span>,<span class="string">' █ '</span>));</span><br><span class="line"> <span class="keyword">END</span> <span class="keyword">LOOP</span>;</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>说明：第一个rpad函数产生对齐效果，第二个rpad函数根据工资额产生不同数目的*。该程序采用了隐式的简略游标循环形式。</p>
+<p>【训练3】  编写程序，格式化输出部门信息。</p>
+<p>输入并执行如下程序：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span> </span><br><span class="line">	<span class="keyword">DECLARE</span></span><br><span class="line">	v_count <span class="built_in">number</span>:=<span class="number">0</span>;</span><br><span class="line">	CURSOR dept_cursor IS <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> dept;</span><br><span class="line">	<span class="keyword">BEGIN</span></span><br><span class="line">	DBMS_OUTPUT.PUT_LINE(<span class="string">'部门列表'</span>);</span><br><span class="line">DBMS_OUTPUT.PUT_LINE('<span class="comment">---------------------------------');</span></span><br><span class="line"> 	FOR Dept_record IN dept_cursor LOOP   </span><br><span class="line">   	DBMS_OUTPUT.PUT_LINE('部门编号：'|| Dept_record.deptno);</span><br><span class="line">   	DBMS_OUTPUT.PUT_LINE('部门名称：'|| Dept_record.dname);</span><br><span class="line">	DBMS_OUTPUT.PUT_LINE('所在城市：'|| Dept_record.loc);</span><br><span class="line">  DBMS_OUTPUT.PUT_LINE('<span class="comment">---------------------------------');</span></span><br><span class="line">	  v_count:= v_count+1;</span><br><span class="line">  	<span class="keyword">END</span> <span class="keyword">LOOP</span>;</span><br><span class="line"> 	 DBMS_OUTPUT.PUT_LINE('共有'||to_char(v_count)||'个部门！');</span><br><span class="line">	<span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>说明：该程序中将字段内容垂直排列。V_count变量记录循环次数，即部门个数。</p>
+<p>【训练4】  已知每个部门有一个经理，编写程序，统计输出部门名称、部门总人数、总工资和部门经理。</p>
+<p>输入并执行如下程序：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span> </span><br><span class="line"><span class="keyword">DECLARE</span></span><br><span class="line"> v_deptno <span class="built_in">number</span>(<span class="number">8</span>);</span><br><span class="line"> v_count number(3);</span><br><span class="line"> v_sumsal number(6);</span><br><span class="line"> v_dname  varchar2(15);</span><br><span class="line">v_manager  varchar2(15);</span><br><span class="line"> CURSOR list_cursor IS</span><br><span class="line">   <span class="keyword">SELECT</span> deptno,<span class="keyword">count</span>(*),<span class="keyword">sum</span>(sal) <span class="keyword">FROM</span> emp <span class="keyword">group</span> <span class="keyword">by</span> deptno;</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">  <span class="keyword">OPEN</span> list_cursor; </span><br><span class="line">  DBMS_OUTPUT.PUT_LINE('<span class="comment">----------- 部 门 统 计 表 -----------');</span></span><br><span class="line">DBMS_OUTPUT.PUT_LINE('部门名称   总人数  总工资   部门经理');</span><br><span class="line">  FETCH list_cursor INTO v_deptno,v_count,v_sumsal; </span><br><span class="line">  WHILE list_cursor%found LOOP  </span><br><span class="line"> <span class="keyword">SELECT</span> dname <span class="keyword">INTO</span> v_dname <span class="keyword">FROM</span> dept</span><br><span class="line">    <span class="keyword">WHERE</span> deptno=v_deptno;</span><br><span class="line">    <span class="keyword">SELECT</span> ename <span class="keyword">INTO</span> v_manager <span class="keyword">FROM</span> emp </span><br><span class="line">    <span class="keyword">WHERE</span> deptno=v_deptno <span class="keyword">and</span> job=<span class="string">'MANAGER'</span>;</span><br><span class="line">DBMS_OUTPUT.PUT_LINE(rpad(v_dname,13)||rpad(to_char(v_count),8)</span><br><span class="line">      ||rpad(to_char(v_sumsal),9)||v_manager);</span><br><span class="line">    FETCH list_cursor INTO v_deptno,v_count,v_sumsal; </span><br><span class="line">  	<span class="keyword">END</span> <span class="keyword">LOOP</span>;</span><br><span class="line">  		DBMS_OUTPUT.PUT_LINE('<span class="comment">--------------------------------------');</span></span><br><span class="line">  		CLOSE list_cursor;</span><br><span class="line">		<span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>说明：游标中使用到了起分组功能的SELECT语句，统计出各部门的总人数和总工资。再根据部门编号和职务找到部门的经理。该程序假定每个部门有一个经理。</p>
+<p>【训练5】  为雇员增加工资，从工资低的雇员开始，为每个人增加原工资的10%，限定所增加的工资总额为800元，显示增加工资的人数和余额。</p>
+<p>输入并调试以下程序：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span> </span><br><span class="line"><span class="keyword">DECLARE</span> </span><br><span class="line">  V_NAME <span class="built_in">CHAR</span>(<span class="number">10</span>);</span><br><span class="line">  V_EMPNO NUMBER(5);</span><br><span class="line">  V_SAL NUMBER(8);</span><br><span class="line">  V_SAL1 NUMBER(8);</span><br><span class="line">  V_TOTAL NUMBER(8) := 800; 	<span class="comment">--增加工资的总额</span></span><br><span class="line">V_NUM NUMBER(5):=0;		<span class="comment">--增加工资的人数</span></span><br><span class="line"> 	CURSOR emp_cursor IS </span><br><span class="line">	 <span class="keyword">SELECT</span> EMPNO,ENAME,SAL <span class="keyword">FROM</span> EMP <span class="keyword">ORDER</span> <span class="keyword">BY</span> SAL <span class="keyword">ASC</span>;</span><br><span class="line">	<span class="keyword">BEGIN</span></span><br><span class="line"> 	 <span class="keyword">OPEN</span> emp_cursor;</span><br><span class="line">  	DBMS_OUTPUT.PUT_LINE('姓名      原工资  新工资'); </span><br><span class="line">  	DBMS_OUTPUT.PUT_LINE('<span class="comment">---------------------------'); </span></span><br><span class="line"> 	 LOOP</span><br><span class="line">    FETCH emp_cursor INTO V_EMPNO,V_NAME,V_SAL;</span><br><span class="line">EXIT WHEN emp_cursor%NOTFOUND;</span><br><span class="line">	  V_SAL1:= V_SAL*0.1;</span><br><span class="line">    IF V_TOTAL&gt;V_SAL1 THEN</span><br><span class="line">     V_TOTAL := V_TOTAL - V_SAL1;</span><br><span class="line">     V_NUM:=V_NUM+1;</span><br><span class="line">	DBMS_OUTPUT.PUT_LINE(V_NAME||TO_CHAR(V_SAL,'99999')||</span><br><span class="line">	TO_CHAR(V_SAL+V_SAL1,'99999'));</span><br><span class="line">     <span class="keyword">UPDATE</span> EMP <span class="keyword">SET</span> SAL=SAL+V_SAL1</span><br><span class="line">	   <span class="keyword">WHERE</span> EMPNO=V_EMPNO;</span><br><span class="line">   	 ELSE</span><br><span class="line">DBMS_OUTPUT.PUT_LINE(V_NAME||TO_CHAR(V_SAL,'99999')||TO_CHAR(V_SAL,'99999'));</span><br><span class="line">   	 <span class="keyword">END</span> <span class="keyword">IF</span>;</span><br><span class="line">  	<span class="keyword">END</span> <span class="keyword">LOOP</span>;</span><br><span class="line">  	DBMS_OUTPUT.PUT_LINE('<span class="comment">---------------------------');</span></span><br><span class="line">  	DBMS_OUTPUT.PUT_LINE('增加工资人数:'||V_NUM||' 剩余工资：'||V_TOTAL);  </span><br><span class="line"> 	 CLOSE emp_cursor; </span><br><span class="line"> 	 <span class="keyword">COMMIT</span>;</span><br><span class="line"> 	 <span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="识存储过程和函数"><a href="#识存储过程和函数" class="headerlink" title="识存储过程和函数"></a>识存储过程和函数</h2><p>存储过程和函数也是一种PL/SQL块，是存入数据库的PL/SQL块。但存储过程和函数不同于已经介绍过的PL/SQL程序，我们通常把PL/SQL程序称为无名块，而存储过程和函数是以命名的方式存储于数据库中的。和PL/SQL程序相比，存储过程有很多优点，具体归纳如下：</p>
+<ul>
+<li><p>存储过程和函数以命名的数据库对象形式存储于数据库当中。存储在数据库中的优点是很明显的，因为代码不保存在本地，用户可以在任何客户机上登录到数据库，并调用或修改代码。</p>
+</li>
+<li><p>存储过程和函数可由数据库提供安全保证，要想使用存储过程和函数，需要有存储过程和函数的所有者的授权，只有被授权的用户或创建者本身才能执行存储过程或调用函数。</p>
+</li>
+<li><p>存储过程和函数的信息是写入数据字典的，所以存储过程可以看作是一个公用模块，用户编写的PL/SQL程序或其他存储过程都可以调用它(但存储过程和函数不能调用PL/SQL程序)。一个重复使用的功能，可以设计成为存储过程，比如：显示一张工资统计表，可以设计成为存储过程；一个经常调用的计算，可以设计成为存储函数；根据雇员编号返回雇员的姓名，可以设计成存储函数。</p>
+</li>
+<li><p>像其他高级语言的过程和函数一样，可以传递参数给存储过程或函数，参数的传递也有多种方式。存储过程可以有返回值，也可以没有返回值，存储过程的返回值必须通过参数带回；函数有一定的数据类型，像其他的标准函数一样，我们可以通过对函数名的调用返回函数值。</p>
+</li>
+</ul>
+<p>存储过程和函数需要进行编译，以排除语法错误，只有编译通过才能调用。</p>
+<h2 id="创建和删除存储过程"><a href="#创建和删除存储过程" class="headerlink" title="创建和删除存储过程"></a>创建和删除存储过程</h2><p>创建存储过程，需要有CREATE PROCEDURE或CREATE ANY PROCEDURE的系统权限。该权限可由系统管理员授予。创建一个存储过程的基本语句如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> [<span class="keyword">OR</span> <span class="keyword">REPLACE</span>] <span class="keyword">PROCEDURE</span> 存储过程名[(参数[<span class="keyword">IN</span>|<span class="keyword">OUT</span>|<span class="keyword">IN</span> <span class="keyword">OUT</span>] 数据类型...)]</span><br><span class="line">&#123;<span class="keyword">AS</span>|<span class="keyword">IS</span>&#125;</span><br><span class="line">[说明部分]</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">可执行部分</span><br><span class="line">[<span class="keyword">EXCEPTION</span></span><br><span class="line">错误处理部分]</span><br><span class="line"><span class="keyword">END</span> [过程名];</span><br></pre></td></tr></table></figure>
+<p>其中：</p>
+<p>可选关键字OR REPLACE 表示如果存储过程已经存在，则用新的存储过程覆盖，通常用于存储过程的重建。</p>
+<p>参数部分用于定义多个参数(如果没有参数，就可以省略)。参数有三种形式：IN、OUT和IN OUT。如果没有指明参数的形式，则默认为IN。</p>
+<p>关键字AS也可以写成IS，后跟过程的说明部分，可以在此定义过程的局部变量。</p>
+<p>编写存储过程可以使用任何文本编辑器或直接在SQL<em>Plus环境下进行，编写好的存储过程必须要在SQL</em>Plus环境下进行编译，生成编译代码，原代码和编译代码在编译过程中都会被存入数据库。编译成功的存储过程就可以在Oracle环境下进行调用了。</p>
+<p>一个存储过程在不需要时可以删除。删除存储过程的人是过程的创建者或者拥有DROP ANY PROCEDURE系统权限的人。删除存储过程的语法如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">PROCEDURE</span> 存储过程名；</span><br></pre></td></tr></table></figure>
+<p>如果要重新编译一个存储过程，则只能是过程的创建者或者拥有ALTER ANY PROCEDURE系统权限的人。语法如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">PROCEDURE</span> 存储过程名 COMPILE；</span><br></pre></td></tr></table></figure>
+<p>执行(或调用)存储过程的人是过程的创建者或是拥有EXECUTE ANY PROCEDURE系统权限的人或是被拥有者授予EXECUTE权限的人。执行的方法如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">方法1：</span><br><span class="line"><span class="keyword">EXECUTE</span> 模式名.存储过程名[(参数...)];</span><br><span class="line">方法2：</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">模式名.存储过程名[(参数...)];</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>传递的参数必须与定义的参数类型、个数和顺序一致(如果参数定义了默认值，则调用时可以省略参数)。参数可以是变量、常量或表达式，用法参见下一节。</p>
+<p>如果是调用本账户下的存储过程，则模式名可以省略。要调用其他账户编写的存储过程，则模式名必须要添加。</p>
+<p>以下是一个生成和调用简单存储过程的训练。注意要事先授予创建存储过程的权限。</p>
+<p>【训练1】  创建一个显示雇员总人数的存储过程。</p>
+<p>步骤1：登录SCOTT账户(或学生个人账户)。</p>
+<p>步骤2：在SQL*Plus输入区中，输入以下存储过程：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">OR</span> <span class="keyword">REPLACE</span> <span class="keyword">PROCEDURE</span> EMP_COUNT</span><br><span class="line"><span class="keyword">AS</span></span><br><span class="line">V_TOTAL <span class="built_in">NUMBER</span>(<span class="number">10</span>);</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"> <span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">INTO</span> V_TOTAL <span class="keyword">FROM</span> EMP;</span><br><span class="line"> DBMS_OUTPUT.PUT_LINE('雇员总人数为：'||V_TOTAL);</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>步骤3：按“执行”按钮进行编译。</p>
+<p>如果存在错误，就会显示:</p>
+<p>警告: 创建的过程带有编译错误。</p>
+<p>如果存在错误，对脚本进行修改，直到没有错误产生。</p>
+<p>如果编译结果正确，将显示：</p>
+<p>过程已创建。</p>
+<p>步骤4：调用存储过程，在输入区中输入以下语句并执行：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXECUTE</span> EMP_COUNT;</span><br></pre></td></tr></table></figure>
+<p>显示结果为：</p>
+<p>雇员总人数为：14</p>
+<p>PL/SQL 过程已成功完成。</p>
+<p>说明：在该训练中，V_TOTAL变量是存储过程定义的局部变量，用于接收查询到的雇员总人数。</p>
+<p>注意：在SQL*Plus中输入存储过程，按“执行”按钮是进行编译，不是执行存储过程。</p>
+<p>如果在存储过程中引用了其他用户的对象，比如表，则必须有其他用户授予的对象访问权限。一个存储过程一旦编译成功，就可以由其他用户或程序来引用。但存储过程或函数的所有者必须授予其他用户执行该过程的权限。</p>
+<p>存储过程没有参数，在调用时，直接写过程名即可。</p>
+<p>【训练2】  在PL/SQL程序中调用存储过程。</p>
+<p>步骤1：登录SCOTT账户。</p>
+<p>步骤2：授权STUDENT账户使用该存储过程，即在SQL*Plus输入区中，输入以下的命令：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GRANT</span> <span class="keyword">EXECUTE</span> <span class="keyword">ON</span> EMP_COUNT <span class="keyword">TO</span> STUDENT</span><br></pre></td></tr></table></figure>
+<p>授权成功。</p>
+<p>步骤3：登录STUDENT账户，在SQL*Plus输入区中输入以下程序：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">SCOTT.EMP_COUNT;</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>步骤4：执行以上程序，结果为：</p>
+<p>雇员总人数为：14</p>
+<p>PL/SQL 过程已成功完成。 </p>
+<p>说明：在本例中，存储过程是由SCOTT账户创建的，STUDEN账户获得SCOTT账户的授权后，才能调用该存储过程。</p>
+<p>注意：在程序中调用存储过程，使用了第二种语法。</p>
+<p>【训练3】  编写显示雇员信息的存储过程EMP_LIST，并引用EMP_COUNT存储过程。</p>
+<p>步骤1：在SQL*Plus输入区中输入并编译以下存储过程：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">OR</span> <span class="keyword">REPLACE</span> <span class="keyword">PROCEDURE</span> EMP_LIST</span><br><span class="line"><span class="keyword">AS</span></span><br><span class="line"><span class="keyword">CURSOR</span> emp_cursor <span class="keyword">IS</span> </span><br><span class="line">  <span class="keyword">SELECT</span> empno,ename <span class="keyword">FROM</span> emp;</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"><span class="keyword">FOR</span> Emp_record <span class="keyword">IN</span> emp_cursor <span class="keyword">LOOP</span>   </span><br><span class="line"> DBMS_OUTPUT.PUT_LINE(Emp_record.empno||Emp_record.ename);</span><br><span class="line"><span class="keyword">END</span> <span class="keyword">LOOP</span>;</span><br><span class="line">EMP_COUNT;</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>执行结果：</p>
+<p>过程已创建。</p>
+<p>步骤2：调用存储过程，在输入区中输入以下语句并执行：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXECUTE</span> EMP_LIST</span><br></pre></td></tr></table></figure>
+<p>显示结果为：<br>7369SMITH<br>7499ALLEN<br>7521WARD<br>7566JONES</p>
+<p>执行结果：</p>
+<p>雇员总人数为：14</p>
+<p>PL/SQL 过程已成功完成。</p>
+<p>说明：以上的EMP_LIST存储过程中定义并使用了游标，用来循环显示所有雇员的信息。然后调用已经成功编译的存储过程EMP_COUNT，用来附加显示雇员总人数。通过EXECUTE命令来执行EMP_LIST存储过程。</p>
+<p>【练习1】编写显示部门信息的存储过程DEPT_LIST，要求统计出部门个数。</p>
+<h2 id="参数传递-1"><a href="#参数传递-1" class="headerlink" title="参数传递"></a>参数传递</h2><p>参数的作用是向存储过程传递数据，或从存储过程获得返回结果。正确的使用参数可以大大增加存储过程的灵活性和通用性。</p>
+<p><img src="https://github.com/aqqje/Personal-repository/raw/master/images/oracle23.jpg" alt="" title="oracle23"><br></p>
+<p>参数的定义形式和作用如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">参数名     IN     数据类型     DEFAULT    值；</span><br></pre></td></tr></table></figure>
+<p>定义一个输入参数变量，用于传递参数给存储过程。在调用存储过程时，主程序的实际参数可以是常量、有值变量或表达式等。DEFAULT 关键字为可选项，用来设定参数的默认值。如果在调用存储过程时不指明参数，则参数变量取默认值。在存储过程中，输入变量接收主程序传递的值，但不能对其进行赋值。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">参数名     OUT     数据类型；</span><br></pre></td></tr></table></figure>
+<p>定义一个输出参数变量，用于从存储过程获取数据，即变量从存储过程中返回值给主程序。</p>
+<p>在调用存储过程时，主程序的实际参数只能是一个变量，而不能是常量或表达式。在存储过程中，参数变量只能被赋值而不能将其用于赋值，在存储过程中必须给输出变量至少赋值一次。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">参数名 IN OUT 数据类型 DEFAULT 值；</span><br></pre></td></tr></table></figure>
+<p>定义一个输入、输出参数变量，兼有以上两者的功能。在调用存储过程时，主程序的实际参数只能是一个变量，而不能是常量或表达式。DEFAULT 关键字为可选项，用来设定参数的默认值。在存储过程中，变量接收主程序传递的值，同时可以参加赋值运算，也可以对其进行赋值。在存储过程中必须给变量至少赋值一次。</p>
+<p>如果省略IN、OUT或IN OUT，则默认模式是IN。</p>
+<p>【训练1】  编写给雇员增加工资的存储过程CHANGE_SALARY，通过IN类型的参数传递要增加工资的雇员编号和增加的工资额。</p>
+<p>步骤1：登录SCOTT账户。</p>
+<p>步骤2：在SQL*Plus输入区中输入以下存储过程并执行：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">OR</span> <span class="keyword">REPLACE</span> <span class="keyword">PROCEDURE</span> CHANGE_SALARY(P_EMPNO <span class="keyword">IN</span> <span class="built_in">NUMBER</span> <span class="keyword">DEFAULT</span> <span class="number">7788</span>,P_RAISE <span class="built_in">NUMBER</span> <span class="keyword">DEFAULT</span> <span class="number">10</span>)</span><br><span class="line">	<span class="keyword">AS</span></span><br><span class="line">	V_ENAME VARCHAR2(<span class="number">10</span>);</span><br><span class="line">	V_SAL NUMBER(5);</span><br><span class="line">	<span class="keyword">BEGIN</span></span><br><span class="line"> 	<span class="keyword">SELECT</span> ENAME,SAL <span class="keyword">INTO</span> V_ENAME,V_SAL <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> EMPNO=P_EMPNO;</span><br><span class="line">	 <span class="keyword">UPDATE</span> EMP <span class="keyword">SET</span> SAL=SAL+P_RAISE <span class="keyword">WHERE</span> EMPNO=P_EMPNO;</span><br><span class="line">	DBMS_OUTPUT.PUT_LINE('雇员'||V_ENAME||'的工资被改为'||TO_CHAR(V_SAL+P_RAISE));</span><br><span class="line"><span class="keyword">COMMIT</span>;</span><br><span class="line">	EXCEPTION</span><br><span class="line">	 WHEN OTHERS THEN</span><br><span class="line"> 	DBMS_OUTPUT.PUT_LINE('发生错误，修改失败！');</span><br><span class="line"> 	<span class="keyword">ROLLBACK</span>;</span><br><span class="line">	<span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>执行结果为：</p>
+<p>过程已创建。</p>
+<p>步骤3：调用存储过程，在输入区中输入以下语句并执行：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXECUTE</span> CHANGE_SALARY(<span class="number">7788</span>,<span class="number">80</span>)</span><br></pre></td></tr></table></figure>
+<p>显示结果为：</p>
+<p>雇员SCOTT的工资被改为3080 </p>
+<p>说明：从执行结果可以看到，雇员SCOTT的工资已由原来的3000改为3080。</p>
+<p>参数的值由调用者传递，传递的参数的个数、类型和顺序应该和定义的一致。如果顺序不一致，可以采用以下调用方法。如上例，执行语句可以改为：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXECUTE</span> CHANGE_SALARY(P_RAISE=&gt;<span class="number">80</span>,P_EMPNO=&gt;<span class="number">7788</span>);</span><br></pre></td></tr></table></figure>
+<p>可以看出传递参数的顺序发生了变化，并且明确指出了参数名和要传递的值，=&gt;运算符左侧是参数名，右侧是参数表达式，这种赋值方法的意义较清楚。</p>
+<p>【练习1】创建插入雇员的存储过程INSERT_EMP，并将雇员编号等作为参数。</p>
+<p>在设计存储过程的时候，也可以为参数设定默认值，这样调用者就可以不传递或少传递参数了。</p>
+<p>【训练2】  调用存储过程CHANGE_SALARY，不传递参数，使用默认参数值。</p>
+<p>在SQL*Plus输入区中输入以下命令并执行：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXECUTE</span> CHANGE_SALARY</span><br></pre></td></tr></table></figure>
+<p>显示结果为：</p>
+<p>雇员SCOTT的工资被改为3090 </p>
+<p>说明：在存储过程的调用中没有传递参数，而是采用了默认值7788和10，即默认雇员号为7788，增加的工资为10。</p>
+<p>【训练3】  使用OUT类型的参数返回存储过程的结果。</p>
+<p>步骤1：登录SCOTT账户。</p>
+<p>步骤2：在SQL*Plus输入区中输入并编译以下存储过程：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">OR</span> <span class="keyword">REPLACE</span> <span class="keyword">PROCEDURE</span> EMP_COUNT(P_TOTAL <span class="keyword">OUT</span> <span class="built_in">NUMBER</span>)</span><br><span class="line">	<span class="keyword">AS</span></span><br><span class="line">	<span class="keyword">BEGIN</span></span><br><span class="line">	<span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">INTO</span> P_TOTAL <span class="keyword">FROM</span> EMP;</span><br><span class="line">	<span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>执行结果为：</p>
+<p>过程已创建。</p>
+<p>步骤3：输入以下程序并执行：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span></span><br><span class="line">	V_EMPCOUNT <span class="built_in">NUMBER</span>;</span><br><span class="line">	<span class="keyword">BEGIN</span></span><br><span class="line">	EMP_COUNT(V_EMPCOUNT);</span><br><span class="line">	DBMS_OUTPUT.PUT_LINE('雇员总人数为：'||V_EMPCOUNT);</span><br><span class="line">	<span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>显示结果为：</p>
+<p>雇员总人数为：14</p>
+<p>PL/SQL 过程已成功完成。</p>
+<p>说明：在存储过程中定义了OUT类型的参数P_TOTAL，在主程序调用该存储过程时，传递了参数V_EMPCOUNT。在存储过程中的SELECT…INTO…语句中对P_TOTAL进行赋值，赋值结果由V_EMPCOUNT变量带回给主程序并显示。</p>
+<p>以上程序要覆盖同名的EMP_COUNT存储过程，如果不使用OR REPLACE选项，就会出现以下错误：</p>
+<p>ERROR 位于第 1 行:</p>
+<p>ORA-00955: 名称已由现有对象使用。</p>
+<p>【练习2】创建存储过程，使用OUT类型参数获得雇员经理名。</p>
+<p>以上程序要覆盖同名的EMP_COUNT存储过程，如果不使用OR REPLACE选项，就会出现以下错误：</p>
+<p>ERROR 位于第 1 行:</p>
+<p>ORA-00955: 名称已由现有对象使用。</p>
+<p>【练习2】创建存储过程，使用OUT类型参数获得雇员经理名。</p>
+<p>【训练4】  使用IN OUT类型的参数，给电话号码增加区码。</p>
+<p>步骤1：登录SCOTT账户。</p>
+<p>步骤2：在SQL*Plus输入区中输入并编译以下存储过程：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">OR</span> <span class="keyword">REPLACE</span> <span class="keyword">PROCEDURE</span> ADD_REGION(P_HPONE_NUM <span class="keyword">IN</span> <span class="keyword">OUT</span> VARCHAR2)</span><br><span class="line">	<span class="keyword">AS</span></span><br><span class="line">	<span class="keyword">BEGIN</span></span><br><span class="line">	 P_HPONE_NUM:=<span class="string">'024-'</span>||P_HPONE_NUM;</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>执行结果为：</p>
+<p>过程已创建。</p>
+<p>步骤3：输入以下程序并执行：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></span><br><span class="line"><span class="keyword">DECLARE</span></span><br><span class="line">V_PHONE_NUM VARCHAR2(<span class="number">15</span>);</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">V_PHONE_NUM:=<span class="string">'26731092'</span>;</span><br><span class="line">ADD_REGION(V_PHONE_NUM);</span><br><span class="line">DBMS_OUTPUT.PUT_LINE('新的电话号码：'||V_PHONE_NUM);</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>显示结果为：</p>
+<p>新的电话号码：024-26731092</p>
+<p>PL/SQL 过程已成功完成。</p>
+<p>说明：变量V_HPONE_NUM既用来向存储过程传递旧电话号码，也用来向主程序返回新号码。新的号码在原来基础上增加了区号024和-。</p>
+<h2 id="创建和删除存储函数"><a href="#创建和删除存储函数" class="headerlink" title="创建和删除存储函数"></a>创建和删除存储函数</h2><p>创建函数，需要有CREATE PROCEDURE或CREATE ANY PROCEDURE的系统权限。该权限可由系统管理员授予。创建存储函数的语法和创建存储过程的类似.</p>
+<p>在可执行部分的RETURN(表达式)，用来生成函数的返回值，其表达式的类型应该和定义部分说明的函数返回值的数据类型一致。在函数的执行部分可以有多个RETURN语句，但只有一个RETURN语句会被执行，一旦执行了RETURN语句，则函数结束并返回调用环境。</p>
+<p>一个存储函数在不需要时可以删除，但删除的人应是函数的创建者或者是拥有DROP ANY PROCEDURE系统权限的人。其语法如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">FUNCTION</span> 函数名；</span><br></pre></td></tr></table></figure>
+<p>重新编译一个存储函数时，编译的人应是函数的创建者或者拥有ALTER ANY PROCEDURE系统权限的人。重新编译一个存储函数的语法如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">PROCEDURE</span> 函数名 COMPILE；</span><br><span class="line"><span class="string">``</span><span class="string">`		</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">函数的调用者应是函数的创建者或拥有EXECUTE ANY PROCEDURE系统权限的人，或是被函数的拥有者授予了函数执行权限的账户。函数的引用和存储过程不同，函数要出现在程序体中，可以参加表达式的运算或单独出现在表达式中，其形式如下：</span></span><br><span class="line"><span class="string">		</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span><span class="keyword">sql</span></span><br><span class="line">变量名:=函数名(...)</span><br></pre></td></tr></table></figure>
+<p>【训练1】  创建一个通过雇员编号返回雇员名称的函数GET_EMP_NAME。</p>
+<p>步骤1：登录SCOTT账户。</p>
+<p>步骤2：在SQL*Plus输入区中输入以下存储函数并编译：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">OR</span> <span class="keyword">REPLACE</span> <span class="keyword">FUNCTION</span> GET_EMP_NAME(P_EMPNO <span class="built_in">NUMBER</span> <span class="keyword">DEFAULT</span> <span class="number">7788</span>)</span><br><span class="line">	<span class="keyword">RETURN</span> VARCHAR2</span><br><span class="line">	<span class="keyword">AS</span></span><br><span class="line">	V_ENAME VARCHAR2(<span class="number">10</span>);</span><br><span class="line">	<span class="keyword">BEGIN</span></span><br><span class="line"> 	<span class="keyword">SELECT</span> ENAME <span class="keyword">INTO</span> V_ENAME <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> EMPNO=P_EMPNO;</span><br><span class="line">RETURN(V_ENAME);</span><br><span class="line">EXCEPTION</span><br><span class="line"> WHEN NO_DATA_FOUND THEN</span><br><span class="line">  DBMS_OUTPUT.PUT_LINE('没有该编号雇员！');</span><br><span class="line">  RETURN (NULL);</span><br><span class="line"> WHEN TOO_MANY_ROWS THEN</span><br><span class="line">  DBMS_OUTPUT.PUT_LINE('有重复雇员编号！');</span><br><span class="line">  RETURN (NULL);</span><br><span class="line"> WHEN OTHERS THEN</span><br><span class="line">  DBMS_OUTPUT.PUT_LINE('发生其他错误！');</span><br><span class="line">  RETURN (NULL);</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>步骤3：调用该存储函数，输入并执行以下程序：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"> DBMS_OUTPUT.PUT_LINE(<span class="string">'雇员7369的名称是：'</span>|| GET_EMP_NAME(<span class="number">7369</span>));</span><br><span class="line"> DBMS_OUTPUT.PUT_LINE('雇员7839的名称是：'|| GET_EMP_NAME(7839));</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="存储过程和函数的查看"><a href="#存储过程和函数的查看" class="headerlink" title="存储过程和函数的查看"></a>存储过程和函数的查看</h2><p>可以通过对数据字典的访问来查询存储过程或函数的有关信息，如果要查询当前用户的存储过程或函数的源代码，可以通过对USER_SOURCE数据字典视图的查询得到。USER_SOURCE的结构如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DESCRIBE</span> USER_SOURCE</span><br></pre></td></tr></table></figure>
+<p>【训练1】 查询过程EMP_COUNT的脚本。</p>
+<p>在SQL*Plus中输入并执行如下查询：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="built_in">TEXT</span>  <span class="keyword">from</span> user_source <span class="keyword">WHERE</span> <span class="keyword">NAME</span>=<span class="string">'EMP_COUNT'</span>;</span><br></pre></td></tr></table></figure>
+<p>【训练2】  查询过程GET_EMP_NAME的参数。</p>
+<p>在SQL*Plus中输入并执行如下查询：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DESCRIBE</span> GET_EMP_NAME</span><br></pre></td></tr></table></figure>
+<p>【训练2】  查询过程GET_EMP_NAME的参数。</p>
+<p>在SQL*Plus中输入并执行如下查询：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DESCRIBE</span> GET_EMP_NAME</span><br><span class="line"><span class="string">``</span><span class="string">`		</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">【训练3】  在发生编译错误时，显示错误。</span></span><br><span class="line"><span class="string">		</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span><span class="keyword">sql</span></span><br><span class="line"><span class="keyword">SHOW</span> <span class="keyword">ERRORS</span></span><br><span class="line"><span class="string">``</span><span class="string">`		</span></span><br><span class="line"><span class="string"> 		</span></span><br><span class="line"><span class="string">说明：查询一个存储过程或函数是否是有效状态(即编译成功)，可以使用数据字典USER_OBJECTS的STATUS列.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">【训练4】  查询EMP_LIST存储过程是否可用：</span></span><br><span class="line"><span class="string">		</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span><span class="keyword">sql</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">STATUS</span> <span class="keyword">FROM</span> USER_OBJECTS <span class="keyword">WHERE</span> OBJECT_NAME=<span class="string">'EMP_LIST'</span>;</span><br></pre></td></tr></table></figure>
+<p>当一个存储过程编译成功，状态变为VALID，会不会在某些情况下变成INVALID。结论是完全可能的。比如一个存储过程中包含对表的查询，如果表被修改或删除，存储过程就会变成无效INVALID。所以要注意存储过程和函数对其他对象的依赖关系。</p>
+<p>如果要检查存储过程或函数的依赖性，可以通过查询数据字典USER_DENPENDENCIES来确定，该表结构如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DESCRIBE</span> USER_DEPENDENCIES;</span><br></pre></td></tr></table></figure>
+<p>还有一种情况需要我们注意：如果一个用户A被授予执行属于用户B的一个存储过程的权限，在用户B的存储过程中，访问到用户C的表，用户B被授予访问用户C的表的权限，但用户A没有被授予访问用户C表的权限，那么用户A调用用户B的存储过程是失败的还是成功的呢？答案是成功的。如果读者有兴趣，不妨进行一下实际测试。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Thanks!❤</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://github.com/aqqje/Personal-repository/raw/master/aqqje/aplaywx.png" alt="梦不若星辰 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://github.com/aqqje/Personal-repository/raw/master/aqqje/appzfb.jpg" alt="梦不若星辰 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    梦不若星辰
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://aqqje.github.com/2017/12/13/oracle学习十四/" title="oracle学习十四">http://aqqje.github.com/2017/12/13/oracle学习十四/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/oracle/" rel="tag"><i class="fa fa-tag"></i> oracle</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/13/易错集(二)/" rel="next" title="易错集二">
+                <i class="fa fa-chevron-left"></i> 易错集二
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/19/FreeTalk-Forum总结/" rel="prev" title="FreeTalk-Forum总结">
+                FreeTalk-Forum总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg"
+                alt="梦不若星辰" />
+            
+              <p class="site-author-name" itemprop="name">梦不若星辰</p>
+              <p class="site-description motion-element" itemprop="description">记录生活的点点滴滴！</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">68</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/lover-time.html" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/aqqje" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=vMXW29HFjImNiPzNzZLf09E" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-pagelines"></i>
+                推荐阅读
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zhoujingen.cn/blog/ |" title="敏捷个人" target="_blank">敏捷个人</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="No-Sky.top" title="NO-SKY" target="_blank">NO-SKY</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://coolshell.cn/" title="酷壳" target="_blank">酷壳</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.read.org.cn/" title="战隼" target="_blank">战隼</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.mifengtd.cn/" title="褪墨" target="_blank">褪墨</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://mindhacks.cn/" title="刘未鹏" target="_blank">刘未鹏</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://ddimples.github.io/" title="程小黑" target="_blank">程小黑</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://blog.javachen.com/" title="javaChen" target="_blank">javaChen</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#笔记"><span class="nav-number">1.</span> <span class="nav-text">笔记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调用存储过程"><span class="nav-number">2.</span> <span class="nav-text">调用存储过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参数传递"><span class="nav-number">3.</span> <span class="nav-text">参数传递</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#错误处理"><span class="nav-number">4.</span> <span class="nav-text">错误处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#预定义错误"><span class="nav-number">5.</span> <span class="nav-text">预定义错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义异常"><span class="nav-number">6.</span> <span class="nav-text">自定义异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阶段训练"><span class="nav-number">7.</span> <span class="nav-text">阶段训练</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#识存储过程和函数"><span class="nav-number">8.</span> <span class="nav-text">识存储过程和函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建和删除存储过程"><span class="nav-number">9.</span> <span class="nav-text">创建和删除存储过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参数传递-1"><span class="nav-number">10.</span> <span class="nav-text">参数传递</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建和删除存储函数"><span class="nav-number">11.</span> <span class="nav-text">创建和删除存储函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存储过程和函数的查看"><span class="nav-number">12.</span> <span class="nav-text">存储过程和函数的查看</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">梦不若星辰</span>
+
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://aqqje.github.com/2017/12/13/oracle学习十四/';
+          this.page.identifier = '2017/12/13/oracle学习十四/';
+          this.page.title = 'oracle学习十四';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cytkDK9yb';
+      var conf = '26dd319189ed255e8b68964a66d7cd40';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
+  undefined
+  <!--点击爆炸效果 -->
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({});</script></body>
+</html>

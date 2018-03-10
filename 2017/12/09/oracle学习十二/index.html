@@ -1,0 +1,1949 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="oracle," />
+
+
+
+
+
+  <link rel="alternate" href="/lover-time.html" title="aqqje's note" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="此文章是oracle学习系例第十二章，主要是用来复习和巩固在课堂学习的知识！">
+<meta name="keywords" content="oracle">
+<meta property="og:type" content="article">
+<meta property="og:title" content="oracle学习十二">
+<meta property="og:url" content="http://aqqje.github.com/2017/12/09/oracle学习十二/index.html">
+<meta property="og:site_name" content="aqqje&#39;s note">
+<meta property="og:description" content="此文章是oracle学习系例第十二章，主要是用来复习和巩固在课堂学习的知识！">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://github.com/aqqje/Personal-repository/raw/master/images/oracle1.jpg">
+<meta property="og:updated_time" content="2018-02-25T04:49:18.849Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="oracle学习十二">
+<meta name="twitter:description" content="此文章是oracle学习系例第十二章，主要是用来复习和巩固在课堂学习的知识！">
+<meta name="twitter:image" content="https://github.com/aqqje/Personal-repository/raw/master/images/oracle1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+  <link rel="canonical" href="http://aqqje.github.com/2017/12/09/oracle学习十二/"/>
+
+
+
+
+
+  <title>oracle学习十二 | aqqje's note</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?777e0089fe26d63f9837de61308deecc";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">aqqje's note</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">相见亦无事，不遇长相思！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photos">
+          <a href="/photos/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-camera"></i> <br />
+            
+            photos
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+	  <!-- 自定义High一下的功能 -->
+      <li class="menu-item"> <a title="High一下" href='javascript:(
+    /*
+     * Copyright (C) 2016 Never_yu (Neveryu.github.io) <React.dong.yu@gmail.com>
+     * Sina Weibo (http://weibo.com/Neveryu)
+     *
+     * Licensed under the Apache License, Version 2.0 (the "License");
+     * you may not use this file except in compliance with the License.
+     * You may obtain a copy of the License at
+     *
+     *      http://www.apache.org/licenses/LICENSE-2.0
+     *
+     * Unless required by applicable law or agreed to in writing, software
+     * distributed under the License is distributed on an "AS IS" BASIS,
+     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     * See the License for the specific language governing permissions and
+     * limitations under the License.
+     */
+    function go() {
+
+
+    var songs = [
+                "http://bdyun.65dj.com:8090/2015/06/28/84791C997D8C55023DAD0D5690E48C28/%D1%A6%D6%AE%C7%AB%20-%20%D1%DD%D4%B1.mp3",
+                "http://music.163.com/song/media/outer/url?id=526464293.mp3",
+				"http://music.163.com/song/media/outer/url?id=191722.mp3",
+				"http://music.163.com/song/media/outer/url?id=516657140.mp3",
+				"http://music.163.com/song/media/outer/url?id=507502138.mp3",
+				"http://music.163.com/song/media/outer/url?id=167799.mp3",
+				"http://music.163.com/song/media/outer/url?id=233882.mp3",
+    ];
+
+    
+    function c() {
+        var e = document.createElement("link");
+        e.setAttribute("type", "text/css");
+        e.setAttribute("rel", "stylesheet");
+        e.setAttribute("href", f);
+        e.setAttribute("class", l);
+        document.body.appendChild(e)
+    }
+ 
+    function h() {
+        var e = document.getElementsByClassName(l);
+        for (var t = 0; t < e.length; t++) {
+            document.body.removeChild(e[t])
+        }
+    }
+ 
+    function p() {
+        var e = document.createElement("div");
+        e.setAttribute("class", a);
+        document.body.appendChild(e);
+        setTimeout(function() {
+            document.body.removeChild(e)
+        }, 100)
+    }
+ 
+    function d(e) {
+        return {
+            height : e.offsetHeight,
+            width : e.offsetWidth
+        }
+    }
+ 
+    function v(i) {
+        var s = d(i);
+        return s.height > e && s.height < n && s.width > t && s.width < r
+    }
+ 
+    function m(e) {
+        var t = e;
+        var n = 0;
+        while (!!t) {
+            n += t.offsetTop;
+            t = t.offsetParent
+        }
+        return n
+    }
+ 
+    function g() {
+        var e = document.documentElement;
+        if (!!window.innerWidth) {
+            return window.innerHeight
+        } else if (e && !isNaN(e.clientHeight)) {
+            return e.clientHeight
+        }
+        return 0
+    }
+ 
+    function y() {
+        if (window.pageYOffset) {
+            return window.pageYOffset
+        }
+        return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+    }
+ 
+    function E(e) {
+        var t = m(e);
+        return t >= w && t <= b + w
+    }
+
+    function S() {
+        var e = document.getElementById("audio_element_id");
+        if(e != null){
+            var index = parseInt(e.getAttribute("curSongIndex"));
+            if(index > songs.length - 2) {
+                index = 0;
+            } else {
+                index++;
+            }
+            e.setAttribute("curSongIndex", index);
+            N();
+        }
+
+        e.src = i;
+        e.play()
+    }
+ 
+    function x(e) {
+        e.className += " " + s + " " + o
+    }
+ 
+    function T(e) {
+        e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+    }
+ 
+    function N() {
+        var e = document.getElementsByClassName(s);
+        var t = new RegExp("\\b" + s + "\\b");
+        for (var n = 0; n < e.length; ) {
+            e[n].className = e[n].className.replace(t, "")
+        }
+    }
+
+    function initAudioEle() {
+        var e = document.getElementById("audio_element_id");
+        if(e === null){
+            e = document.createElement("audio");
+            e.setAttribute("class", l);
+            e.setAttribute("curSongIndex", 0);
+            e.id = "audio_element_id";
+            e.loop = false;
+            e.bgcolor = 0;
+            e.addEventListener("canplay", function() {
+            setTimeout(function() {
+                x(k)
+            }, 500);
+            setTimeout(function() {
+                N();
+                p();
+                for (var e = 0; e < O.length; e++) {
+                    T(O[e])
+                }
+            }, 15500)
+        }, true);
+        e.addEventListener("ended", function() {
+            N();
+            h();
+            go();
+        }, true);
+        e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+        document.body.appendChild(e);
+        }
+    }
+    
+    initAudioEle();
+    var e = 30;
+    var t = 30;
+    var n = 350;
+    var r = 350;
+
+    var curSongIndex = parseInt(document.getElementById("audio_element_id").getAttribute("curSongIndex"));
+    var i = songs[curSongIndex];
+    
+    var s = "mw-harlem_shake_me";
+    var o = "im_first";
+    var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+    var a = "mw-strobe_light";
+
+    /* harlem-shake-style.css，替换成你的位置，也可以直接使用：//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css */
+    var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+    
+    var l = "mw_added_css";
+    var b = g();
+    var w = y();
+    var C = document.getElementsByTagName("*");
+    var k = null;
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            if (E(A)) {
+                k = A;
+                break
+            }
+        }
+    }
+    if (A === null) {
+        console.warn("Could not find a node of the right size. Please try a different page.");
+        return
+    }
+    c();
+    S();
+    var O = [];
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            O.push(A)
+        }
+    }
+    })()'><i class="menu-item-icon fa fa-music fa-fw"></i>High一下</a> </li>
+      <!-- end High一下 -->
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aqqje.github.com/2017/12/09/oracle学习十二/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="梦不若星辰">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="aqqje's note">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">oracle学习十二</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-09T17:15:14+08:00">
+                2017-12-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/12/09/oracle学习十二/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/12/09/oracle学习十二/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://github.com/aqqje/Personal-repository/raw/master/images/oracle1.jpg" alt="" title="oracle1"><br><br><div class="note info"><ul>
+<li>此文章是oracle学习系例第十二章，主要是用来复习和巩固在课堂学习的知识！</li>
+</ul></div><br><div class="note danger"><a id="more"></a></div></p>
+<hr>
+<h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><ul>
+<li>索引</li>
+</ul>
+<p>索引(INDEX)是为了加快数据的查找而创建的数据库对象，特别是对大表，索引可以有效地提高查找速度，也可以保证数据的惟一性<br>创建索引一般要掌握以下原则：只有较大的表才有必要建立索引，表的记录应该大于50条，查询数据小于总行数的2%～4%。虽然可以为表创建多个索引，但是无助于查询的索引不但不会提高效率，还会增加系统开销。因为当执行DML操作时，索引也要跟着更新，这时索引可能会降低系统的性能。<br>创建索引：           </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> 索引名 <span class="keyword">ON</span> 表名(列名);</span><br></pre></td></tr></table></figure>
+<p>删除索引：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">INDEX</span> 索引名；</span><br></pre></td></tr></table></figure>
+<ul>
+<li>同义词</li>
+</ul>
+<p>同义词(SYNONYM)是为模式对象起的别名，可以为表、视图、序列、过程、函数和包等数据库模式对象创建同义词。<br>创建私有同义词：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">SYNONYM</span> BOOK <span class="keyword">FOR</span> 图书；</span><br></pre></td></tr></table></figure>
+<p>创建公有同义词(先要获得创建公有同义词的权限)：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">PUBLIC</span> <span class="keyword">SYNONYM</span> BOOK <span class="keyword">FOR</span> SCOTT.图书；</span><br></pre></td></tr></table></figure>
+<p>删除同义词：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">SYNONYM</span> 同义词名；</span><br></pre></td></tr></table></figure>
+<ul>
+<li>数据库链接</li>
+</ul>
+<p>数据库链接(DATABASE LINK)是在分布式环境下，为了访问远程数据库而创建的数据通信链路。</p>
+<p>格式：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> <span class="keyword">LINK</span> 链接名 <span class="keyword">CONNECT</span> <span class="keyword">TO</span> 账户 <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> 口令 <span class="keyword">USING</span> 服务名;</span><br></pre></td></tr></table></figure>
+<p>数据库链接一旦建立并测试成功，就可以使用以下形式来访问远程用户的表。</p>
+<p>表名@数据库链接名</p>
+<ul>
+<li>PL/sql</li>
+</ul>
+<p>1.块结构和基本语法要求</p>
+<p>块中各部分的作用解释如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(1)  DECLARE：声明部分标志。</span><br><span class="line"></span><br><span class="line">(2)  BEGIN：可执行部分标志。</span><br><span class="line"></span><br><span class="line">(3)  EXCEPTION：异常处理部分标志。</span><br><span class="line"></span><br><span class="line">(4)  END；：程序结束标志。</span><br></pre></td></tr></table></figure>
+<p>2、输出<br>第一种形式：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DBMS_OUTPUT.PUT(字符串表达式)；</span><br></pre></td></tr></table></figure>
+<p>第二种形式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DBMS_OUTPUT.PUT_LINE(字符串表达式)；</span><br></pre></td></tr></table></figure>
+<p>第三种形式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DBMS_OUTPUT.NEW_LINE；</span><br></pre></td></tr></table></figure>
+<p>3、变量赋值：</p>
+<ul>
+<li><p>第一种形式：SELECT 列名1，列名2… INTO 变量1，变量2… FROM 表名 WHERE 条件；</p>
+</li>
+<li><p>第二种形式：变量名:=值</p>
+</li>
+</ul>
+<p>例：查询雇员编号为7788的雇员姓名和工资。SET SERVEROUTPUT ON</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DECLARE</span><span class="comment">--定义部分标识 		</span></span><br><span class="line">v_name  VARCHAR2(<span class="number">10</span>);	<span class="comment">--定义字符串变量v_name		</span></span><br><span class="line">v_sal   NUMBER(5);	<span class="comment">--定义数值变量v_sal		</span></span><br><span class="line"><span class="keyword">BEGIN</span>			<span class="comment">--可执行部分标识SELECT	 ename,sal INTO v_name,v_sal </span></span><br><span class="line"><span class="keyword">FROM</span> emp </span><br><span class="line"><span class="keyword">WHERE</span> empno=<span class="number">7788</span>;<span class="comment">--在程序中插入的SQL语句		</span></span><br><span class="line">DBMS_OUTPUT.PUT_LINE('7788号雇员是：'||v_name||'，工资为：'||to_char(v_sal));</span><br><span class="line"><span class="comment">--输出雇员名和工资	</span></span><br><span class="line"><span class="keyword">END</span>;</span><br><span class="line">```	</span><br><span class="line"></span><br><span class="line">4、结合变量的定义和使用（即全局变量）</span><br><span class="line">   </span><br><span class="line">- 该变量是在整个SQL*Plus环境下有效的变量，在退出SQL*Plus之前始终有效，所以可以使用该变量在不同的程序之间传递信息。结合变量不是由程序定义的，而是使用系统命令VARIABLE定义的。</span><br><span class="line"></span><br><span class="line">例：定义并使用结合变量</span><br><span class="line"></span><br><span class="line">步骤1：输入和执行下列命令，定义结合变量g_ename：</span><br><span class="line">	</span><br><span class="line">```sql	</span><br><span class="line">VARIABLE  g_ename VARCHAR2(100)</span><br></pre></td></tr></table></figure>
+<p>步骤2：输入和执行下列程序：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span> </span><br><span class="line">		</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">  		 </span><br><span class="line">:g_ename:=:g_ename|| <span class="string">'Hello~ '</span>;			<span class="comment">--在程序中使用结合变量</span></span><br><span class="line">  </span><br><span class="line">DBMS_OUTPUT.PUT_LINE(:g_ename);                <span class="comment">--输出结合变量的值</span></span><br><span class="line">		</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
+<p>5．记录变量的定义</p>
+<ul>
+<li>还可以根据表或视图的一个记录中的所有字段定义变量，称为记录变量。记录变量包含若干个字段，在结构上同表的一个记录相同，定义方法是在表名后跟%ROWTYPE。记录变量的字段名就是表的字段名，数据类型也一致。</li>
+</ul>
+<p>如：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v_name emp.ename%TYPE;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="数据库模式对象"><a href="#数据库模式对象" class="headerlink" title="数据库模式对象"></a>数据库模式对象</h2><ul>
+<li>Oracle数据库的模式对象</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>对  象</th>
+<th>名  称</th>
+<th>作  用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TABLE</td>
+<td>表</td>
+<td>用于存储数据的基本结构</td>
+</tr>
+<tr>
+<td>VIEW</td>
+<td>视图</td>
+<td>以不同的侧面反映表的数据，是一种逻辑上的表</td>
+</tr>
+<tr>
+<td>INDEX</td>
+<td>索引</td>
+<td>加快表的查询速度</td>
+</tr>
+<tr>
+<td>CLUSTER</td>
+<td>聚簇</td>
+<td>将不同表的字段并用的一种特殊结构的表集合</td>
+</tr>
+<tr>
+<td>SEQUENCE</td>
+<td>序列</td>
+<td>生成数字序列，用于在插入时自动填充表的字段</td>
+</tr>
+<tr>
+<td>SYNONYM</td>
+<td>同义词</td>
+<td>为简化和便于记忆，给对象起的别名</td>
+</tr>
+<tr>
+<td>DATABASE LINK</td>
+<td>数据库链接</td>
+<td>为访问远程对象创建的通道</td>
+</tr>
+<tr>
+<td>STORED PROCEDURE、FUNCTION</td>
+<td>存储过程和函数</td>
+<td>存储于数据库中的可调用的程序和函数</td>
+</tr>
+<tr>
+<td>PACKAGE、PACKAGE BODY</td>
+<td>包和包体</td>
+<td>将存储过程、函数及变量按功能和类别进行捆绑</td>
+</tr>
+</tbody>
+</table>
+<h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><ul>
+<li>索引(INDEX)是为了加快数据的查找而创建的数据库对象，特别是对大表，索引可以有效地提高查找速度，也可以保证数据的惟一性。索引是由Oracle自动使用和维护的，一旦创建成功，用户不必对索引进行直接的操作。索引是独立于表的数据库结构，即表和索引是分开存放的，当删除索引时，对拥有索引的表的数据没有影响。</li>
+</ul>
+<ul>
+<li>在创建PRIMARY KEY和UNIQUE约束条件时，系统将自动为相应的列创建惟一(UNIQUE)索引。索引的名字同约束的名字一致。</li>
+</ul>
+<ul>
+<li>索引有两种：B*树索引和位图(BITMAP)索引。</li>
+</ul>
+<p>【B<em>树索引是通常使用的索引，也是默认的索引类型。在这里主要讨论B</em>树索引。B*树是一种平衡2叉树，左右的查找路径一样。这种方法保证了对表的任何值的查找时间都相同。】</p>
+<p>【B*树索引可分为：惟一索引、非惟一索引、一列简单索引和多列复合索引。】</p>
+<ul>
+<li>创建索引一般要掌握以下原则：只有较大的表才有必要建立索引，表的记录应该大于50条，查询数据小于总行数的2%～4%。虽然可以为表创建多个索引，但是无助于查询的索引不但不会提高效率，还会增加系统开销。因为当执行DML操作时，索引也要跟着更新，这时索引可能会降低系统的性能。一般在主键列或经常出现在WHERE子句或连接条件中的列建立索引，该列称为索引关键字。</li>
+</ul>
+<h2 id="索引的创建"><a href="#索引的创建" class="headerlink" title="索引的创建"></a>索引的创建</h2><ul>
+<li>创建索引不需要特定的系统权限。索引会自动被引用。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">INDEX</span> 索引名；</span><br></pre></td></tr></table></figure>
+<p>【训练1】  创建和删除索引。</p>
+<p>步骤1：创建索引：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> EMP_ENAME <span class="keyword">ON</span> EMP(ENAME);</span><br></pre></td></tr></table></figure>
+<p>步骤2：查询中引用索引：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ENAME,JOB,SAL <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> ENAME=<span class="string">'SCOTT'</span>;</span><br></pre></td></tr></table></figure>
+<p>步骤3：删除索引：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">INDEX</span> EMP_ENAME;</span><br></pre></td></tr></table></figure>
+<p>【训练2】  创建复合索引。索引出现在WHERE子句中的时候就会被自动被引用。</p>
+<p>步骤1：创建复合索引：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> EMP_JOBSAL <span class="keyword">ON</span> EMP(JOB,SAL);</span><br></pre></td></tr></table></figure>
+<p> 步骤2：查询中引用索引：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ENAME,JOB,SAL <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> JOB=<span class="string">'MANAGER'</span><span class="keyword">AND</span> SAL&gt;<span class="number">2500</span>;</span><br></pre></td></tr></table></figure>
+<p>如下的查询也会引用索引：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ENAME,JOB,SAL <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> JOB=<span class="string">'CLERK'</span>;</span><br></pre></td></tr></table></figure>
+<p>但以下查询不会引用索引，因为没有先引用索引关键字的主键：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ENAME,JOB,SAL <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> SAL&gt;<span class="number">2500</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="查看索引"><a href="#查看索引" class="headerlink" title="查看索引"></a>查看索引</h2><ul>
+<li>通过查询数据字典USER_INDEXES可以检查创建的索引。</li>
+</ul>
+<p>通过查询数据字典USER_IND_COLUMNS可以检查索引的列。</p>
+<p>【训练1】  显示emp表的索引：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT INDEX_NAME, INDEX_TYPE, UNIQUENESS FROM USER_INDEXES WHERE TABLE_NAME=&apos;EMP&apos;;</span><br></pre></td></tr></table></figure>
+<p>【训练2】  显示索引的列。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> COLUMN_NAME <span class="keyword">FROM</span> USER_IND_COLUMNS </span><br><span class="line"><span class="keyword">WHERE</span>  INDEX_NAME=<span class="string">'EMP_JOBSAL'</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="同义词"><a href="#同义词" class="headerlink" title="同义词"></a>同义词</h2><ul>
+<li><p>同义词(SYNONYM)是为模式对象起的别名，可以为表、视图、序列、过程、函数和包等数据库模式对象创建同义词。同义词有两种：公有同义词和私有同义词。公有同义词是对所有用户都可用的。创建公有同义词必须拥有系统权限CREATE PUBLIC SYNONYM；创建私有同义词需要CREATE SYNONYM系统权限。私有同义词只对拥有同义词的账户有效，但私有同义词也可以通过授权，使其对其他用户有效。同义词通过给本地或远程对象分配一个通用或简单的名称，隐藏了对象的拥有者和对象的真实名称，也简化了SQL语句。</p>
+</li>
+<li><p>如果同义词同对象名称重名，私有同义词又同公有同义词重名，那么，识别的顺序是怎样的呢？如果存在对象名，则优先识别，其次识别私有同义词，最后识别公有同义词。比如,执行以下的SELECT语句：</p>
+</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> ABC;</span><br></pre></td></tr></table></figure>
+<p>如果存在表ABC，就对表ABC执行查询语句；如果不存在表ABC，就去查看是否有私有同义词ABC，如果有就对ABC执行查询(此时ABC是另外一个表的同义词)；如果没有私有同义词ABC，则去查找公有同义词；如果找不到，则查询失败。</p>
+<h2 id="同义词的创建和使用"><a href="#同义词的创建和使用" class="headerlink" title="同义词的创建和使用"></a>同义词的创建和使用</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">SYNONYM</span> 同义词名；</span><br></pre></td></tr></table></figure>
+<p>【训练1】  创建同义词。</p>
+<p>步骤1：创建私有同义词：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">SYNONYM</span> BOOK <span class="keyword">FOR</span> 图书；</span><br></pre></td></tr></table></figure>
+<p>步骤2：创建公有同义词(先要获得创建公有同义词的权限)：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">PUBLIC</span> <span class="keyword">SYNONYM</span> BOOK <span class="keyword">FOR</span> SCOTT.图书；</span><br></pre></td></tr></table></figure>
+<p>步骤3：使用同义词：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> *　<span class="keyword">FROM</span> BOOK;</span><br></pre></td></tr></table></figure>
+<h2 id="同义词的查看"><a href="#同义词的查看" class="headerlink" title="同义词的查看"></a>同义词的查看</h2><ul>
+<li>通过查询数据字典USER_OBJECTS和USER_SYNONYMS，可以查看同义词信息。 </li>
+</ul>
+<p>【训练1】  查看用户拥有的同义词：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> OBJECT_NAME <span class="keyword">FROM</span>　USER_OBJECTS <span class="keyword">WHERE</span> OBJECT_TYPE=<span class="string">'SYNONYM'</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="系统定义同义词"><a href="#系统定义同义词" class="headerlink" title="系统定义同义词"></a>系统定义同义词</h2><ul>
+<li><p>系统为常用的对象预定义了一些同义词，利用它们可以方便地访问用户的常用对象</p>
+</li>
+<li><p>Oracle数据库模式对象</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>对 象</th>
+<th>名 称</th>
+<th>作    用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DICT</td>
+<td>DICTIONARY</td>
+<td>数据字典</td>
+</tr>
+<tr>
+<td>CAT</td>
+<td>USER_CATALOG</td>
+<td>用户拥有的表、视图、同义词和序列</td>
+</tr>
+<tr>
+<td>CLU</td>
+<td>USER_CLUSTERS</td>
+<td>用户拥有的聚簇</td>
+</tr>
+<tr>
+<td>IND</td>
+<td>USER_INDEXES</td>
+<td>用户拥有的索引</td>
+</tr>
+<tr>
+<td>OBJ</td>
+<td>USER_OBJECTS</td>
+<td>用户拥有的对象</td>
+</tr>
+<tr>
+<td>SEQ</td>
+<td>USER_SEQUENCES</td>
+<td>用户拥有的序列</td>
+</tr>
+<tr>
+<td>SYN</td>
+<td>USER_SYNONYMS</td>
+<td>用户拥有的私有同义词</td>
+</tr>
+<tr>
+<td>COLS</td>
+<td>USER_TAB_COLUMNS</td>
+<td>用户拥有的表、视图和聚簇的列</td>
+</tr>
+<tr>
+<td>TABS</td>
+<td>USER_TABLES</td>
+<td>用户拥有的表</td>
+</tr>
+</tbody>
+</table>
+<p>【训练1】  查看用户拥有的表：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TABLE_NAME <span class="keyword">FROM</span> TABS;</span><br></pre></td></tr></table></figure>
+<h2 id="聚簇【了解】"><a href="#聚簇【了解】" class="headerlink" title="聚簇【了解】"></a>聚簇【了解】</h2><ul>
+<li><p>所谓聚簇(CLUSTER)，形象地说，就是生长在一起的表。聚簇包含一张或多张表，表的公共列被称为聚簇关键字，在公共列上具有同一值的列物理上存储在一起。那么在什么情况下需要创建聚簇呢？通常在多个表有共同的列时，应使用聚簇。比如有一张学生基本情况表，其中包含学生的学号、姓名、性别、住址等信息。另外，还设计了一张学生成绩表，其中除了包含学生成绩，也包含学生的学号、姓名、性别。那么这两张表共同的列就可以创建成聚簇。这样两张表的共同的学号、姓名和性别，就存放在了一起，相同的值只存放一次。如果两个表通过聚簇列进行联合，则会大大提高查询的速度，但对于插入等操作则会降低效率。</p>
+</li>
+<li><p>创建聚簇后，要创建使用聚簇的表，对聚簇还应该建立索引。如果不对聚簇建立索引，则不能对聚簇表进行插入、修改和删除操作。</p>
+</li>
+<li><p>创建聚簇需要CREATE CLUSTER系统权限。</p>
+</li>
+</ul>
+<p>【训练1】  创建和使用聚簇。</p>
+<p>步骤1：创建聚簇：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CREATE CLUSTER COMM(STUNO NUMBER(5),STUNAME VARCHAR2(10),SEX VARCHAR2(2))</span><br><span class="line">SIZE 500</span><br><span class="line">TABLESPACE USERS;</span><br></pre></td></tr></table></figure>
+<p>步骤2：创建第一张聚簇表：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> STUDENT(</span><br><span class="line">STUNO <span class="built_in">NUMBER</span>(<span class="number">5</span>),</span><br><span class="line">STUNAME VARCHAR2(<span class="number">10</span>),</span><br><span class="line">SEX VARCHAR2(<span class="number">2</span>),</span><br><span class="line">ADDRESS VARCHAR2(<span class="number">20</span>),</span><br><span class="line">E_MAIL VARCHAR2(<span class="number">20</span>)</span><br><span class="line">)</span><br><span class="line">CLUSTER COMM(STUNO,STUNAME,SEX);</span><br></pre></td></tr></table></figure>
+<p>步骤3：创建第二张聚簇表：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> SCORE(</span><br><span class="line">STUNO <span class="built_in">NUMBER</span>(<span class="number">5</span>),</span><br><span class="line">STUNAME VARCHAR2(<span class="number">10</span>),</span><br><span class="line">SEX VARCHAR2(<span class="number">2</span>),</span><br><span class="line">CHINESE <span class="built_in">NUMBER</span>(<span class="number">3</span>),</span><br><span class="line">MATH <span class="built_in">NUMBER</span>(<span class="number">3</span>),</span><br><span class="line">ENGLISH <span class="built_in">NUMBER</span>(<span class="number">3</span>) )</span><br><span class="line">CLUSTER COMM(STUNO,STUNAME,SEX);</span><br></pre></td></tr></table></figure>
+<p>步骤4：为聚簇创建索引：    </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> INX_COMM <span class="keyword">ON</span> CLUSTER COMM;</span><br></pre></td></tr></table></figure>
+<p>步骤5：向表中插入数据：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> STUDENT <span class="keyword">VALUES</span>(<span class="number">10001</span>,<span class="string">'黄凯'</span>,<span class="string">'男'</span>,<span class="string">'宝安'</span>,<span class="string">'HK123@163.COM'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> STUDENT <span class="keyword">VALUES</span>(<span class="number">10002</span>,<span class="string">'苏丽'</span>,<span class="string">'女'</span>,<span class="string">'罗湖'</span>,<span class="string">'SL99@163.COM'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> STUDENT <span class="keyword">VALUES</span>(<span class="number">10003</span>,<span class="string">'刘平平'</span>,<span class="string">'男'</span>,<span class="string">'南山'</span>,<span class="string">'PP2003@SHOU.COM'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> SCORE <span class="keyword">VALUES</span>(<span class="number">10001</span>,<span class="string">'黄凯'</span>,<span class="string">'男'</span>,<span class="number">70</span>,<span class="number">85</span>,<span class="number">93</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> SCORE <span class="keyword">VALUES</span>(<span class="number">10002</span>,<span class="string">'苏丽'</span>,<span class="string">'女'</span>,<span class="number">65</span>,<span class="number">74</span>,<span class="number">83</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> SCORE <span class="keyword">VALUES</span>(<span class="number">10003</span>,<span class="string">'刘平平'</span>,<span class="string">'男'</span>,<span class="number">88</span>,<span class="number">75</span>,<span class="number">69</span>);</span><br></pre></td></tr></table></figure>
+<p>步骤6：删除聚簇及聚簇表：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> CLUSTER COMM <span class="keyword">INCLUDING</span> <span class="keyword">TABLES</span> <span class="keyword">CASCADE</span> <span class="keyword">CONSTRAINTS</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="数据库链接"><a href="#数据库链接" class="headerlink" title="数据库链接"></a>数据库链接</h2><ul>
+<li><p>数据库链接(DATABASE LINK)是在分布式环境下，为了访问远程数据库而创建的数据通信链路。数据库链接隐藏了对远程数据库访问的复杂性。通常，我们把正在登录的数据库称为本地数据库，另外的一个数据库称为远程数据库。  </p>
+</li>
+<li><p>有了数据库链接，可以直接通过数据库链接来访问远程数据库的表。常见的形式是访问远程数据库固定用户的链接，即链接到指定的用户，创建这种形式的数据库链接的语句</p>
+</li>
+</ul>
+<p>如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> <span class="keyword">LINK</span> 链接名 <span class="keyword">CONNECT</span> <span class="keyword">TO</span> 账户 <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> 口令</span><br><span class="line"><span class="keyword">USING</span> 服务名;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>创建数据库链接，需要CREATE DATABASE LINK系统权限。</li>
+</ul>
+<p>数据库链接一旦建立并测试成功，就可以使用以下形式来访问远程用户的表。</p>
+<pre><code>表名@数据库链接名
+</code></pre><p>【训练1】  在局域网上创建和使用数据库链接。</p>
+<p>步骤1：创建远程数据库的服务名，假定局域网上另一个数据库服务名为MYDB_REMOTE。</p>
+<p>步骤2：登录本地数据库SCOTT账户，创建数据库链接：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CONNECT SCOTT/TIGER@MYDB</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> <span class="keyword">LINK</span> abc <span class="keyword">CONNECT</span> <span class="keyword">TO</span> scott <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> tiger <span class="keyword">USING</span> <span class="string">'MYDB_REMOTE'</span>;</span><br></pre></td></tr></table></figure>
+<p>步骤3：查询远程数据库的数据：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> *　<span class="keyword">FROM</span> emp@abc;</span><br></pre></td></tr></table></figure>
+<p>结果略。</p>
+<p>步骤4：一个分布查询：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ename,dname <span class="keyword">FROM</span> emp@abc e,dept d <span class="keyword">WHERE</span> e.deptno=d.deptno;</span><br></pre></td></tr></table></figure>
+<p>说明：在本例中，远程数据库服务名是MYDB_REMOTE，创建的数据库链接名称是abc.emp@abc表示远程数据库的emp表。步骤4是一个联合查询，数据来自本地服务器的dept表和远程服务器的emp表。</p>
+<hr>
+<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><p>【训练1】  创建和删除索引。</p>
+<p>步骤1：创建索引：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> EMP_ENAME <span class="keyword">ON</span> EMP(ENAME);</span><br></pre></td></tr></table></figure>
+<p>步骤2：查询中引用索引：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ENAME,JOB,SAL <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> ENAME=<span class="string">'SCOTT'</span>;</span><br></pre></td></tr></table></figure>
+<p>步骤3：删除索引：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> <span class="keyword">INDEX</span> EMP_ENAME;</span><br></pre></td></tr></table></figure>
+<p>【训练2】  创建复合索引。索引出现在WHERE子句中的时候就会被自动被引用。</p>
+<p>步骤1：创建复合索引：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> EMP_JOBSAL <span class="keyword">ON</span> EMP(JOB,SAL);</span><br></pre></td></tr></table></figure>
+<p>步骤2：查询中引用索引：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ENAME,JOB,SAL <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> JOB=<span class="string">'MANAGER'</span><span class="keyword">AND</span> SAL&gt;<span class="number">2500</span>;</span><br></pre></td></tr></table></figure>
+<p>如下的查询也会引用索引：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ENAME,JOB,SAL <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> JOB=<span class="string">'CLERK'</span>;</span><br></pre></td></tr></table></figure>
+<p>但以下查询不会引用索引，因为没有先引用索引关键字的主键：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ENAME,JOB,SAL <span class="keyword">FROM</span> EMP <span class="keyword">WHERE</span> SAL&gt;<span class="number">2500</span>;</span><br></pre></td></tr></table></figure>
+<p>【训练3】  显示emp表的索引：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> INDEX_NAME, INDEX_TYPE, UNIQUENESS <span class="keyword">FROM</span> USER_INDEXES <span class="keyword">WHERE</span> TABLE_NAME=<span class="string">'EMP'</span>;</span><br></pre></td></tr></table></figure>
+<p>【训练4】  显示索引的列。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> COLUMN_NAME <span class="keyword">FROM</span> USER_IND_COLUMNS </span><br><span class="line"><span class="keyword">WHERE</span>  INDEX_NAME=<span class="string">'EMP_JOBSAL'</span>;</span><br></pre></td></tr></table></figure>
+<p>【训练5】  创建同义词。</p>
+<p>步骤1：创建私有同义词：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">SYNONYM</span> BOOK <span class="keyword">FOR</span> 图书；</span><br></pre></td></tr></table></figure>
+<p>步骤2：创建公有同义词(先要获得创建公有同义词的权限)：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">PUBLIC</span> <span class="keyword">SYNONYM</span> BOOK <span class="keyword">FOR</span> SCOTT.图书；</span><br></pre></td></tr></table></figure>
+<p>步骤3：使用同义词：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> *　<span class="keyword">FROM</span> BOOK;</span><br></pre></td></tr></table></figure>
+<p>【训练6】  查看用户拥有的同义词：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> OBJECT_NAME <span class="keyword">FROM</span>　USER_OBJECTS <span class="keyword">WHERE</span> OBJECT_TYPE=<span class="string">'SYNONYM'</span>;</span><br></pre></td></tr></table></figure>
+<p>【训练7】  查看用户拥有的表：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> TABLE_NAME <span class="keyword">FROM</span> TABS;</span><br></pre></td></tr></table></figure>
+<p>【训练8】  创建和使用聚簇。</p>
+<p>步骤1：创建聚簇：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> CLUSTER COMM(STUNO <span class="built_in">NUMBER</span>(<span class="number">5</span>),STUNAME VARCHAR2(<span class="number">10</span>),SEX VARCHAR2(<span class="number">2</span>))</span><br><span class="line"><span class="keyword">SIZE</span> <span class="number">500</span></span><br><span class="line"><span class="keyword">TABLESPACE</span> <span class="keyword">USERS</span>;</span><br></pre></td></tr></table></figure>
+<p>步骤2：创建第一张聚簇表：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> STUDENT(</span><br><span class="line">STUNO <span class="built_in">NUMBER</span>(<span class="number">5</span>),</span><br><span class="line">STUNAME VARCHAR2(<span class="number">10</span>),</span><br><span class="line">SEX VARCHAR2(<span class="number">2</span>),</span><br><span class="line">ADDRESS VARCHAR2(<span class="number">20</span>),</span><br><span class="line">E_MAIL VARCHAR2(<span class="number">20</span>)</span><br><span class="line">)CLUSTER COMM(STUNO,STUNAME,SEX);</span><br></pre></td></tr></table></figure>
+<p>步骤3：创建第二张聚簇表：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> SCORE(</span><br><span class="line">STUNO <span class="built_in">NUMBER</span>(<span class="number">5</span>),</span><br><span class="line">STUNAME VARCHAR2(<span class="number">10</span>),</span><br><span class="line">SEX VARCHAR2(<span class="number">2</span>),</span><br><span class="line">CHINESE <span class="built_in">NUMBER</span>(<span class="number">3</span>),</span><br><span class="line">MATH <span class="built_in">NUMBER</span>(<span class="number">3</span>),</span><br><span class="line">ENGLISH <span class="built_in">NUMBER</span>(<span class="number">3</span>) )</span><br><span class="line">CLUSTER COMM(STUNO,STUNAME,SEX);</span><br></pre></td></tr></table></figure>
+<p>步骤4：为聚簇创建索引：</p>
+<pre><code>CREATE INDEX INX_COMM ON CLUSTER COMM;
+</code></pre><p>步骤5：向表中插入数据：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> STUDENT <span class="keyword">VALUES</span>(<span class="number">10001</span>,<span class="string">'黄凯'</span>,<span class="string">'男'</span>,<span class="string">'宝安'</span>,<span class="string">'HK123@163.COM'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> STUDENT <span class="keyword">VALUES</span>(<span class="number">10002</span>,<span class="string">'苏丽'</span>,<span class="string">'女'</span>,<span class="string">'罗湖'</span>,<span class="string">'SL99@163.COM'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> STUDENT <span class="keyword">VALUES</span>(<span class="number">10003</span>,<span class="string">'刘平平'</span>,<span class="string">'男'</span>,<span class="string">'南山'</span>,<span class="string">'PP2003@SHOU.COM'</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> SCORE <span class="keyword">VALUES</span>(<span class="number">10001</span>,<span class="string">'黄凯'</span>,<span class="string">'男'</span>,<span class="number">70</span>,<span class="number">85</span>,<span class="number">93</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> SCORE <span class="keyword">VALUES</span>(<span class="number">10002</span>,<span class="string">'苏丽'</span>,<span class="string">'女'</span>,<span class="number">65</span>,<span class="number">74</span>,<span class="number">83</span>);</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> SCORE <span class="keyword">VALUES</span>(<span class="number">10003</span>,<span class="string">'刘平平'</span>,<span class="string">'男'</span>,<span class="number">88</span>,<span class="number">75</span>,<span class="number">69</span>);</span><br></pre></td></tr></table></figure>
+<p>步骤6：删除聚簇及聚簇表：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DROP</span> CLUSTER COMM <span class="keyword">INCLUDING</span> <span class="keyword">TABLES</span> <span class="keyword">CASCADE</span> <span class="keyword">CONSTRAINTS</span>;</span><br></pre></td></tr></table></figure>
+<p>【训练9】  在局域网上创建和使用数据库链接。</p>
+<p>步骤1：创建远程数据库的服务名，假定局域网上另一个数据库服务名为MYDB_REMOTE。</p>
+<p>步骤2：登录本地数据库SCOTT账户，创建数据库链接：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CONNECT SCOTT/TIGER@ORACLE</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> <span class="keyword">LINK</span> abc <span class="keyword">CONNECT</span> <span class="keyword">TO</span> scott <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> tiger <span class="keyword">USING</span> <span class="string">'MYDB_REMOTE'</span>;</span><br></pre></td></tr></table></figure>
+<p>步骤3：查询远程数据库的数据：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> *　<span class="keyword">FROM</span> emp@abc;</span><br></pre></td></tr></table></figure>
+<p>步骤4：一个分布查询：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ename,dname <span class="keyword">FROM</span> emp@abc e,dept d <span class="keyword">WHERE</span> e.deptno=d.deptno;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Thanks!❤</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://github.com/aqqje/Personal-repository/raw/master/aqqje/aplaywx.png" alt="梦不若星辰 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://github.com/aqqje/Personal-repository/raw/master/aqqje/appzfb.jpg" alt="梦不若星辰 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    梦不若星辰
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://aqqje.github.com/2017/12/09/oracle学习十二/" title="oracle学习十二">http://aqqje.github.com/2017/12/09/oracle学习十二/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/oracle/" rel="tag"><i class="fa fa-tag"></i> oracle</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/07/staruml教程/" rel="next" title="staruml教程">
+                <i class="fa fa-chevron-left"></i> staruml教程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/09/易错集（一）/" rel="prev" title="易错集（一）">
+                易错集（一） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg"
+                alt="梦不若星辰" />
+            
+              <p class="site-author-name" itemprop="name">梦不若星辰</p>
+              <p class="site-description motion-element" itemprop="description">记录生活的点点滴滴！</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">68</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/lover-time.html" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/aqqje" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=vMXW29HFjImNiPzNzZLf09E" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-pagelines"></i>
+                推荐阅读
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zhoujingen.cn/blog/ |" title="敏捷个人" target="_blank">敏捷个人</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="No-Sky.top" title="NO-SKY" target="_blank">NO-SKY</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://coolshell.cn/" title="酷壳" target="_blank">酷壳</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.read.org.cn/" title="战隼" target="_blank">战隼</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.mifengtd.cn/" title="褪墨" target="_blank">褪墨</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://mindhacks.cn/" title="刘未鹏" target="_blank">刘未鹏</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://ddimples.github.io/" title="程小黑" target="_blank">程小黑</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://blog.javachen.com/" title="javaChen" target="_blank">javaChen</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#笔记"><span class="nav-number">1.</span> <span class="nav-text">笔记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库模式对象"><span class="nav-number">2.</span> <span class="nav-text">数据库模式对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引"><span class="nav-number">3.</span> <span class="nav-text">索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的创建"><span class="nav-number">4.</span> <span class="nav-text">索引的创建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看索引"><span class="nav-number">5.</span> <span class="nav-text">查看索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同义词"><span class="nav-number">6.</span> <span class="nav-text">同义词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同义词的创建和使用"><span class="nav-number">7.</span> <span class="nav-text">同义词的创建和使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#同义词的查看"><span class="nav-number">8.</span> <span class="nav-text">同义词的查看</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统定义同义词"><span class="nav-number">9.</span> <span class="nav-text">系统定义同义词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#聚簇【了解】"><span class="nav-number">10.</span> <span class="nav-text">聚簇【了解】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库链接"><span class="nav-number">11.</span> <span class="nav-text">数据库链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题"><span class="nav-number">12.</span> <span class="nav-text">例题</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">梦不若星辰</span>
+
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://aqqje.github.com/2017/12/09/oracle学习十二/';
+          this.page.identifier = '2017/12/09/oracle学习十二/';
+          this.page.title = 'oracle学习十二';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cytkDK9yb';
+      var conf = '26dd319189ed255e8b68964a66d7cd40';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
+  undefined
+  <!--点击爆炸效果 -->
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({});</script></body>
+</html>

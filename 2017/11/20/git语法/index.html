@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="github," />
+
+
+
+
+
+  <link rel="alternate" href="/lover-time.html" title="aqqje's note" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="Git是什么？  Git是目前世界上最先进的分布式版本控制系统（没有之一）。  Git有什么特点？简单来说就是：高端大气上档次 !@#!@#%!@# 什么的，你懂的哈 就是贼厉害！">
+<meta name="keywords" content="github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git">
+<meta property="og:url" content="http://aqqje.github.com/2017/11/20/git语法/index.html">
+<meta property="og:site_name" content="aqqje&#39;s note">
+<meta property="og:description" content="Git是什么？  Git是目前世界上最先进的分布式版本控制系统（没有之一）。  Git有什么特点？简单来说就是：高端大气上档次 !@#!@#%!@# 什么的，你懂的哈 就是贼厉害！">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://github.com/aqqje/images/raw/master/images/git.jpg">
+<meta property="og:image" content="https://github.com/aqqje/images/raw/master/images/github.jpg">
+<meta property="og:updated_time" content="2018-02-25T04:49:18.632Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git">
+<meta name="twitter:description" content="Git是什么？  Git是目前世界上最先进的分布式版本控制系统（没有之一）。  Git有什么特点？简单来说就是：高端大气上档次 !@#!@#%!@# 什么的，你懂的哈 就是贼厉害！">
+<meta name="twitter:image" content="https://github.com/aqqje/images/raw/master/images/git.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+  <link rel="canonical" href="http://aqqje.github.com/2017/11/20/git语法/"/>
+
+
+
+
+
+  <title>git | aqqje's note</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?777e0089fe26d63f9837de61308deecc";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">aqqje's note</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">相见亦无事，不遇长相思！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photos">
+          <a href="/photos/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-camera"></i> <br />
+            
+            photos
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+	  <!-- 自定义High一下的功能 -->
+      <li class="menu-item"> <a title="High一下" href='javascript:(
+    /*
+     * Copyright (C) 2016 Never_yu (Neveryu.github.io) <React.dong.yu@gmail.com>
+     * Sina Weibo (http://weibo.com/Neveryu)
+     *
+     * Licensed under the Apache License, Version 2.0 (the "License");
+     * you may not use this file except in compliance with the License.
+     * You may obtain a copy of the License at
+     *
+     *      http://www.apache.org/licenses/LICENSE-2.0
+     *
+     * Unless required by applicable law or agreed to in writing, software
+     * distributed under the License is distributed on an "AS IS" BASIS,
+     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     * See the License for the specific language governing permissions and
+     * limitations under the License.
+     */
+    function go() {
+
+
+    var songs = [
+                "http://bdyun.65dj.com:8090/2015/06/28/84791C997D8C55023DAD0D5690E48C28/%D1%A6%D6%AE%C7%AB%20-%20%D1%DD%D4%B1.mp3",
+                "http://music.163.com/song/media/outer/url?id=526464293.mp3",
+				"http://music.163.com/song/media/outer/url?id=191722.mp3",
+				"http://music.163.com/song/media/outer/url?id=516657140.mp3",
+				"http://music.163.com/song/media/outer/url?id=507502138.mp3",
+				"http://music.163.com/song/media/outer/url?id=167799.mp3",
+				"http://music.163.com/song/media/outer/url?id=233882.mp3",
+    ];
+
+    
+    function c() {
+        var e = document.createElement("link");
+        e.setAttribute("type", "text/css");
+        e.setAttribute("rel", "stylesheet");
+        e.setAttribute("href", f);
+        e.setAttribute("class", l);
+        document.body.appendChild(e)
+    }
+ 
+    function h() {
+        var e = document.getElementsByClassName(l);
+        for (var t = 0; t < e.length; t++) {
+            document.body.removeChild(e[t])
+        }
+    }
+ 
+    function p() {
+        var e = document.createElement("div");
+        e.setAttribute("class", a);
+        document.body.appendChild(e);
+        setTimeout(function() {
+            document.body.removeChild(e)
+        }, 100)
+    }
+ 
+    function d(e) {
+        return {
+            height : e.offsetHeight,
+            width : e.offsetWidth
+        }
+    }
+ 
+    function v(i) {
+        var s = d(i);
+        return s.height > e && s.height < n && s.width > t && s.width < r
+    }
+ 
+    function m(e) {
+        var t = e;
+        var n = 0;
+        while (!!t) {
+            n += t.offsetTop;
+            t = t.offsetParent
+        }
+        return n
+    }
+ 
+    function g() {
+        var e = document.documentElement;
+        if (!!window.innerWidth) {
+            return window.innerHeight
+        } else if (e && !isNaN(e.clientHeight)) {
+            return e.clientHeight
+        }
+        return 0
+    }
+ 
+    function y() {
+        if (window.pageYOffset) {
+            return window.pageYOffset
+        }
+        return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+    }
+ 
+    function E(e) {
+        var t = m(e);
+        return t >= w && t <= b + w
+    }
+
+    function S() {
+        var e = document.getElementById("audio_element_id");
+        if(e != null){
+            var index = parseInt(e.getAttribute("curSongIndex"));
+            if(index > songs.length - 2) {
+                index = 0;
+            } else {
+                index++;
+            }
+            e.setAttribute("curSongIndex", index);
+            N();
+        }
+
+        e.src = i;
+        e.play()
+    }
+ 
+    function x(e) {
+        e.className += " " + s + " " + o
+    }
+ 
+    function T(e) {
+        e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+    }
+ 
+    function N() {
+        var e = document.getElementsByClassName(s);
+        var t = new RegExp("\\b" + s + "\\b");
+        for (var n = 0; n < e.length; ) {
+            e[n].className = e[n].className.replace(t, "")
+        }
+    }
+
+    function initAudioEle() {
+        var e = document.getElementById("audio_element_id");
+        if(e === null){
+            e = document.createElement("audio");
+            e.setAttribute("class", l);
+            e.setAttribute("curSongIndex", 0);
+            e.id = "audio_element_id";
+            e.loop = false;
+            e.bgcolor = 0;
+            e.addEventListener("canplay", function() {
+            setTimeout(function() {
+                x(k)
+            }, 500);
+            setTimeout(function() {
+                N();
+                p();
+                for (var e = 0; e < O.length; e++) {
+                    T(O[e])
+                }
+            }, 15500)
+        }, true);
+        e.addEventListener("ended", function() {
+            N();
+            h();
+            go();
+        }, true);
+        e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+        document.body.appendChild(e);
+        }
+    }
+    
+    initAudioEle();
+    var e = 30;
+    var t = 30;
+    var n = 350;
+    var r = 350;
+
+    var curSongIndex = parseInt(document.getElementById("audio_element_id").getAttribute("curSongIndex"));
+    var i = songs[curSongIndex];
+    
+    var s = "mw-harlem_shake_me";
+    var o = "im_first";
+    var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+    var a = "mw-strobe_light";
+
+    /* harlem-shake-style.css，替换成你的位置，也可以直接使用：//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css */
+    var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+    
+    var l = "mw_added_css";
+    var b = g();
+    var w = y();
+    var C = document.getElementsByTagName("*");
+    var k = null;
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            if (E(A)) {
+                k = A;
+                break
+            }
+        }
+    }
+    if (A === null) {
+        console.warn("Could not find a node of the right size. Please try a different page.");
+        return
+    }
+    c();
+    S();
+    var O = [];
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            O.push(A)
+        }
+    }
+    })()'><i class="menu-item-icon fa fa-music fa-fw"></i>High一下</a> </li>
+      <!-- end High一下 -->
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aqqje.github.com/2017/11/20/git语法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="梦不若星辰">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="aqqje's note">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">git</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-20T22:11:57+08:00">
+                2017-11-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/git/" itemprop="url" rel="index">
+                    <span itemprop="name">git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/11/20/git语法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/11/20/git语法/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://github.com/aqqje/images/raw/master/images/git.jpg" alt="" title="git"><br></p>
+<ul>
+<li><p>Git是什么？</p>
+</li>
+<li><p>Git是目前世界上最先进的分布式版本控制系统（没有之一）。</p>
+</li>
+<li><p>Git有什么特点？简单来说就是：高端大气上档次 !@#!@#%!@# 什么的，你懂的哈 就是贼厉害！</p>
+<a id="more"></a>
+<h2 id="Git的诞生"><a href="#Git的诞生" class="headerlink" title="Git的诞生"></a>Git的诞生</h2><p>同生活中的许多伟大事件一样，Git 诞生于一个极富纷争大举创新的年代。Linux 内核开源项目有着为数众广的参与者。绝大多数的 Linux 内核维护工作都花在了提交补丁和保存归档的繁琐事务上（1991－2002年间）。到 2002 年，整个项目组开始启用分布式版本控制系统 BitKeeper 来管理和维护代码。</p>
+</li>
+</ul>
+<p>到了 2005 年，开发 BitKeeper 的商业公司同 Linux 内核开源社区的合作关系结束，他们收回了免费使用 BitKeeper 的权力。这就迫使 Linux 开源社区（特别是 Linux 的缔造者 Linus Torvalds ）不得不吸取教训，只有开发一套属于自己的版本控制系统才不至于重蹈覆辙。他们对新的系统制订了若干目标：</p>
+<ul>
+<li>速度</li>
+<li>简单的设计</li>
+<li>对非线性开发模式的强力支持（允许上千个并行开发的分支）</li>
+<li>完全分布式</li>
+<li>有能力高效管理类似 Linux 内核一样的超大规模项目（速度和数据量）<br></li>
+</ul>
+<p>自诞生于 2005 年以来，Git 日臻成熟完善，在高度易用的同时，仍然保留着初期设定的目标。它的速度飞快，极其适合管理大项目，它还有着令人难以置信的非线性分支管理系统。</p>
+<h2 id="安装Git-只介绍winn7系统"><a href="#安装Git-只介绍winn7系统" class="headerlink" title="安装Git(只介绍winn7系统)"></a>安装Git(只介绍winn7系统)</h2><ul>
+<li><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">git下载官网</a></li>
+<li>一路next安装即可</li>
+<li>安装完成，在开始菜单里找到“Git”-&gt;“Git Bash”，出现类似命令行窗口的东西，即Git安装成功！</li>
+<li>安装完成后，还需要最后一步设置，在命令行输入：</li>
+<li><p>  git config –global user.name “Your Name”（Your Name是你github上的用户名，如：aqqje）<br>  git config –global user.email “<a href="mailto:email@example.com" target="_blank" rel="noopener">email@example.com</a>“</p>
+</li>
+</ul>
+<h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><p>说明：</p>
+<p>什么是版本库呢？版本库又名仓库，英文名repository，你可以简单理解成一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改、删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”</p>
+<ul>
+<li>创建一个版本库非常简单，首先，选择一个合适的地方，创建一个空目录：</li>
+</ul>
+<pre><code>mkdir learngit       -- 新建一个名叫learngit的文件夹
+cd learngit          -- 进入learngit文件夹
+pwd                  -- 显示当前目录
+</code></pre><ul>
+<li>初始化仓库</li>
+</ul>
+<pre><code>git init                -- 初始化learngi文件夹为仓库
+</code></pre><ul>
+<li>初始化仓库后会出现一个 .git 目录(默认隐藏)，使用ls -ah命令就可以看见。</li>
+</ul>
+<h2 id="git指令"><a href="#git指令" class="headerlink" title="git指令"></a>git指令</h2><p>说明:</p>
+<p>在讲解git指令之前，我们必须先了解git的分区：</p>
+<ul>
+<li>工作区（working directory） </li>
+<li>暂缓区（stage index） </li>
+<li>历史记录区（history）</li>
+<li>三个区域关系：工作区是我们能看到的区域，我们在工作区修改增加代码；完成编辑后，我们用git add 将工作区文件添加到暂存区；然后利用git commit 提交文件到我们自己的分支。</li>
+</ul>
+<h2 id="增删改查"><a href="#增删改查" class="headerlink" title="增删改查:"></a>增删改查:</h2><pre><code>git add &lt;文件名&gt;                 -- 工作区文件添加到暂存区
+git add .                       -- 工作区所有修改动态添加到暂存区
+git commit    -m &quot;提交说明&quot;        -- 提交git add后的文件到我们自己的分支
+git status                        -- 掌握仓库当前的状态(*红色*代表未add未commit,*绿色*代表未commit)
+git diff &lt;文件名&gt;                -- 能查看该文件具体修改了什么内容
+git checkout --&lt;文件名&gt;          -- 使该文件在工作区的修改全部撤销(这有两种情况:1.该文件自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态 2.该文件已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态)
+git reset HEAD &lt;文件名&gt;          -- 可以把暂存区的修改撤销掉（unstage）
+git rm &lt;文件名&gt;  
+</code></pre><h2 id="版本"><a href="#版本" class="headerlink" title="版本:"></a>版本:</h2><pre><code>git log                            -- 显示从最近到最远的提交日志
+git log --pretty=oneline        -- 显示从最近到最远*简化*的提交日志
+git reset --hard HEAD^          -- 显示当前版本
+cat &lt;文件名&gt;                     -- 显示当前文件的内容
+git reset --hard &lt;commit id&gt;    -- 退回commit id 时的版本
+git reflog                      -- 记录你的每一次reset和commit的命令
+git diff HEAD -- &lt;文件名&gt;        -- 查看该文件工作区和版本库里面最新版本的区别
+
+
+        -- 从版本库中删除该文件
+</code></pre><h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库:"></a>远程仓库:</h2><pre><code>git remote add origin &lt;远程仓库地址&gt; -- 添加一个仓库地址的别名,即origin
+git remote -v                     -- 可以查看对应的*别名*和*远程仓库地址*
+git push -u origin master       -- 把本地仓库push到远程仓库上
+git pull origin master          -- 把远程仓库pull到本地仓库
+git clone &lt;远程仓库地址&gt;          -- 把对应的远程仓库地址的内容clone到本地
+</code></pre><h2 id="分支"><a href="#分支" class="headerlink" title="分支:"></a>分支:</h2><pre><code>git checkout dev                 -- 创建dev分支
+git checkout -b dev              -- 创建dev分支并切换到dev分支上
+git branch                         -- 查看所有分支(绿色代表当前分支)
+git checkout &lt;分支名&gt;            -- 切换到对应的分支上
+git merge &lt;分支名&gt;               -- 把对应分支合并到当前分支上
+git brand -d &lt;分支名&gt;            -- 删除对应的分支
+</code></pre><h2 id="分支图"><a href="#分支图" class="headerlink" title="分支图:"></a>分支图:</h2><pre><code>git log --graph                -- 查看分支合并图
+</code></pre><h2 id="分支管理："><a href="#分支管理：" class="headerlink" title="分支管理："></a>分支管理：</h2><p>说明：</p>
+<ul>
+<li><p>Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。</p>
+</li>
+<li><p>如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。</p>
+</li>
+</ul>
+<pre><code>git merge --no-ff -m &quot;说明修改&quot; &lt;分支名&gt;    -- --no-ff参数，表示禁用Fast forward -m &quot;说明修改&quot; 代表一个commit
+</code></pre><h2 id="bug分支："><a href="#bug分支：" class="headerlink" title="bug分支："></a>bug分支：</h2><p>情境：<br>当你接到在master主分支上有修复bug的任务代号:bug_001,想创建一个分支bug_001来修复它，但当前正在dev上进行的工作还没有提交：</p>
+<pre><code>git stash                                      -- 把当前工作现场“储藏”起来，等以后bug_001修复好后继续工作
+git checkout master                             -- 回到master主分支 
+git ckeckout -b bug_001                         -- 创建bug_001分支并切换到bug_001分支上
+git add .                                        -- 添加修复 
+git commit -m &quot;修复bug_001&quot;                     -- 提交bug_001修复
+git checkout master                            -- 回到master主分支 
+git merge --no-ff -m &quot;merged bug_001&quot; bug_001  -- 合并bug_001分支到master主分支上并commit&quot;merged bug_001&quot;日志
+git checkout dev                               -- 切换到dev分支上
+git stash list                                    -- 查看“储藏”起来工作现场
+
+【*git stash apply                                   -- 修复储藏”起来工作现场（但是恢复后，stash内容并不删除，你需要用git stash drop来删除）
+git stash pop                                     -- 修复储藏”起来工作现场（恢复的同时把stash内容也删了）*】
+
+git stash apply stash@{0}                      -- 恢复指定的stash
+</code></pre><h2 id="feature分支："><a href="#feature分支：" class="headerlink" title="feature分支："></a>feature分支：</h2><p>情境：<br>软件开发过程中，添加一个新功能时，你肯定不希望因为一些实验性质的代码，把主分支搞乱了，所以，每添加一个新功能，最好新建一个feature分支，在上面开发，完成后，合并，最后，删除该feature分支。现在，有一个新的功能需要实现，代号为newfunction。</p>
+<pre><code>git checkout -b feature_newfc                -- 创建feature_newfc分支并切换到feature_newfc准备开发
+git add newfunction.py                        -- 开发完成并添加到暂存区
+git commit -m &quot;add newfunction&quot;                -- 提交到feature_newfc上
+git chekout master                            -- 切换到master主分支上，准备合并分支
+git merge feature_newfc                     -- 合并feature_newfc分支到master主分支
+</code></pre><p>新情境：</p>
+<p>刚刚开发的新功能，因经费不足，新功能必须取消！（没有开发完成！还没有合并到master主分支）如何就地销毁呢？</p>
+<pre><code>git bracnch -d feature_newfc                 -- 准备销毁feature_newfc分支，但因为还没有合并报错，就地销毁失败！
+git bracnch -d feature_newfc                -- 强行销毁，销毁成功！
+</code></pre><h2 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h2><p>说明：</p>
+<ul>
+<li>Git中打标签非常简单，首先，切换到需要打标签的分支上，</li>
+<li>创建的标签都只存储在本地，不会自动推送到远程，所以，打错的标签可以在本地安全删除。</li>
+<li>如果标签已经推送到远程，要删除远程标签就麻烦一点，先从本地删除，然后，从远程删除。删除命令也是push</li>
+</ul>
+<pre><code>git branch                                             -- 查看所有分支（带绿色*的是当前分支）
+git checkout master                                    -- 切换到master主分支上
+git tag &lt;新建标签名&gt;                                    -- 新建一个标签
+git tag                                             -- 查看所有标签
+git log --pretty=oneline --abbrev-commit            -- 查询历史提交的commit id
+git tag &lt;tag commit id&gt;                               -- 回到指定的tag
+git show &lt;tagname&gt;                                   -- 查看标签信息
+git tag -a v0.1 -m &quot;version 0.1 released&quot;              -- 创建带有说明的标签，用-a指定标签名，-m指定说明文字       
+git tag -s v0.2 -m &quot;signed version 0.2 released&quot;     -- 通过-s用私钥签名一个标签（签名采用PGP签名，因此，必须首先安装gpg（GnuPG），如果没有找到gpg，或者没有gpg密钥对，就会报错！如果报错，请参考GnuPG帮助文档配置Key！）
+git tag -d &lt;tagname&gt;                                -- 删除标签
+git push origin &lt;tagname&gt;                            -- 推送某个标签到远程
+git push origin --tags                                -- 一次性推送全部尚未推送到远程的本地标签
+
+【*git tag -d &lt;tagname&gt;                                -- 标签已经推送到远程，要删除远程标签就麻烦一点，先从本地删除
+git push origin :refs/tags/&lt;tagname&gt;                --然后，从远程删除。也是push*】
+</code></pre><h2 id="自定义Git"><a href="#自定义Git" class="headerlink" title="自定义Git"></a>自定义Git</h2><pre><code>git config --global color.ui true                    -- 让Git显示颜色，会让命令输出看起来更醒目(一般默认不用自己再配置！)
+其它配置指令请百度，这里不一一指出！
+</code></pre><h2 id="别名"><a href="#别名" class="headerlink" title="别名"></a>别名</h2><pre><code>git config --global alias.co checkout                -- 等同 git co dev
+git config --global alias.ci commit                -- 等同 git ci -m &quot;提交说明&quot;
+git config --global alias.br branch                -- 等同 git br 
+...
+</code></pre><p><img src="https://github.com/aqqje/images/raw/master/images/github.jpg" alt="" title="github"></p>
+<h3 id="注意：所有的尖括号皆可以省略！"><a href="#注意：所有的尖括号皆可以省略！" class="headerlink" title="注意：所有的尖括号皆可以省略！"></a>注意：所有的尖括号皆可以省略！</h3><hr>
+<ul>
+<li><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">参考1</a></li>
+<li><a href="http://www.jianshu.com/p/ddac9d030d2c" target="_blank" rel="noopener">参考2</a></li>
+<li><a href="https://www.cnblogs.com/liujiaq/p/5670069.html" target="_blank" rel="noopener">参考3</a></li>
+</ul>
+<p>作者：梦不若星辰<br>链接：<a href="https://aqqje.github.io" target="_blank" rel="noopener">https://aqqje.github.io</a><br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Thanks!❤</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://github.com/aqqje/Personal-repository/raw/master/aqqje/aplaywx.png" alt="梦不若星辰 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://github.com/aqqje/Personal-repository/raw/master/aqqje/appzfb.jpg" alt="梦不若星辰 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    梦不若星辰
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://aqqje.github.com/2017/11/20/git语法/" title="git">http://aqqje.github.com/2017/11/20/git语法/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/github/" rel="tag"><i class="fa fa-tag"></i> github</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/20/github博客绑定域名/" rel="next" title="github博客绑定域名">
+                <i class="fa fa-chevron-left"></i> github博客绑定域名
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/11/22/uml类图关系/" rel="prev" title="uml类图关系">
+                uml类图关系 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg"
+                alt="梦不若星辰" />
+            
+              <p class="site-author-name" itemprop="name">梦不若星辰</p>
+              <p class="site-description motion-element" itemprop="description">记录生活的点点滴滴！</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">68</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/lover-time.html" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/aqqje" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=vMXW29HFjImNiPzNzZLf09E" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-pagelines"></i>
+                推荐阅读
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zhoujingen.cn/blog/ |" title="敏捷个人" target="_blank">敏捷个人</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="No-Sky.top" title="NO-SKY" target="_blank">NO-SKY</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://coolshell.cn/" title="酷壳" target="_blank">酷壳</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.read.org.cn/" title="战隼" target="_blank">战隼</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.mifengtd.cn/" title="褪墨" target="_blank">褪墨</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://mindhacks.cn/" title="刘未鹏" target="_blank">刘未鹏</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://ddimples.github.io/" title="程小黑" target="_blank">程小黑</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://blog.javachen.com/" title="javaChen" target="_blank">javaChen</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git的诞生"><span class="nav-number">1.</span> <span class="nav-text">Git的诞生</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Git-只介绍winn7系统"><span class="nav-number">2.</span> <span class="nav-text">安装Git(只介绍winn7系统)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建版本库"><span class="nav-number">3.</span> <span class="nav-text">创建版本库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git指令"><span class="nav-number">4.</span> <span class="nav-text">git指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增删改查"><span class="nav-number">5.</span> <span class="nav-text">增删改查:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本"><span class="nav-number">6.</span> <span class="nav-text">版本:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程仓库"><span class="nav-number">7.</span> <span class="nav-text">远程仓库:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支"><span class="nav-number">8.</span> <span class="nav-text">分支:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支图"><span class="nav-number">9.</span> <span class="nav-text">分支图:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支管理："><span class="nav-number">10.</span> <span class="nav-text">分支管理：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bug分支："><span class="nav-number">11.</span> <span class="nav-text">bug分支：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#feature分支："><span class="nav-number">12.</span> <span class="nav-text">feature分支：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标签管理"><span class="nav-number">13.</span> <span class="nav-text">标签管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义Git"><span class="nav-number">14.</span> <span class="nav-text">自定义Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#别名"><span class="nav-number">15.</span> <span class="nav-text">别名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#注意：所有的尖括号皆可以省略！"><span class="nav-number">15.1.</span> <span class="nav-text">注意：所有的尖括号皆可以省略！</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">梦不若星辰</span>
+
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://aqqje.github.com/2017/11/20/git语法/';
+          this.page.identifier = '2017/11/20/git语法/';
+          this.page.title = 'git';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cytkDK9yb';
+      var conf = '26dd319189ed255e8b68964a66d7cd40';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
+  undefined
+  <!--点击爆炸效果 -->
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({});</script></body>
+</html>

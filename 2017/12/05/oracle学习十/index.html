@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="oracle," />
+
+
+
+
+
+  <link rel="alternate" href="/lover-time.html" title="aqqje's note" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="此文章是oracle学习系例第十章，主要是用来复习和巩固在课堂学习的知识！">
+<meta name="keywords" content="oracle">
+<meta property="og:type" content="article">
+<meta property="og:title" content="oracle学习十">
+<meta property="og:url" content="http://aqqje.github.com/2017/12/05/oracle学习十/index.html">
+<meta property="og:site_name" content="aqqje&#39;s note">
+<meta property="og:description" content="此文章是oracle学习系例第十章，主要是用来复习和巩固在课堂学习的知识！">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://github.com/aqqje/Personal-repository/raw/master/images/oracle1.jpg">
+<meta property="og:image" content="https://github.com/aqqje/Personal-repository/raw/master/images/oracle15.png">
+<meta property="og:image" content="https://github.com/aqqje/Personal-repository/raw/master/images/oracle16.png">
+<meta property="og:updated_time" content="2018-03-05T06:31:30.452Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="oracle学习十">
+<meta name="twitter:description" content="此文章是oracle学习系例第十章，主要是用来复习和巩固在课堂学习的知识！">
+<meta name="twitter:image" content="https://github.com/aqqje/Personal-repository/raw/master/images/oracle1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+  <link rel="canonical" href="http://aqqje.github.com/2017/12/05/oracle学习十/"/>
+
+
+
+
+
+  <title>oracle学习十 | aqqje's note</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?777e0089fe26d63f9837de61308deecc";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">aqqje's note</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">相见亦无事，不遇长相思！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photos">
+          <a href="/photos/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-camera"></i> <br />
+            
+            photos
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+	  <!-- 自定义High一下的功能 -->
+      <li class="menu-item"> <a title="High一下" href='javascript:(
+    /*
+     * Copyright (C) 2016 Never_yu (Neveryu.github.io) <React.dong.yu@gmail.com>
+     * Sina Weibo (http://weibo.com/Neveryu)
+     *
+     * Licensed under the Apache License, Version 2.0 (the "License");
+     * you may not use this file except in compliance with the License.
+     * You may obtain a copy of the License at
+     *
+     *      http://www.apache.org/licenses/LICENSE-2.0
+     *
+     * Unless required by applicable law or agreed to in writing, software
+     * distributed under the License is distributed on an "AS IS" BASIS,
+     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     * See the License for the specific language governing permissions and
+     * limitations under the License.
+     */
+    function go() {
+
+
+    var songs = [
+                "http://bdyun.65dj.com:8090/2015/06/28/84791C997D8C55023DAD0D5690E48C28/%D1%A6%D6%AE%C7%AB%20-%20%D1%DD%D4%B1.mp3",
+                "http://music.163.com/song/media/outer/url?id=526464293.mp3",
+				"http://music.163.com/song/media/outer/url?id=191722.mp3",
+				"http://music.163.com/song/media/outer/url?id=516657140.mp3",
+				"http://music.163.com/song/media/outer/url?id=507502138.mp3",
+				"http://music.163.com/song/media/outer/url?id=167799.mp3",
+				"http://music.163.com/song/media/outer/url?id=233882.mp3",
+    ];
+
+    
+    function c() {
+        var e = document.createElement("link");
+        e.setAttribute("type", "text/css");
+        e.setAttribute("rel", "stylesheet");
+        e.setAttribute("href", f);
+        e.setAttribute("class", l);
+        document.body.appendChild(e)
+    }
+ 
+    function h() {
+        var e = document.getElementsByClassName(l);
+        for (var t = 0; t < e.length; t++) {
+            document.body.removeChild(e[t])
+        }
+    }
+ 
+    function p() {
+        var e = document.createElement("div");
+        e.setAttribute("class", a);
+        document.body.appendChild(e);
+        setTimeout(function() {
+            document.body.removeChild(e)
+        }, 100)
+    }
+ 
+    function d(e) {
+        return {
+            height : e.offsetHeight,
+            width : e.offsetWidth
+        }
+    }
+ 
+    function v(i) {
+        var s = d(i);
+        return s.height > e && s.height < n && s.width > t && s.width < r
+    }
+ 
+    function m(e) {
+        var t = e;
+        var n = 0;
+        while (!!t) {
+            n += t.offsetTop;
+            t = t.offsetParent
+        }
+        return n
+    }
+ 
+    function g() {
+        var e = document.documentElement;
+        if (!!window.innerWidth) {
+            return window.innerHeight
+        } else if (e && !isNaN(e.clientHeight)) {
+            return e.clientHeight
+        }
+        return 0
+    }
+ 
+    function y() {
+        if (window.pageYOffset) {
+            return window.pageYOffset
+        }
+        return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+    }
+ 
+    function E(e) {
+        var t = m(e);
+        return t >= w && t <= b + w
+    }
+
+    function S() {
+        var e = document.getElementById("audio_element_id");
+        if(e != null){
+            var index = parseInt(e.getAttribute("curSongIndex"));
+            if(index > songs.length - 2) {
+                index = 0;
+            } else {
+                index++;
+            }
+            e.setAttribute("curSongIndex", index);
+            N();
+        }
+
+        e.src = i;
+        e.play()
+    }
+ 
+    function x(e) {
+        e.className += " " + s + " " + o
+    }
+ 
+    function T(e) {
+        e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+    }
+ 
+    function N() {
+        var e = document.getElementsByClassName(s);
+        var t = new RegExp("\\b" + s + "\\b");
+        for (var n = 0; n < e.length; ) {
+            e[n].className = e[n].className.replace(t, "")
+        }
+    }
+
+    function initAudioEle() {
+        var e = document.getElementById("audio_element_id");
+        if(e === null){
+            e = document.createElement("audio");
+            e.setAttribute("class", l);
+            e.setAttribute("curSongIndex", 0);
+            e.id = "audio_element_id";
+            e.loop = false;
+            e.bgcolor = 0;
+            e.addEventListener("canplay", function() {
+            setTimeout(function() {
+                x(k)
+            }, 500);
+            setTimeout(function() {
+                N();
+                p();
+                for (var e = 0; e < O.length; e++) {
+                    T(O[e])
+                }
+            }, 15500)
+        }, true);
+        e.addEventListener("ended", function() {
+            N();
+            h();
+            go();
+        }, true);
+        e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+        document.body.appendChild(e);
+        }
+    }
+    
+    initAudioEle();
+    var e = 30;
+    var t = 30;
+    var n = 350;
+    var r = 350;
+
+    var curSongIndex = parseInt(document.getElementById("audio_element_id").getAttribute("curSongIndex"));
+    var i = songs[curSongIndex];
+    
+    var s = "mw-harlem_shake_me";
+    var o = "im_first";
+    var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+    var a = "mw-strobe_light";
+
+    /* harlem-shake-style.css，替换成你的位置，也可以直接使用：//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css */
+    var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+    
+    var l = "mw_added_css";
+    var b = g();
+    var w = y();
+    var C = document.getElementsByTagName("*");
+    var k = null;
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            if (E(A)) {
+                k = A;
+                break
+            }
+        }
+    }
+    if (A === null) {
+        console.warn("Could not find a node of the right size. Please try a different page.");
+        return
+    }
+    c();
+    S();
+    var O = [];
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            O.push(A)
+        }
+    }
+    })()'><i class="menu-item-icon fa fa-music fa-fw"></i>High一下</a> </li>
+      <!-- end High一下 -->
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aqqje.github.com/2017/12/05/oracle学习十/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="梦不若星辰">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="aqqje's note">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">oracle学习十</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-05T20:33:58+08:00">
+                2017-12-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/12/05/oracle学习十/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/12/05/oracle学习十/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://github.com/aqqje/Personal-repository/raw/master/images/oracle1.jpg" alt="" title="oracle1"><br><br><div class="note info"><ul>
+<li>此文章是oracle学习系例第十章，主要是用来复习和巩固在课堂学习的知识！</li>
+</ul></div><br><div class="note danger"><a id="more"></a></div></p>
+<hr>
+<h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><ul>
+<li>建表</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">格式：<span class="keyword">create</span> <span class="keyword">table</span> 表名</span><br><span class="line">(</span><br><span class="line">列名<span class="number">1</span>   类型   约束,</span><br><span class="line">列名<span class="number">2</span>   类型   约束,</span><br><span class="line">......	</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>如：<br>步骤1：创建出版社表，输入并执行以下命令：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 出版社(</span><br><span class="line">编号 VARCHAR2(<span class="number">2</span>),</span><br><span class="line">出版社名称 VARCHAR2(<span class="number">30</span>),</span><br><span class="line">地址 VARCHAR2(<span class="number">30</span>),</span><br><span class="line">联系电话 VARCHAR2(<span class="number">20</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 图书(</span><br><span class="line">图书编号 VARCHAR2(<span class="number">5</span>),</span><br><span class="line">图书名称 VARCHAR2(<span class="number">30</span>),</span><br><span class="line">出版社编号 VARCHAR2(<span class="number">2</span>),</span><br><span class="line">作者 VARCHAR2(<span class="number">10</span>),	</span><br><span class="line">出版日期 <span class="built_in">DATE</span>,	</span><br><span class="line">数量 <span class="built_in">NUMBER</span>(<span class="number">3</span>),	</span><br><span class="line">单价 <span class="built_in">NUMBER</span>(<span class="number">7</span>,<span class="number">2</span>)	</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>通过子查询建表</li>
+</ul>
+<p>步骤1：完全复制图书表到“图书1”，输入并执行以下命令：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 图书<span class="number">1</span> <span class="keyword">AS</span> <span class="keyword">SELECT</span> *　<span class="keyword">FROM</span> 图书;</span><br></pre></td></tr></table></figure></p>
+<p>步骤2：创建新的图书表“图书2”，只包含书名和单价，输入并执行以下命令：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 图书<span class="number">2</span>(书名,单价) <span class="keyword">AS</span> <span class="keyword">SELECT</span> 图书名称,单价 <span class="keyword">FROM</span> 图书;</span><br></pre></td></tr></table></figure>
+<p>步骤3：创建新的图书表“图书3”，只包含书名和单价，不复制内容，输入并执行以下命令：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 图书<span class="number">3</span>(书名,单价) <span class="keyword">AS</span> <span class="keyword">SELECT</span> 图书名称,单价 <span class="keyword">FROM</span> 图书 <span class="keyword">WHERE</span> <span class="number">1</span>=<span class="number">2</span>;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>添加表的约束</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>约束</th>
+<th>关键字</th>
+<th>简写</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主键</td>
+<td>primary key</td>
+<td>PK</td>
+</tr>
+<tr>
+<td>唯一</td>
+<td>unique</td>
+<td>UQ</td>
+</tr>
+<tr>
+<td>默认值</td>
+<td>default</td>
+<td>DF</td>
+</tr>
+<tr>
+<td>检查约束</td>
+<td>check</td>
+<td>CK</td>
+</tr>
+<tr>
+<td>外键约束</td>
+<td>foreign key</td>
+<td>FK</td>
+</tr>
+</tbody>
+</table>
+<p>方法一：建表的同时添加约束</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> stuinfo</span><br><span class="line">(</span><br><span class="line">sno <span class="built_in">int</span> primary <span class="keyword">key</span> <span class="keyword">not</span> <span class="literal">null</span>,       <span class="comment">--主键</span></span><br><span class="line">sname varchar2(<span class="number">10</span>) <span class="keyword">unique</span> <span class="keyword">not</span> <span class="literal">null</span>,       <span class="comment">--唯一</span></span><br><span class="line">sex <span class="built_in">char</span>(<span class="number">2</span>) <span class="keyword">default</span> <span class="string">'男'</span> <span class="keyword">check</span>(sex=<span class="string">'男'</span> <span class="keyword">or</span> sex = <span class="string">'女'</span>) <span class="keyword">not</span> <span class="literal">null</span>,   <span class="comment">--默认及检查</span></span><br><span class="line">saddress varchar2(<span class="number">50</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">phone <span class="built_in">char</span>(<span class="number">11</span>),</span><br><span class="line">email varchar2(<span class="number">50</span>)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> stumarks</span><br><span class="line">(</span><br><span class="line">marksId <span class="built_in">int</span>,</span><br><span class="line">sno <span class="built_in">int</span> <span class="keyword">references</span> stuinfo(sno) <span class="keyword">not</span> <span class="literal">null</span>,     <span class="comment">--外键</span></span><br><span class="line">score <span class="built_in">number</span>(<span class="number">5</span>,<span class="number">1</span>),</span><br><span class="line">examDate <span class="built_in">date</span> <span class="keyword">default</span> <span class="keyword">sysdate</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>方法二:建表完成后，再添加约束</p>
+<p>（之前已建好了出版社表及图书表）</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--主键约束</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 出版社 <span class="keyword">add</span> <span class="keyword">constraint</span> PK_编号</span><br><span class="line">primary <span class="keyword">key</span> (编号);</span><br><span class="line"><span class="comment">--唯一约束</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 出版社 <span class="keyword">add</span> <span class="keyword">constraint</span> UQ_地址</span><br><span class="line"><span class="keyword">unique</span> (地址);</span><br><span class="line"><span class="comment">--检查约束</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 出版社 <span class="keyword">add</span> <span class="keyword">constraint</span> CK_联系电话</span><br><span class="line"><span class="keyword">check</span> (联系电话 <span class="keyword">like</span> <span class="string">'1%'</span>);</span><br><span class="line"><span class="comment">--默认值</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 出版社 <span class="keyword">modify</span> 地址 <span class="keyword">default</span> <span class="string">'湘潭'</span>;</span><br><span class="line"><span class="comment">--外键约束</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 图书 <span class="keyword">add</span> <span class="keyword">constraint</span> FK_图书编号 </span><br><span class="line">foreign <span class="keyword">key</span> (图书编号) <span class="keyword">references</span> </span><br><span class="line">出版社(编号)</span><br><span class="line"><span class="comment">--外键约束</span></span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 图书 <span class="keyword">add</span> <span class="keyword">constraint</span> FK_图书编号 </span><br><span class="line">foreign <span class="keyword">key</span> (图书编号) <span class="keyword">references</span> 出版社(编号)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>查看约束条件</li>
+</ul>
+<p>数据字典USER_CONSTRAINTS中包含了当前模式用户的约束条件信息。其中，CONSTRAINTS_TYPE 显示的约束类型为：</p>
+<p>C：CHECK约束。</p>
+<p>P：PRIMARY KEY约束。</p>
+<p>U：UNIQUE约束。</p>
+<p>R：FOREIGN KEY约束。</p>
+<p>其他信息可根据需要进行查询显示，可用DESCRIBE命令查看USER_CONSTRAINTS的结构。</p>
+<p>如:检查表的约束信息：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> CONSTRAINT_NAME,CONSTRAINT_TYPE,SEARCH_CONDITION <span class="keyword">FROM</span> USER_CONSTRAINTS</span><br><span class="line"><span class="keyword">WHERE</span> TABLE_NAME=<span class="string">'图书'</span>;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>删除约束条件</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 <span class="keyword">DROP</span> <span class="keyword">CONSTRAINT</span> 约束名;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>表的操作</p>
+</li>
+</ul>
+<p>1、删除表    drop table 表名<br>2、重命名表  RENAME 表名 TO 新表名;<br>3、查看表</p>
+<p>可以通过对数据字典USER_OBJECTS的查询，显示当前模式用户的所有表。</p>
+<p>如： 显示当前用户的所有表。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> object_name <span class="keyword">FROM</span> user_objects <span class="keyword">WHERE</span> object_type=<span class="string">'TABLE'</span>;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>修改表<br>1、<span id="inline-yellow">增加新列:</span><br>如： 为“出版社”增加一列“电子邮件”：</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 出版社</span><br><span class="line"><span class="keyword">ADD</span> 电子邮件 VARCHAR2(<span class="number">30</span>) <span class="keyword">CHECK</span>(电子邮件 <span class="keyword">LIKE</span> <span class="string">'%@%'</span>);</span><br></pre></td></tr></table></figure>
+<p>2、修改列</p>
+<p>修改列定义有以下一些特点：<br>(1) 列的宽度可以增加或减小，在表的列没有数据或数据为NULL时才能减小宽度。<br>(2) 在表的列没有数据或数据为NULL时才能改变数据类型，CHAR和VARCHAR2之间可以随意转换。(3) 只有当列的值非空时，才能增加约束条件NOT NULL。<br>(4) 修改列的默认值，只影响以后插入的数据。如：修改“出版社”表“电子邮件”列的宽度为40。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 出版社 <span class="keyword">MODIFY</span> 电子邮件 VARCHAR2(<span class="number">40</span>);</span><br></pre></td></tr></table></figure></p>
+<p>3、删除列<br>如：删除“出版社”表的“电子邮件”列。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 出版社</span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">COLUMN</span> 电子邮件;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h2 id="数据操作"><a href="#数据操作" class="headerlink" title="数据操作"></a>数据操作</h2><h2 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h2><p>【训练1】  表的部分字段插入练习。<br>步骤1：将新雇员插入到emp表：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp(empno,ename,job)</span><br><span class="line"><span class="keyword">VALUES</span> (<span class="number">1000</span>, <span class="string">'小李'</span>, <span class="string">'CLERK'</span>);</span><br></pre></td></tr></table></figure></p>
+<p>步骤2：显示插入结果<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span> empno=<span class="number">1000</span>;</span><br></pre></td></tr></table></figure></p>
+<p> 日期类型的字段值也要用单引号括起来，如’10-1月-03’。日期型的数据默认格式为DD-MON-YY，默认的世纪为当前的世纪，默认的时间为午夜12点。如果指定的世纪不是本世纪或时间不是午夜12点，则必须使用TO_DATE系统函数对字符串进行转换。</p>
+<p>【训练2】  时间字段的插入练习。</p>
+<p>步骤1：将新雇员插入到emp表：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp(empno,ename,job,hiredate)</span><br><span class="line"><span class="keyword">VALUES</span> (<span class="number">1001</span>, <span class="string">'小马'</span>, <span class="string">'CLERK'</span>, <span class="string">'10-1月-03'</span>);</span><br></pre></td></tr></table></figure></p>
+<p>【训练3】  表的全部字段的插入练习。</p>
+<p>执行以下的查询：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> dept <span class="keyword">VALUES</span> (<span class="number">50</span>, <span class="string">'培训部'</span>,<span class="string">'深圳'</span>);</span><br></pre></td></tr></table></figure></p>
+<p>【训练4】  插入空值练习。</p>
+<p>执行以下的查询：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp(empno,ename,job,sal) <span class="keyword">VALUES</span>(<span class="number">1005</span>,<span class="string">'杨华'</span>, <span class="string">'CLERK'</span>,<span class="literal">null</span>);</span><br></pre></td></tr></table></figure></p>
+<h2 id="复制数据-该形式一次可以插入多行数据。"><a href="#复制数据-该形式一次可以插入多行数据。" class="headerlink" title="复制数据:该形式一次可以插入多行数据。"></a>复制数据:该形式一次可以插入多行数据。</h2><p>【训练5】  <span id="inline-yellow">通过其他表插入数据的练习。</span></p>
+<p>步骤1：创建一个新表manager：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> manager <span class="keyword">AS</span> <span class="keyword">SELECT</span> empno,ename,sal <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span> job=<span class="string">'MANAGER'</span>;</span><br></pre></td></tr></table></figure></p>
+<p>步骤2：从emp表拷贝数据到manager：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> manager</span><br><span class="line"><span class="keyword">SELECT</span>	empno, ename, sal</span><br><span class="line"><span class="keyword">FROM</span>   emp</span><br><span class="line"><span class="keyword">WHERE</span>	job = <span class="string">'CLERK'</span>;</span><br></pre></td></tr></table></figure>
+<p>##　修改数据</p>
+<p>【训练1】  修改小李(编号为1000)的工资为3000。<br>执行以下的查询：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> 	emp</span><br><span class="line"><span class="keyword">SET</span> sal = <span class="number">3000</span></span><br><span class="line"><span class="keyword">WHERE</span> empno = <span class="number">1000</span>;</span><br></pre></td></tr></table></figure></p>
+<p>【训练2】  将小李(编号为1000)的雇佣日期改成当前系统日期，部门编号改为50。</p>
+<p>执行以下的查询：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span>  emp</span><br><span class="line"><span class="keyword">SET</span> hiredate=<span class="keyword">sysdate</span>, deptno=<span class="number">50</span></span><br><span class="line"><span class="keyword">WHERE</span>  empno = <span class="number">1000</span>;</span><br></pre></td></tr></table></figure></p>
+<p>【训练3】  为所有雇员增加100元工资。<br>执行以下的查询：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span>  emp</span><br><span class="line"><span class="keyword">SET</span>  sal =sal+<span class="number">100</span>;</span><br></pre></td></tr></table></figure></p>
+<p>【训练4】  根据其他表修改数据。</p>
+<p>执行以下的查询：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span>  manager</span><br><span class="line"><span class="keyword">SET</span> (ename, sal) =(<span class="keyword">SELECT</span> ename,sal <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span>   empno = <span class="number">7788</span>)</span><br><span class="line"><span class="keyword">WHERE</span>   empno = <span class="number">1000</span>;</span><br></pre></td></tr></table></figure></p>
+<p>##　删除数据<br>【训练1】  删除雇员编号为1000的新插入的雇员。</p>
+<p>步骤1：删除编号为1000的雇员：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span> empno=<span class="number">1000</span>;</span><br></pre></td></tr></table></figure></p>
+<p>步骤2：显示删除结果：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span> empno=<span class="number">1000</span>;</span><br></pre></td></tr></table></figure></p>
+<p>【训练2】  彻底删除manager表的内容。</p>
+<p>执行以下的命令：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">TRUNCATE</span> <span class="keyword">TABLE</span> manager;</span><br></pre></td></tr></table></figure></p>
+<p>DELETE命令进行的删除可以撤销，但TRUNCATE命令进行的删除不可撤销。</p>
+<p>注意：TRUNCATE TABLE命令用来删除表的全部数据而不是删除表，表依旧存在。</p>
+<h2 id="数据库事务"><a href="#数据库事务" class="headerlink" title="数据库事务"></a>数据库事务</h2><h2 id="数据库事务的概念"><a href="#数据库事务的概念" class="headerlink" title="数据库事务的概念"></a>数据库事务的概念</h2><p>两次连续成功的COMMIT或ROLLBACK之间的操作，称为一个事务。在一个事务内，数据的修改一起提交或撤销，如果发生故障或系统错误，整个事务也会自动撤销。</p>
+<p>比如，我们去银行转账，操作可以分为下面两个环节：<br>(1) 从第一个账户划出款项。<br>(2) 将款项存入第二个账户。</p>
+<p>在这个过程中，两个环节是关联的。第一个账户划出款项必须保证正确的存入第二个账户，如果第二个环节没有完成，整个的过程都应该取消，否则就会发生丢失款项的问题。</p>
+<p> 整个交易过程，可以看作是一个事物，成功则全部成功，失败则需要全部撤消，这样可以避免当操作的中间环节出现问题时，产生数据不一致的问题。</p>
+<h2 id="数据库事务的应用"><a href="#数据库事务的应用" class="headerlink" title="数据库事务的应用"></a>数据库事务的应用</h2><p>数据库事务处理可分为隐式和显式两种。显式事务操作通过命令实现，隐式事务由系统自动完成提交或撤销(回退)工作，无需用户的干预。</p>
+<p>隐式提交的情况包括：当用户正常退出SQL*Plus或执行CREATE、DROP、GRANT、REVOKE等命令时会发生事务的自动提交。</p>
+<p>系统的环境变量AUTOCOMMIT设置为ON(默认状态为OFF)</p>
+<p>SET AUTOCOMMIT ON/OFF</p>
+<p>隐式回退的情况包括：当异常结束SQL*Plus或系统故障发生时，会发生事务的自动回退。</p>
+<p><img src="https://github.com/aqqje/Personal-repository/raw/master/images/oracle15.png" alt="" title="oracle15"><br></p>
+<p>【训练1】  <span id="inline-yellow">学习使用COMMIT和ROLLBACK。</span><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--步骤1：执行以下命令，提交尚未提交的操作：</span></span><br><span class="line"><span class="keyword">COMMIT</span>;</span><br><span class="line"><span class="comment">--步骤2：修改雇员SCOTT的工资：</span></span><br><span class="line"><span class="keyword">UPDATE</span> emp <span class="keyword">SET</span> sal=sal+<span class="number">100</span> <span class="keyword">WHERE</span> empno=<span class="number">7788</span>;</span><br><span class="line"><span class="keyword">SELECT</span> ename,sal <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span> empno=<span class="number">7788</span>;</span><br><span class="line"><span class="comment">--步骤3：假定修改操作后发现增加的工资应该为1000而不是100，为了取消刚做的操作，可以执行以下命令：</span></span><br><span class="line"><span class="keyword">ROLLBACK</span>;</span><br><span class="line"><span class="comment">--显示回退后SCOTT的工资恢复为3000：</span></span><br><span class="line"><span class="keyword">SELECT</span> ename,sal <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span> empno=<span class="number">7788</span>;</span><br><span class="line"><span class="comment">--步骤4：重新修改雇员SCOTT的工资，工资在原有基础上增加1000：</span></span><br><span class="line"><span class="keyword">UPDATE</span> emp <span class="keyword">SET</span> sal=sal+<span class="number">1000</span> <span class="keyword">WHERE</span> empno=<span class="number">7788</span>;</span><br><span class="line"><span class="comment">--显示修改后SCOTT的工资：</span></span><br><span class="line"><span class="keyword">SELECT</span> ename,sal <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span> empno=<span class="number">7788</span>;</span><br><span class="line"><span class="comment">--步骤5：经查看修改结果正确，提交所做的修改：</span></span><br><span class="line"><span class="keyword">COMMIT</span>;</span><br></pre></td></tr></table></figure></p>
+<p>注意：在事务执行过程中，随时可以预览数据的变化。<br>对于比较大的事务，可以使用SAVEPOINT命令在事务中间划分一些断点，用来作为回退点。</p>
+<p>【训练2】  <span id="inline-yellow">学习使用SAVEPOINT命令。</span><br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--步骤1：插入一个雇员：</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp(empno, ename, job)</span><br><span class="line"><span class="keyword">VALUES</span> (<span class="number">3000</span>, <span class="string">'小马'</span>,<span class="string">'STUDENT'</span>);</span><br><span class="line"><span class="comment">--步骤2：插入保存点，检查点的名称为PA：</span></span><br><span class="line"><span class="keyword">SAVEPOINT</span> pa;</span><br><span class="line"><span class="comment">--步骤3：插入另一个雇员：</span></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp(empno, ename, job)</span><br><span class="line"><span class="keyword">VALUES</span> (<span class="number">3001</span>, <span class="string">'小黄'</span>,<span class="string">'STUDENT'</span>);</span><br><span class="line"><span class="comment">--步骤4：回退到保存点PA，则后插入的小黄被取消，而小马仍然保留。</span></span><br><span class="line"><span class="keyword">ROLLBACK</span> <span class="keyword">TO</span>　pa;</span><br><span class="line"><span class="comment">--步骤5: 提交所做的修改：</span></span><br><span class="line"><span class="keyword">COMMIT</span>;</span><br><span class="line">```sql</span><br><span class="line">【训练3】  观察数据的读一致性。</span><br><span class="line"></span><br><span class="line"><span class="comment">--步骤1：显示刚插入的雇员小马:</span></span><br><span class="line"><span class="keyword">SELECT</span> empno,ename <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span> empno=<span class="number">3000</span>;</span><br><span class="line"><span class="comment">--步骤2：删除雇员小马:</span></span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span> empno=<span class="number">3000</span>;</span><br><span class="line"><span class="comment">--步骤3：再次显示该雇员，显示结果为该雇员不存在：</span></span><br><span class="line"><span class="keyword">SELECT</span> empno,ename <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span> empno=<span class="number">3000</span>;</span><br><span class="line"><span class="comment">--步骤4：另外启动第2个SQL*Plus，并以SCOTT身份连接。执行以下命令，结果为该记录依旧存在。</span></span><br><span class="line"><span class="keyword">SELECT</span> empno,ename <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span> empno=<span class="number">3000</span>;</span><br><span class="line"><span class="comment">--步骤5：在第1个SQL*Plus中提交删除：</span></span><br><span class="line"><span class="keyword">COMMIT</span>;</span><br><span class="line"><span class="comment">--步骤6：在第2个SQL*Plus中再次显示该雇员，显示结果与步骤3的结果一致:</span></span><br><span class="line"><span class="keyword">SELECT</span> empno,ename <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span> empno=<span class="number">3000</span>;</span><br></pre></td></tr></table></figure></p>
+<p>说明：在以上训练中，当第1个SQL<em>Plus会话删除小马后，第2个SQL</em>Plus会话仍然可以看到该雇员，直到第1个SQL*Plus会话提交该删除操作后，两个会话看到的才是一致的数据。</p>
+<h2 id="表的锁定【了解】"><a href="#表的锁定【了解】" class="headerlink" title="表的锁定【了解】"></a>表的锁定【<span id="inline-green">了解</span>】</h2><h2 id="锁的概念"><a href="#锁的概念" class="headerlink" title="锁的概念"></a>锁的概念</h2><p>锁出现在数据共享的场合，用来保证数据的一致性。当多个会话同时修改一个表时，需要对数据进行相应的锁定。<br>锁有“只读锁”、“排它锁”，“共享排它锁”等多种类型，而且每种类型又有“行级锁”(一次锁住一条记录)，“页级锁”(一次锁住一页，即数据库中存储记录的最小可分配单元)，“表级锁”(锁住整个表)。 </p>
+<p>若为“行级排它锁”，则除被锁住的行外，该表中其他行均可被其他的用户进行修改(Update)或删除(delete)。若为“表级排它锁”，则所有其他用户只能对该表进行查询(select)操作，而无法对其中的任何记录进行修改或删除。当程序对所做的修改进行提交(commit)或回滚(rollback)后，锁住的资源便会得到释放，从而允许其他用户进行操作。 </p>
+<p>如果两个事务，分别锁定一部分数据，而都在等待对方释放锁才能完成事务操作，这种情况下就会发生死锁。</p>
+<h2 id="隐式锁和显式锁"><a href="#隐式锁和显式锁" class="headerlink" title="隐式锁和显式锁"></a>隐式锁和显式锁</h2><p>在Oracle数据库中，修改数据操作时需要一个隐式的独占锁，以锁定修改的行，直到修改被提交或撤销为止。如果一个会话锁定了数据，那么第二个会话要想对数据进行修改，只能等到第一个会话对修改使用COMMIT命令进行提交或使用ROLLBACK命令进行回滚撤销后，才开始执行。因此应养成一个良好的习惯：执行修改操作后，要尽早地提交或撤销，以免影响其他会话对数据的修改。</p>
+<p>【训练1】  对emp表的SCOTT雇员记录进行修改，测试隐式锁。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">步骤1：启动第一个SQL*Plus，以SCOTT账户登录数据库(第一个会话)，修改SCOTT记录，隐式加锁。</span><br><span class="line"></span><br><span class="line"><span class="keyword">UPDATE</span> emp <span class="keyword">SET</span> sal=<span class="number">3500</span> <span class="keyword">where</span> empno=<span class="number">7788</span>;</span><br><span class="line"></span><br><span class="line">步骤2：启动第二个SQL*Plus，以SCOTT账户登录数据库(第二个会话)，进行记录修改操作。</span><br><span class="line"></span><br><span class="line"><span class="keyword">UPDATE</span> emp <span class="keyword">SET</span> sal=<span class="number">4000</span> <span class="keyword">where</span> empno=<span class="number">7788</span>;</span><br><span class="line"></span><br><span class="line">步骤3：对第一个会话进行解锁操作：</span><br><span class="line"></span><br><span class="line"><span class="keyword">COMMIT</span>;</span><br><span class="line"></span><br><span class="line">步骤4：查看第二个会话，此时有输出结果：</span><br><span class="line"></span><br><span class="line">步骤5：提交第二个会话，防止长时间锁定。</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>表的显式锁定</li>
+</ul>
+<p><img src="https://github.com/aqqje/Personal-repository/raw/master/images/oracle16.png" alt="" title="oracle16"><br></p>
+<h2 id="锁定行"><a href="#锁定行" class="headerlink" title="锁定行"></a>锁定行</h2><p>【训练1】  对emp表的部门10的雇员记录加显式锁，并测试。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">步骤1：对部门10加显式锁：</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> empno,ename,job,sal <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span> deptno=<span class="number">10</span> <span class="keyword">FOR</span> <span class="keyword">UPDATE</span>;</span><br><span class="line"></span><br><span class="line">步骤2：启动第二个SQL*Plus(第二个会话)，以SCOTT账户登录数据库，对部门10的雇员CLARK进行修改操作。</span><br><span class="line"></span><br><span class="line"><span class="keyword">UPDATE</span> emp <span class="keyword">SET</span> sal=sal+<span class="number">100</span> <span class="keyword">where</span> empno=<span class="number">7782</span>;</span><br><span class="line"></span><br><span class="line">步骤3：在第一个会话进行解锁操作：</span><br><span class="line"></span><br><span class="line"><span class="keyword">COMMIT</span>;</span><br><span class="line"></span><br><span class="line">步骤4：查看第二个会话，有输出结果：</span><br></pre></td></tr></table></figure></p>
+<h2 id="锁定表"><a href="#锁定表" class="headerlink" title="锁定表"></a>锁定表</h2><p>LOCK语句用于对整张表进行锁定。<br>对表的锁定可以是共享(SHARE)或独占(EXCLUSIVE)模式。共享模式下，其他会话可以加共享锁，但不能加独占锁。在独占模式下，其他会话不能加共享或独占锁。</p>
+<p>【训练1】  对emp表添加独占锁。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">步骤1：对emp表加独占锁：</span><br><span class="line"></span><br><span class="line"><span class="keyword">LOCK</span> <span class="keyword">TABLE</span> emp <span class="keyword">IN</span> EXCLUSIVE <span class="keyword">MODE</span>;</span><br><span class="line"></span><br><span class="line">步骤2：对表进行解锁操作：</span><br><span class="line"></span><br><span class="line"><span class="keyword">COMMIT</span>;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Thanks!❤</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://github.com/aqqje/Personal-repository/raw/master/aqqje/aplaywx.png" alt="梦不若星辰 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://github.com/aqqje/Personal-repository/raw/master/aqqje/appzfb.jpg" alt="梦不若星辰 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    梦不若星辰
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://aqqje.github.com/2017/12/05/oracle学习十/" title="oracle学习十">http://aqqje.github.com/2017/12/05/oracle学习十/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/oracle/" rel="tag"><i class="fa fa-tag"></i> oracle</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/05/eclipse主题设置/" rel="next" title="eclipse主题设置">
+                <i class="fa fa-chevron-left"></i> eclipse主题设置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/06/oracle学习十一/" rel="prev" title="oracle学习十一">
+                oracle学习十一 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg"
+                alt="梦不若星辰" />
+            
+              <p class="site-author-name" itemprop="name">梦不若星辰</p>
+              <p class="site-description motion-element" itemprop="description">记录生活的点点滴滴！</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">68</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/lover-time.html" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/aqqje" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=vMXW29HFjImNiPzNzZLf09E" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-pagelines"></i>
+                推荐阅读
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zhoujingen.cn/blog/ |" title="敏捷个人" target="_blank">敏捷个人</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="No-Sky.top" title="NO-SKY" target="_blank">NO-SKY</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://coolshell.cn/" title="酷壳" target="_blank">酷壳</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.read.org.cn/" title="战隼" target="_blank">战隼</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.mifengtd.cn/" title="褪墨" target="_blank">褪墨</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://mindhacks.cn/" title="刘未鹏" target="_blank">刘未鹏</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://ddimples.github.io/" title="程小黑" target="_blank">程小黑</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://blog.javachen.com/" title="javaChen" target="_blank">javaChen</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#笔记"><span class="nav-number">1.</span> <span class="nav-text">笔记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据操作"><span class="nav-number">2.</span> <span class="nav-text">数据操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入数据"><span class="nav-number">3.</span> <span class="nav-text">插入数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复制数据-该形式一次可以插入多行数据。"><span class="nav-number">4.</span> <span class="nav-text">复制数据:该形式一次可以插入多行数据。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库事务"><span class="nav-number">5.</span> <span class="nav-text">数据库事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库事务的概念"><span class="nav-number">6.</span> <span class="nav-text">数据库事务的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库事务的应用"><span class="nav-number">7.</span> <span class="nav-text">数据库事务的应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表的锁定【了解】"><span class="nav-number">8.</span> <span class="nav-text">表的锁定【了解】</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#锁的概念"><span class="nav-number">9.</span> <span class="nav-text">锁的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#隐式锁和显式锁"><span class="nav-number">10.</span> <span class="nav-text">隐式锁和显式锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#锁定行"><span class="nav-number">11.</span> <span class="nav-text">锁定行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#锁定表"><span class="nav-number">12.</span> <span class="nav-text">锁定表</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">梦不若星辰</span>
+
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://aqqje.github.com/2017/12/05/oracle学习十/';
+          this.page.identifier = '2017/12/05/oracle学习十/';
+          this.page.title = 'oracle学习十';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cytkDK9yb';
+      var conf = '26dd319189ed255e8b68964a66d7cd40';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
+  undefined
+  <!--点击爆炸效果 -->
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({});</script></body>
+</html>

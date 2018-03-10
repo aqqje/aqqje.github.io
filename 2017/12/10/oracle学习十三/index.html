@@ -1,0 +1,2075 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg?v=5.1.4">
+
+
+  <link rel="mask-icon" href="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="oracle," />
+
+
+
+
+
+  <link rel="alternate" href="/lover-time.html" title="aqqje's note" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="此文章是oracle学习系例第十三章，主要是用来复习和巩固在课堂学习的知识！">
+<meta name="keywords" content="oracle">
+<meta property="og:type" content="article">
+<meta property="og:title" content="oracle学习十三">
+<meta property="og:url" content="http://aqqje.github.com/2017/12/10/oracle学习十三/index.html">
+<meta property="og:site_name" content="aqqje&#39;s note">
+<meta property="og:description" content="此文章是oracle学习系例第十三章，主要是用来复习和巩固在课堂学习的知识！">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://github.com/aqqje/Personal-repository/raw/master/images/oracle1.jpg">
+<meta property="og:image" content="https://github.com/aqqje/Personal-repository/raw/master/images/oracle17.png">
+<meta property="og:image" content="https://github.com/aqqje/Personal-repository/raw/master/images/oracle18.png">
+<meta property="og:image" content="https://github.com/aqqje/Personal-repository/raw/master/images/oracle18.png">
+<meta property="og:image" content="https://github.com/aqqje/Personal-repository/raw/master/images/oracle20.png">
+<meta property="og:image" content="https://github.com/aqqje/Personal-repository/raw/master/images/oracle20.png">
+<meta property="og:updated_time" content="2018-02-25T04:49:18.832Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="oracle学习十三">
+<meta name="twitter:description" content="此文章是oracle学习系例第十三章，主要是用来复习和巩固在课堂学习的知识！">
+<meta name="twitter:image" content="https://github.com/aqqje/Personal-repository/raw/master/images/oracle1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+  <link rel="canonical" href="http://aqqje.github.com/2017/12/10/oracle学习十三/"/>
+
+
+
+
+
+  <title>oracle学习十三 | aqqje's note</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?777e0089fe26d63f9837de61308deecc";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">aqqje's note</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">相见亦无事，不遇长相思！</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-photos">
+          <a href="/photos/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-camera"></i> <br />
+            
+            photos
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+	  <!-- 自定义High一下的功能 -->
+      <li class="menu-item"> <a title="High一下" href='javascript:(
+    /*
+     * Copyright (C) 2016 Never_yu (Neveryu.github.io) <React.dong.yu@gmail.com>
+     * Sina Weibo (http://weibo.com/Neveryu)
+     *
+     * Licensed under the Apache License, Version 2.0 (the "License");
+     * you may not use this file except in compliance with the License.
+     * You may obtain a copy of the License at
+     *
+     *      http://www.apache.org/licenses/LICENSE-2.0
+     *
+     * Unless required by applicable law or agreed to in writing, software
+     * distributed under the License is distributed on an "AS IS" BASIS,
+     * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     * See the License for the specific language governing permissions and
+     * limitations under the License.
+     */
+    function go() {
+
+
+    var songs = [
+                "http://bdyun.65dj.com:8090/2015/06/28/84791C997D8C55023DAD0D5690E48C28/%D1%A6%D6%AE%C7%AB%20-%20%D1%DD%D4%B1.mp3",
+                "http://music.163.com/song/media/outer/url?id=526464293.mp3",
+				"http://music.163.com/song/media/outer/url?id=191722.mp3",
+				"http://music.163.com/song/media/outer/url?id=516657140.mp3",
+				"http://music.163.com/song/media/outer/url?id=507502138.mp3",
+				"http://music.163.com/song/media/outer/url?id=167799.mp3",
+				"http://music.163.com/song/media/outer/url?id=233882.mp3",
+    ];
+
+    
+    function c() {
+        var e = document.createElement("link");
+        e.setAttribute("type", "text/css");
+        e.setAttribute("rel", "stylesheet");
+        e.setAttribute("href", f);
+        e.setAttribute("class", l);
+        document.body.appendChild(e)
+    }
+ 
+    function h() {
+        var e = document.getElementsByClassName(l);
+        for (var t = 0; t < e.length; t++) {
+            document.body.removeChild(e[t])
+        }
+    }
+ 
+    function p() {
+        var e = document.createElement("div");
+        e.setAttribute("class", a);
+        document.body.appendChild(e);
+        setTimeout(function() {
+            document.body.removeChild(e)
+        }, 100)
+    }
+ 
+    function d(e) {
+        return {
+            height : e.offsetHeight,
+            width : e.offsetWidth
+        }
+    }
+ 
+    function v(i) {
+        var s = d(i);
+        return s.height > e && s.height < n && s.width > t && s.width < r
+    }
+ 
+    function m(e) {
+        var t = e;
+        var n = 0;
+        while (!!t) {
+            n += t.offsetTop;
+            t = t.offsetParent
+        }
+        return n
+    }
+ 
+    function g() {
+        var e = document.documentElement;
+        if (!!window.innerWidth) {
+            return window.innerHeight
+        } else if (e && !isNaN(e.clientHeight)) {
+            return e.clientHeight
+        }
+        return 0
+    }
+ 
+    function y() {
+        if (window.pageYOffset) {
+            return window.pageYOffset
+        }
+        return Math.max(document.documentElement.scrollTop, document.body.scrollTop)
+    }
+ 
+    function E(e) {
+        var t = m(e);
+        return t >= w && t <= b + w
+    }
+
+    function S() {
+        var e = document.getElementById("audio_element_id");
+        if(e != null){
+            var index = parseInt(e.getAttribute("curSongIndex"));
+            if(index > songs.length - 2) {
+                index = 0;
+            } else {
+                index++;
+            }
+            e.setAttribute("curSongIndex", index);
+            N();
+        }
+
+        e.src = i;
+        e.play()
+    }
+ 
+    function x(e) {
+        e.className += " " + s + " " + o
+    }
+ 
+    function T(e) {
+        e.className += " " + s + " " + u[Math.floor(Math.random() * u.length)]
+    }
+ 
+    function N() {
+        var e = document.getElementsByClassName(s);
+        var t = new RegExp("\\b" + s + "\\b");
+        for (var n = 0; n < e.length; ) {
+            e[n].className = e[n].className.replace(t, "")
+        }
+    }
+
+    function initAudioEle() {
+        var e = document.getElementById("audio_element_id");
+        if(e === null){
+            e = document.createElement("audio");
+            e.setAttribute("class", l);
+            e.setAttribute("curSongIndex", 0);
+            e.id = "audio_element_id";
+            e.loop = false;
+            e.bgcolor = 0;
+            e.addEventListener("canplay", function() {
+            setTimeout(function() {
+                x(k)
+            }, 500);
+            setTimeout(function() {
+                N();
+                p();
+                for (var e = 0; e < O.length; e++) {
+                    T(O[e])
+                }
+            }, 15500)
+        }, true);
+        e.addEventListener("ended", function() {
+            N();
+            h();
+            go();
+        }, true);
+        e.innerHTML = " <p>If you are reading this, it is because your browser does not support the audio element. We recommend that you get a new browser.</p> <p>";
+        document.body.appendChild(e);
+        }
+    }
+    
+    initAudioEle();
+    var e = 30;
+    var t = 30;
+    var n = 350;
+    var r = 350;
+
+    var curSongIndex = parseInt(document.getElementById("audio_element_id").getAttribute("curSongIndex"));
+    var i = songs[curSongIndex];
+    
+    var s = "mw-harlem_shake_me";
+    var o = "im_first";
+    var u = ["im_drunk", "im_baked", "im_trippin", "im_blown"];
+    var a = "mw-strobe_light";
+
+    /* harlem-shake-style.css，替换成你的位置，也可以直接使用：//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css */
+    var f = "//s3.amazonaws.com/moovweb-marketing/playground/harlem-shake-style.css";
+    
+    var l = "mw_added_css";
+    var b = g();
+    var w = y();
+    var C = document.getElementsByTagName("*");
+    var k = null;
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            if (E(A)) {
+                k = A;
+                break
+            }
+        }
+    }
+    if (A === null) {
+        console.warn("Could not find a node of the right size. Please try a different page.");
+        return
+    }
+    c();
+    S();
+    var O = [];
+    for (var L = 0; L < C.length; L++) {
+        var A = C[L];
+        if (v(A)) {
+            O.push(A)
+        }
+    }
+    })()'><i class="menu-item-icon fa fa-music fa-fw"></i>High一下</a> </li>
+      <!-- end High一下 -->
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aqqje.github.com/2017/12/10/oracle学习十三/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="梦不若星辰">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="aqqje's note">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">oracle学习十三</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-10T19:21:27+08:00">
+                2017-12-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/12/10/oracle学习十三/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/12/10/oracle学习十三/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <div class="note info"><p><img src="https://github.com/aqqje/Personal-repository/raw/master/images/oracle1.jpg" alt="" title="oracle1"><br></p>
+<ul>
+<li>此文章是oracle学习系例第十三章，主要是用来复习和巩固在课堂学习的知识！</li>
+</ul></div>
+<div class="note danger"><a id="more"></a></div>
+<hr>
+<blockquote class="blockquote-center"><h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><h2 id="IF语句"><a href="#IF语句" class="headerlink" title="IF语句"></a>IF语句</h2><p>1、IF-THEN-END IF形式</p>
+undefined
+<p>2、IF-THEN-ELSE-END IF形式</p>
+undefined
+<p>3．IF-THEN-ELSIF-ELSE-END IF形式</p>
+undefined
+<h2 id="CASE语句"><a href="#CASE语句" class="headerlink" title="CASE语句"></a>CASE语句</h2><p>1．基本CASE结构</p>
+undefined
+<p>2.搜索CASE结构</p>
+undefined
+<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><p>1．基本LOOP循环</p>
+undefined
+<p>2.FOR LOOP循环</p>
+<ul>
+<li>FOR循环是固定次数循环，格式如下：</li>
+</ul>
+undefined
+<p>注：循环控制变量是隐含定义的，不需要声明。</p>
+<p>下限和上限用于指明循环次数。正常情况下循环控制变量的取值由下限到上限递增，REVERSE关键字表示循环控制变量的取值由上限到下限递减。</p>
+<p>3．WHILE LOOP循环   </p>
+undefined
+<h2 id="游标"><a href="#游标" class="headerlink" title="游标"></a>游标</h2><h2 id="游标概念"><a href="#游标概念" class="headerlink" title="游标概念"></a>游标概念</h2><p>   游标是SQL的一个内存工作区，由系统或用户以变量的形式定义。游标的作用就是用于临时存储从数据库中提取的数据块。在某些情况下，需要把数据从存放在磁盘的表中调到计算机内存中进行处理，最后将处理结果显示出来或最终写回数据库。这样数据处理的速度才会提高，否则频繁的磁盘数据交换会降低效率。</p>
+<p>游标有两种类型：显式游标和隐式游标。</p>
+<p>在前述程序中用到的SELECT…INTO…查询语句，一次只能从数据库中     提取一行数据，系统都会使用一个隐式游标。</p>
+<p>显式游标对应一个返回结果为多行多列的SELECT语句。</p>
+<p>游标一旦打开，数据就从数据库中传送到游标变量中，然后应用程序再从游标变量中分解出需要的数据，并进行处理。</p>
+<h2 id="隐式游标属性"><a href="#隐式游标属性" class="headerlink" title="隐式游标属性"></a>隐式游标属性</h2><table>
+<thead>
+<tr>
+<th>隐式游标的属性</th>
+<th>返回值类型</th>
+<th>意    义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SQL%ROWCOUNT</td>
+<td>整型</td>
+<td>代表DML语句成功执行的数据行数</td>
+</tr>
+<tr>
+<td>SQL%FOUND</td>
+<td>布尔型</td>
+<td>值为TRUE代表插入、删除、更新或单行查询操作成功</td>
+</tr>
+<tr>
+<td>SQL%NOTFOUND</td>
+<td>布尔型</td>
+<td>与SQL%FOUND属性返回值相反</td>
+</tr>
+<tr>
+<td>SQL%ISOPEN</td>
+<td>布尔型</td>
+<td>DML执行过程中为真，结束后为假</td>
+</tr>
+</tbody>
+</table>
+<p>如：使用隐式游标的属性，判断对雇员工资的修改是否成功。</p>
+<p>步骤1：输入和运行以下程序：</p>
+undefined
+<h2 id="显式游标"><a href="#显式游标" class="headerlink" title="显式游标"></a>显式游标</h2><p>游标的使用分成以下4个步骤。<br>a．声明游标</p>
+<p>在DECLEAR部分按以下格式声明游标：</p>
+undefined
+<p>参数是可选部分，所定义的参数可以出现在SELECT语句的WHERE子句中。如果定义了参数，则必须在打开游标时传递相应的实际参数。</p>
+<p>b.打开游标        在可执行部分，按以下格式打开游标：</p>
+undefined
+<p>打开游标时，SELECT语句的查询结果就被传送到了游标工作区。</p>
+<p>c.提取数据</p>
+<p>在可执行部分，按以下格式将游标工作区中的数据取到变量中。提取操作必须在打开游标之后进行。</p>
+undefined
+<p>游标打开后有一个指针指向数据区，FETCH语句一次返回指针所指的一行数据，要返回多行需重复执行，可以使用循环语句来实现。控制循环可以通过判断游标的属性来进行。<br>  定义记录变量的方法如下：</p>
+undefined
+<p>d.关闭游标</p>
+undefined
+<p>显式游标打开后，必须显式地关闭。游标一旦关闭，游标占用的资源就被释放，游标变成无效，必须重新打开才能使用。</p>
+<p>【例1】 用游标提取emp表中7788雇员的名称和职务。</p>
+undefined
+<p>【例2】  用游标提取emp表中7788雇员的姓名、职务和工资。</p>
+undefined
+<p>【例3】  显示工资最高的前3名雇员的名称和工资。</p>
+undefined
+<h2 id="游标循环（重点）"><a href="#游标循环（重点）" class="headerlink" title="游标循环（重点）"></a>游标循环（重点）</h2><p>方法一：使用特殊的FOR循环形式显示全部雇员的编号和名称(省略掉定义记录变量、打开游标、提取数据、关闭游标)。</p>
+undefined
+<p>方法二：最简单方式</p>
+undefined
+<h2 id="利用游标属性做循环条件"><a href="#利用游标属性做循环条件" class="headerlink" title="利用游标属性做循环条件"></a>利用游标属性做循环条件</h2><p>【训练1】  使用游标的属性练习。</p>
+undefined
+<h2 id="PL-SQL的基本构成"><a href="#PL-SQL的基本构成" class="headerlink" title="PL/SQL的基本构成"></a>PL/SQL的基本构成</h2><ul>
+<li><p>PL/SQL语言是SQL语言的扩展，具有为程序开发而设计的特性，如数据封装、异常处理、面向对象等特性。PL/SQL是嵌入到Oracle服务器和开发工具中的，所以具有很高的执行效率和同Oracle数据库的完美结合。在PL/SQL模块中可以使用查询语句和数据操纵语句(即进行DML操作)，这样就可以编写具有数据库事务处理功能的模块。</p>
+</li>
+<li><p>至于数据定义(DDL)和数据控制(DCL)命令的处理，需要通过Oracle提供的特殊的DBMS_SQL包来进行。PL/SQL还可以用来编写过程、函数、包及数据库触发器。过程和函数也称为子程序，在定义时要给出相应的过程名和函数名。它们可以存储在数据库中成为存储过程和存储函数，并可以由程序来调用，它们在结构上同程序模块类似。</p>
+</li>
+<li><p>PL/SQL过程化结构的特点是：可将逻辑上相关的语句组织在一个程序块内；通过嵌入或调用子块，构造功能强大的程序；可将一个复杂的问题分解成为一组便于管理、定义和实现的小块。</p>
+</li>
+</ul>
+<h2 id="PL-SQL块结构和基本语法要求"><a href="#PL-SQL块结构和基本语法要求" class="headerlink" title="PL/SQL块结构和基本语法要求"></a>PL/SQL块结构和基本语法要求</h2><p>PL/SQL程序的基本单元是块(BLOCK)，块就是实现一定功能的逻辑模块。一个PL/SQL程序由一个或多个块组成。块有固定的结构，也可以嵌套。一个块可以包括三个部分，每个部分由一个关键字标识。</p>
+<p>块中各部分的作用解释如下：</p>
+<pre><code>(1)  DECLARE：声明部分标志。
+(2)  BEGIN：可执行部分标志。
+(3)  EXCEPTION：异常处理部分标志。
+(4)  END；：程序结束标志。
+</code></pre><h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><ul>
+<li><p>使用函数DBMS_OUTPUT.PUT_LINE显示输出结果。</p>
+</li>
+<li><p>DBMS_OUTPUT是Oracle提供的包，该包有如下三个用于输出的函数，用于显示PL/SQL程序模块的输出信息。</p>
+</li>
+</ul>
+<p>第一种形式：</p>
+undefined
+<p>用于输出字符串，但不换行，括号中的参数是要输出的字符串表达式。</p>
+<p>第二种形式：</p>
+undefined
+<p>用于输出一行字符串信息，并换行，括号中的参数是要输出的字符串表达式。 </p>
+<p>第三种形式：</p>
+undefined
+<p>用来输出一个换行，没有参数。调用函数时，在包名后面用一个点“.”和函数名分隔，表示隶属关系。 </p>
+<p>要使用该方法显示输出数据，在SQL*Plus环境下要先执行一次如下的环境设置命令：</p>
+undefined
+<p>用来打开DBMS_OUTPUT.PUT_LINE函数的屏幕输出功能，系统默认状态是OFF。其中，n表示输出缓冲区的大小。n的范围在2000～1 000 000之间，默认为2000。如果输出内容较多，需要使用SIZE n来设置较大的输出缓冲区。</p>
+<p>在PL/SQL模块中可以使用查询语句和数据操纵语句(即进行DML操作)，所以PL/SQL程序是同SQL语言紧密结合在一起的。在PL/SQL程序中，最常见的是使用SELECT语句从数据库中获取信息，同直接执行SELECT语句不同，在程序中的SELECT语句总是和INTO相配合，INTO后跟用于接收查询结果的变量，形式如下：</p>
+undefined
+<p>注意：接收查询结果的变量类型、顺序和个数同SELECT语句的字段的类型、顺序和个数应该完全一致。并且SELECT语句返回的数据必须是一行，否则将引发系统错误。当程序要接收返回的多行结果时，可以采用后面介绍的游标的方法。</p>
+<p>使用INSERT、DELETE和UPDATE的语法没有变化，但在程序中要注意判断语句执行的状态，并使用COMMIT或ROLLBACK进行事务处理。</p>
+<p>【训练1】  查询雇员编号为7788的雇员姓名和工资。</p>
+<p>步骤1：用SCOTT账户登录SQL*Plus。</p>
+<p>步骤2：在输入区输入以下程序：</p>
+undefined
+<p>步骤3：按执行按钮或F5快捷键执行程序。</p>
+<p>以上程序的作用是，查询雇员编号为7788的雇员姓名和工资，然后显示输出。这种方法同直接在SQL环境下执行SELECT语句显示雇员的姓名和工资比较，程序变得更复杂。那么两者究竟有什么区别呢？SQL查询的方法，只限于SQL环境，并且输出的格式基本上是固定的。而程序通过把数据取到变量中，可以进行复杂的处理，完成SQL语句不能实现的功能，并通过多种方式输出。</p>
+<p>“–”是注释符号，后边是程序的注释部分。该部分不编译执行，所以在输入程序时可以省略。/<em>……</em>/中间也是注释部分，同“–”注释方法不同，它可以跨越多行进行注释。</p>
+<p>PL/SQL程序的可执行语句、SQL语句和END结束标识都要以分号结束。</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
+<li>量的基本数据类型同SQL部分的字段数据类型相一致，但是也有不同</li>
+</ul>
+<p>变量的数据类型:<br></p>
+<p><img src="https://github.com/aqqje/Personal-repository/raw/master/images/oracle17.png" alt="" title="oracle17"><br></p>
+<p><img src="https://github.com/aqqje/Personal-repository/raw/master/images/oracle18.png" alt="" title="oracle18"><br></p>
+<p>LOB数据类型可以存储视频、音频或图片，支持随机访问，存储的数据可以位于数据库内或数据库外，具体有四种类型：BFILE、BLOB、CLOB、NCLOB。但是操纵大对象需要使用Oracle提供的DBMS_LOB包。</p>
+<h2 id="变量定义"><a href="#变量定义" class="headerlink" title="变量定义"></a>变量定义</h2><ul>
+<li>变量定义:</li>
+</ul>
+<p>变量的作用是用来存储数据，可以在过程语句中使用。</p>
+<p>变量在声明部分可以进行初始化，即赋予初值。   </p>
+<ul>
+<li>变量的命名规则:</li>
+</ul>
+<p>变量名不要和在程序中引用的字段名相重，如果相重，变量名会被当作列名来使用。</p>
+<ul>
+<li>变量的作用范围是在定义此变量的程序范围内，如果程序中包含子块，则变量在子块中也有效。但在子块中定义的变量，仅在定义变量的子块中有效，在主程序中无效。</li>
+</ul>
+<p>【训练1】  变量的定义和初始化。</p>
+<p>输入和运行以下程序：</p>
+undefined
+<h2 id="根据表的字段定义变量"><a href="#根据表的字段定义变量" class="headerlink" title="根据表的字段定义变量"></a>根据表的字段定义变量</h2><p>变量的声明还可以根据数据库表的字段进行定义或根据已经定义的变量进行定义。</p>
+<p>【训练2】  根据表的字段定义变量。</p>
+<p>输入并执行以下程序：</p>
+undefined
+<p>说明：变量v_ename是根据表emp的ename字段定义的，两者的数据类型总是一致的。</p>
+<p>如果我们根据数据库的字段定义了某一变量，后来数据库的字段数据类型又进行了修改，那么程序中的该变量的定义也自动使用新的数据类型。使用该种变量定义方法，变量的数据类型和大小是在编译执行时决定的，这为书写和维护程序提供了很大的便利。</p>
+<h2 id="结合变量的定义和使用"><a href="#结合变量的定义和使用" class="headerlink" title="结合变量的定义和使用"></a>结合变量的定义和使用</h2><p>我们还可以定义SQL<em>Plus环境下使用的变量，称为结合变量。结合变量也可以在程序中使用，该变量是在整个SQL</em>Plus环境下有效的变量，在退出SQL<em>Plus之前始终有效，所以可以使用该变量在不同的程序之间传递信息。结合变量不是由程序定义的，而是使用系统命令VARIABLE定义的。在SQL</em>Plus环境下显示该变量要用系统的PRINT命令。</p>
+<p>【训练3】  定义并使用结合变量。</p>
+<p>步骤1：输入和执行下列命令，定义结合变量g_ename：</p>
+undefined
+<p>步骤2：输入和执行下列程序：</p>
+undefined
+<p>步骤3：重新执行程序。</p>
+<p>输出结果：<br>       ?</p>
+<p>步骤4：程序结束后用命令显示结合变量的内容：</p>
+undefined
+<p>说明：g_ename为结合变量，可以在程序中引用或赋值，引用时在结合变量前面要加上“∶”。在程序结束后该变量的值仍然存在，其他程序可以继续引用。</p>
+<h2 id="记录变量的定义"><a href="#记录变量的定义" class="headerlink" title="记录变量的定义"></a>记录变量的定义</h2><p>还可以根据表或视图的一个记录中的所有字段定义变量，称为记录变量。记录变量包含若干个字段，在结构上同表的一个记录相同，定义方法是在表名后跟%ROWTYPE。记录变量的字段名就是表的字段名，数据类型也一致。</p>
+<p>【训练4】  根据表定义记录变量。</p>
+<p>输入并执行如下程序：</p>
+undefined
+<h2 id="TABLE类型变量"><a href="#TABLE类型变量" class="headerlink" title="TABLE类型变量"></a>TABLE类型变量</h2><p>在PL/SQL中可以定义TABLE类型的变量。 TABLE数据类型用来存储可变长度的一维数组数据，即数组中的数据动态地增长。要定义TABLE变量，需要先定义TABLE数据类型。通过使用下标来引用TABLE变量的元素。</p>
+<p>【训练5】  定义和使用TABLE变量：</p>
+undefined
+<p>说明：本例定义了长度为10的字符型TABLE变量，通过赋值语句为前五个元素赋值，最后输出第三个元素。</p>
+<h2 id="运算符和函数"><a href="#运算符和函数" class="headerlink" title="运算符和函数"></a>运算符和函数</h2><p>PL/SQL常见的运算符和函数包括以下方面(这里只做简单的总结，可参见SQL部分的例子)：</p>
+<pre><code>算术运算：加(+)、减(-)、乘(*)、除(/)、指数(**)。
+关系运算：小于(&lt;)、小于等于(&lt;=)、大于(&gt;)、大于等于(&gt;=)、等于(=)、不等于(!=或&lt;&gt;)。
+字符运算：连接(||)。
+逻辑运算：与(AND)、或(OR)、非(NOT)。
+</code></pre><p>特殊运算:<br></p>
+<p><img src="https://github.com/aqqje/Personal-repository/raw/master/images/oracle18.png" alt="" title="oracle18"><br></p>
+<p>IS NULL或IS NOT NULL用来判断运算对象的值是否为空，不能用“=”去判断。另外，对空值的运算也必须注意，对空值的算术和比较运算的结果都是空，但对空值可以进行连接运算，结果是另外一部分的字符串。例如：</p>
+undefined
+<h2 id="结构控制语句"><a href="#结构控制语句" class="headerlink" title="结构控制语句"></a>结构控制语句</h2><h2 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h2><ul>
+<li>分支结构是最基本的程序结构，分支结构由IF语句实现。</li>
+</ul>
+<h2 id="IF-THEN-END-IF形式"><a href="#IF-THEN-END-IF形式" class="headerlink" title="IF-THEN-END IF形式"></a>IF-THEN-END IF形式</h2><p>这是最简单的IF结构，练习如下： </p>
+<p>【训练1】  如果温度大于30℃，则显示“温度偏高”。</p>
+<p>输入并执行以下程序：</p>
+undefined
+<h2 id="IF-THEN-ELSE-END-IF形式"><a href="#IF-THEN-ELSE-END-IF形式" class="headerlink" title="IF-THEN-ELSE-END IF形式"></a>IF-THEN-ELSE-END IF形式</h2><p>这种形式的练习如下：</p>
+<p>【训练2】  根据性别，显示尊称。</p>
+<p>输入并执行以下程序：</p>
+undefined
+<p>说明：该程序根据性别显示尊称和问候，无论性别的值为何，总会有显示结果输出。如果V_sex的值不是‘男’和‘女’，那么输出结果会是什么？</p>
+<h2 id="IF-THEN-ELSIF-ELSE-END-IF形式"><a href="#IF-THEN-ELSIF-ELSE-END-IF形式" class="headerlink" title="IF-THEN-ELSIF-ELSE-END IF形式"></a>IF-THEN-ELSIF-ELSE-END IF形式</h2><p>这种形式的练习如下：</p>
+<p>【训练3】  根据雇员工资分级显示税金。</p>
+<p>输入并运行以下程序：</p>
+undefined
+<h2 id="选择结构"><a href="#选择结构" class="headerlink" title="选择结构"></a>选择结构</h2><p>CASE语句适用于分情况的多分支处理，可有以下三种用法。<br>1．基本CASE结构</p>
+<p>2．表达式结构CASE语句<br><br>在Oracle中，CASE结构还能以赋值表达式的形式出现，它根据选择变量的值求得不同的结果。</p>
+<p>3．搜索CASE结构<br><br>Oracle还提供了一种搜索CASE结构，它没有选择变量，直接判断条件表达式的值，根据条件表达式决定转向。</p>
+<h2 id="基本CASE结构"><a href="#基本CASE结构" class="headerlink" title="基本CASE结构"></a>基本CASE结构</h2><p>训练1】  使用CASE结构实现职务转换。</p>
+<p>输入并执行程序：</p>
+undefined
+<p>说明：以上实例检索雇员7788的职务，通过CASE结构转换成中文输出。</p>
+<h2 id="表达式结构CASE语句"><a href="#表达式结构CASE语句" class="headerlink" title="表达式结构CASE语句"></a>表达式结构CASE语句</h2><p>【训练2】  使用CASE的表达式结构。</p>
+undefined
+<p>说明：该CASE表达式通过判断变量v_grade的值，对变量V_result赋予不同的值。</p>
+<h2 id="搜索CASE结构"><a href="#搜索CASE结构" class="headerlink" title="搜索CASE结构"></a>搜索CASE结构</h2><p>【训练3】  使用CASE的搜索结构。</p>
+undefined
+<h2 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h2><p>循环结构是最重要的程序控制结构，用来控制反复执行一段程序。比如我们要进行累加，则可以通过适当的循环程序实现。PL/SQL循环结构可划分为以下3种：</p>
+<p>1.基本LOOP循环。<br><br>EXIT用于在循环过程中退出循环，WHEN用于定义EXIT的退出条件。如果没有WHEN条件，遇到EXIT语句则无条件退出循环。</p>
+<p>2.FOR LOOP循环。<br><br> FOR循环是固定次数循环，格式如下：</p>
+undefined
+<p>循环控制变量是隐含定义的，不需要声明。</p>
+<p>下限和上限用于指明循环次数。正常情况下循环控制变量的取值由下限到上限递增，REVERSE关键字表示循环控制变量的取值由上限到下限递减。</p>
+<p>3.WHILE LOOP循环。</p>
+<p>多重循环</p>
+<h2 id="基本LOOP循环"><a href="#基本LOOP循环" class="headerlink" title="基本LOOP循环"></a>基本LOOP循环</h2><p>【训练1】　求：1２+3２+5２+…+15２ 的值。</p>
+<p>输入并执行以下程序：</p>
+undefined
+<p>说明：基本循环一定要使用EXIT退出，否则就会成为死循环。</p>
+<p>【训练2】  用FOR循环输出图形。</p>
+undefined
+<p>说明：该程序在循环中使用了循环控制变量I，该变量隐含定义。在每次循环中根据循环控制变量I的值，使用RPAD函数控制显示相应个数的“*”。</p>
+<p>【练习2】为以上程序增加REVERSE关键字，观察执行结果。</p>
+<p>【训练3】  输出一个空心三角形。</p>
+undefined
+<p>说明：该实例采用循环和IF结构相结合，对第1行和第9行(I=1 OR I=9)执行同样的输出语句，其他行执行另外的输出语句。</p>
+<h2 id="WHILE-LOOP循环"><a href="#WHILE-LOOP循环" class="headerlink" title="WHILE LOOP循环"></a>WHILE LOOP循环</h2><p>【训练3】　使用WHILE 循环向emp表连续插入5个记录。</p>
+<p>步骤1：执行下面的程序：</p>
+undefined
+<p>步骤2：显示插入的记录：</p>
+undefined
+<p>步骤3：删除插入的记录：</p>
+undefined
+<h2 id="多重循环-了解"><a href="#多重循环-了解" class="headerlink" title="多重循环(了解)"></a>多重循环(了解)</h2><p>循环可以嵌套，以下是一个二重循环的练习。</p>
+<p>【训练4】　使用二重循环求1！+2！+…+10！的值。</p>
+<p>步骤1：第1种算法：</p>
+undefined
+<p>步骤2：第2种算法：</p>
+undefined
+<h2 id="阶段训练"><a href="#阶段训练" class="headerlink" title="阶段训练"></a>阶段训练</h2><p>训练1】  插入雇员，如果雇员已经存在，则输出提示信息。</p>
+undefined
+<p>说明：在本程序中，使用了一个技巧来判断一个雇员是否存在。如果一个雇员不存在，那么使用SELECT…INTO来获取雇员信息就会失败，因为SELECT…INTO形式要求查询必须返回一行。但如果使用COUNT统计查询，返回满足条件的雇员人数，则该查询总是返回一行，所以任何情况都不会失败。COUNT返回的统计人数为0说明雇员不存在，返回的统计人数为1说明雇员存在，返回的统计人数大于1说明有多个满足条件的雇员存在。本例在雇员不存在时进行插入操作，如果雇员已经存在则不进行插入。</p>
+<p>【训练2】  输出由符号“*”构成的正弦曲线的一个周期(0～360°)。</p>
+undefined
+<p>说明：在本程序中使用到了固定次数的循环以及SIN和LPAD函数，通过正确地设置步长、幅度和位移的参数，在屏幕上可正确地显示图形。</p>
+<h2 id="游标的概念"><a href="#游标的概念" class="headerlink" title="游标的概念"></a>游标的概念</h2><p>游标是SQL的一个内存工作区，由系统或用户以变量的形式定义。游标的作用就是用于临时存储从数据库中提取的数据块。在某些情况下，需要把数据从存放在磁盘的表中调到计算机内存中进行处理，最后将处理结果显示出来或最终写回数据库。这样数据处理的速度才会提高，否则频繁的磁盘数据交换会降低效率。</p>
+<p>游标有两种类型：显式游标和隐式游标。</p>
+<p> 在前述程序中用到的SELECT…INTO…查询语句，一次只能从数据库中     提取一行数据，系统都会使用一个隐式游标。</p>
+<p>显式游标对应一个返回结果为多行多列的SELECT语句。</p>
+<p>游标一旦打开，数据就从数据库中传送到游标变量中，然后应用程序再从游标变量中分解出需要的数据，并进行处理。</p>
+<h2 id="隐式游标"><a href="#隐式游标" class="headerlink" title="隐式游标"></a>隐式游标</h2><p>如前所述，DML操作和单行SELECT语句会使用隐式游标，它们是：</p>
+<pre><code>* 插入操作：INSERT。
+* 更新操作：UPDATE。
+* 删除操作：DELETE。
+* 单行查询操作：SELECT ... INTO ...。
+</code></pre><p>当系统使用一个隐式游标时，可以通过隐式游标的属性来了解操作的状态和结果，进而控制程序的流程。</p>
+<p>通过SQL游标名总是只能访问前一个DML操作或单行SELECT操作的游标属性。所以通常在刚刚执行完操作之后，立即使用SQL游标名来访问属性。游标的属性有四种</p>
+<p>隐式游标属性：</p>
+<p><img src="https://github.com/aqqje/Personal-repository/raw/master/images/oracle20.png" alt="" title="oracle20"></p>
+<p>【训练1】　使用隐式游标的属性，判断对雇员工资的修改是否成功。</p>
+<p>步骤1：输入和运行以下程序：</p>
+undefined
+<p>步骤2：将雇员编号1234改为7788，重新执行以上程序：</p>
+<p>说明：本例中，通过SQL%FOUND属性判断修改是否成功，并给出相应信息。</p>
+<h2 id="显式游标-1"><a href="#显式游标-1" class="headerlink" title="显式游标"></a>显式游标</h2><h2 id="游标的定义和操作"><a href="#游标的定义和操作" class="headerlink" title="游标的定义和操作"></a>游标的定义和操作</h2><p>游标的使用分成以下4个步骤。</p>
+<p>1．声明游标</p>
+<p>在DECLEAR部分按以下格式声明游标：</p>
+undefined
+<p>参数是可选部分，所定义的参数可以出现在SELECT语句的WHERE子句中。如果定义了参数，则必须在打开游标时传递相应的实际参数。</p>
+<p>语句的查询结果就被传送到了游标工作区。SELECT语句是对表或视图的查询语句，甚至也可以是联合查询。可以带WHERE条件、ORDER BY或GROUP BY等子句，但不能使用INTO子句。在SELECT语句中可以使用在定义游标之前定义的变量。</p>
+<p>2．打开游标</p>
+<p>在可执行部分，按以下格式打开游标：</p>
+undefined
+<p>3．提取数据</p>
+<p>在可执行部分，按以下格式将游标工作区中的数据取到变量中。提取操作必须在打开游标之后进行。</p>
+undefined
+<p>游标打开后有一个指针指向数据区，FETCH语句一次返回指针所指的一行数据，要返回多行需重复执行，可以使用循环语句来实现。控制循环可以通过判断游标的属性来进行。</p>
+<p>下面对这两种格式进行说明：</p>
+<p>第一种格式中的变量名是用来从游标中接收数据的变量，需要事先定义。变量的个数和类型应与SELECT语句中的字段变量的个数和类型一致。</p>
+<p>第二种格式一次将一行数据取到记录变量中，需要使用%ROWTYPE事先定义记录变量，这种形式使用起来比较方便，不必分别定义和使用多个变量。</p>
+<p>定义记录变量的方法如下：</p>
+undefined
+<p>其中的表必须存在，游标名也必须先定义。</p>
+<p>4．关闭游标</p>
+undefined
+<p>显式游标打开后，必须显式地关闭。游标一旦关闭，游标占用的资源就被释放，游标变成无效，必须重新打开才能使用。</p>
+<p>以下是使用显式游标的一个简单练习。</p>
+<p>【训练1】  用游标提取emp表中7788雇员的名称和职务。</p>
+undefined
+<p>说明：该程序通过定义游标emp_cursor，提取并显示雇员7788的名称和职务。</p>
+<p>作为对以上例子的改进，在以下训练中采用了记录变量。</p>
+<p>【训练2】  用游标提取emp表中7788雇员的姓名、职务和工资。</p>
+undefined
+<p>说明：实例中使用记录变量来接收数据，记录变量由游标变量定义，需要出现在游标定义之后。</p>
+<p>注意：可通过以下形式获得记录变量的内容：</p>
+<p>记录变量名.字段名。</p>
+<p>【训练3】  显示工资最高的前3名雇员的名称和工资。</p>
+undefined
+<p>说明：该程序在游标定义中使用了ORDER BY子句进行排序，并使用循环语句来提取多行数据。</p>
+<p>##游标循环</p>
+<p>【训练1】  使用特殊的FOR循环形式显示全部雇员的编号和名称。</p>
+undefined
+<p>说明：可以看到该循环形式非常简单，隐含了记录变量的定义、游标的打开、提取和关闭过程。Emp_record为隐含定义的记录变量，循环的执行次数与游标取得的数据的行数相一致。</p>
+<p>【训练2】  另一种形式的游标循环。</p>
+undefined
+<p>说明：该种形式更为简单，省略了游标的定义，游标的SELECT查询语句在循环中直接出现。</p>
+<h2 id="显式游标属性"><a href="#显式游标属性" class="headerlink" title="显式游标属性"></a>显式游标属性</h2><p>虽然可以使用前面的形式获得游标数据，但是在游标定义以后使用它的一些属性来进行结构控制是一种更为灵活的方法</p>
+<p>标的属性:</p>
+<p><img src="https://github.com/aqqje/Personal-repository/raw/master/images/oracle20.png" alt="" title="oracle20"></p>
+<p>可按照以下形式取得游标的属性：</p>
+undefined
+<p>要判断游标emp_cursor是否处于打开状态，可以使用属性emp_cursor%ISOPEN。如果游标已经打开，则返回值为“真”，否则为“假”。具体可参照以下的训练。</p>
+<p>【训练1】  使用游标的属性练习。</p>
+undefined
+<p> 说明：本例使用emp_cursor%ISOPEN判断游标是否打开；使用emp_cursor%ROWCOUNT获得到目前为止FETCH语句返回的数据行数并输出；使用循环来获取数据，在循环体中使用FETCH语句；使用emp_cursor%NOTFOUND判断FETCH语句是否成功执行，当FETCH语句失败时说明数据已经取完，退出循环。</p>
+<p>【练习1】去掉OPEN emp_cursor;语句，重新执行以上程序。</p>
+<h2 id="游标参数的传递"><a href="#游标参数的传递" class="headerlink" title="游标参数的传递"></a>游标参数的传递</h2><p>【训练1】  带参数的游标。</p>
+undefined
+<p>说明：游标emp_cursor定义了两个参数：p_deptno代表部门编号，p_job代表职务。语句OPEN emp_cursor(10, ‘CLERK’)传递了两个参数值给游标，即部门为10、职务为CLERK，所以游标查询的内容是部门10的职务为CLERK的雇员。循环部分用于显示查询的内容。</p>
+<p>【练习1】修改Open语句的参数：部门号为20、职务为ANALYST，并重新执行。</p>
+<p>也可以通过变量向游标传递参数，但变量需要先于游标定义，并在游标打开之前赋值。对以上例子重新改动如下：</p>
+<p>【训练2】  通过变量传递参数给游标。</p>
+undefined
+<p>说明：该程序与前一程序实现相同的功能。</p>
+<h2 id="动态SELECT语句和动态游标的用法"><a href="#动态SELECT语句和动态游标的用法" class="headerlink" title="动态SELECT语句和动态游标的用法"></a>动态SELECT语句和动态游标的用法</h2><p>Oracle支持动态SELECT语句和动态游标，动态的方法大大扩展了程序设计的能力。</p>
+<p>对于查询结果为一行的SELECT语句，可以用动态生成查询语句字符串的方法，在程序执行阶段临时地生成并执行，语法是：</p>
+undefined
+<p>以下是一个动态生成SELECT语句的例子。</p>
+<p>【训练1】  动态SELECT查询。</p>
+undefined
+<p>说明：SELECT…INTO…语句存放在STR字符串中，通过EXECUTE语句执行。</p>
+<p>在变量声明部分定义的游标是静态的，不能在程序运行过程中修改。虽然可以通过参数传递来取得不同的数据，但还是有很大的局限性。通过采用动态游标，可以在程序运行阶段随时生成一个查询语句作为游标。要使用动态游标需要先定义一个游标类型，然后声明一个游标变量，游标对应的查询语句可以在程序的执行过程中动态地说明。</p>
+<p>定义游标类型的语句如下：</p>
+undefined
+<p>声明游标变量的语句如下：</p>
+undefined
+<p>在可执行部分可以如下形式打开一个动态游标：</p>
+undefined
+<p>【训练2】  按名字中包含的字母顺序分组显示雇员信息。</p>
+<p>输入并运行以下程序：</p>
+undefined
+<p>说明：使用了二重循环，在外循环体中，动态生成游标的SELECT语句，然后打开。通过语句<br>letter:=chr(ascii(letter)+1)可获得字母表中的下一个字母。</p>
+<h2 id="例题（一）"><a href="#例题（一）" class="headerlink" title="例题（一）"></a>例题（一）</h2><p>【训练1】  查询雇员编号为7788的雇员姓名和工资。</p>
+<p>步骤1：用SCOTT账户登录SQL*Plus。</p>
+<p>步骤2：在输入区输入以下程序：</p>
+undefined
+<p>步骤3：按执行按钮或F5快捷键执行程序。</p>
+<p>【训练2】  变量的定义和初始化。</p>
+<p>输入和运行以下程序：</p>
+undefined
+<p>【训练3】  根据表的字段定义变量。</p>
+<p>输入并执行以下程序：</p>
+undefined
+<p>【训练4】  定义并使用结合变量。<br>步骤1：输入和执行下列命令，定义结合变量g_ename：</p>
+undefined
+<p>步骤2：输入和执行下列程序：</p>
+undefined
+<p>步骤3：重新执行程序。</p>
+<p>步骤4：程序结束后用命令显示结合变量的内容：</p>
+undefined
+<p>【训练5】  根据表定义记录变量。</p>
+<p>输入并执行如下程序：</p>
+undefined
+<p>【训练6】  定义和使用TABLE变量：</p>
+undefined
+<p>【训练7】  如果温度大于30℃，则显示“温度偏高”。<br>输入并执行以下程序：</p>
+undefined
+<p>试修改温度的初值为25℃，重新执行，观察结果。</p>
+<p>【训练8】  根据性别，显示尊称。</p>
+<p>输入并执行以下程序：</p>
+undefined
+<p>【训练9】  根据雇员工资分级显示税金。</p>
+<p>输入并运行以下程序：</p>
+undefined
+<h2 id="例题（二）"><a href="#例题（二）" class="headerlink" title="例题（二）"></a>例题（二）</h2><p>【训练1】  使用CASE结构实现职务转换。</p>
+<p>输入并执行程序：</p>
+undefined
+<p>【训练2】  使用CASE的表达式结构。</p>
+undefined
+<p>【训练3】  使用CASE的搜索结构。</p>
+undefined
+<p>【训练4】　求：1２+3２+5２+…+15２ 的值。</p>
+<p>输入并执行以下程序：</p>
+undefined
+<p>【训练5】  用FOR循环输出图形。</p>
+undefined
+<p>【训练6】  输出一个空心三角形。</p>
+undefined
+<p>【训练7】　使用WHILE 循环向emp表连续插入5个记录。<br>步骤1：执行下面的程序：</p>
+undefined
+<p>步骤2：显示插入的记录：</p>
+undefined
+<p>步骤3：删除插入的记录：</p>
+undefined
+<p>【训练8】　使用二重循环求1！+2！+…+10！的值。</p>
+<p>步骤1：第1种算法：</p>
+undefined
+<p>步骤2：第2种算法：</p>
+undefined
+<p>【训练9】  插入雇员，如果雇员已经存在，则输出提示信息。</p>
+undefined
+<p>【训练10】  输出由符号“*”构成的正弦曲线的一个周期(0～360°)。</p>
+undefined
+<h2 id="例题（三）"><a href="#例题（三）" class="headerlink" title="## 例题（三）"></a>## 例题（三）</h2><p>【训练1】　使用隐式游标的属性，判断对雇员工资的修改是否成功。</p>
+<p>步骤1：输入和运行以下程序：</p>
+undefined
+<p>步骤2：将雇员编号1234改为7788，重新执行以上程序：</p>
+<p>【训练2】  用游标提取emp表中7788雇员的名称和职务。</p>
+undefined
+<p>【训练3】  用游标提取emp表中7788雇员的姓名、职务和工资。</p>
+undefined
+<p>【训练4】  显示工资最高的前3名雇员的名称和工资。</p>
+undefined
+<p>【训练5】  使用特殊的FOR循环形式显示全部雇员的编号和名称。</p>
+undefined
+<p>【训练6】  另一种形式的游标循环。</p>
+undefined
+<p>【训练7】  使用游标的属性练习。</p>
+undefined
+<p> 【训练8】  带参数的游标。</p>
+undefined
+<p>【训练9】  通过变量传递参数给游标。</p>
+undefined
+<p>【训练10】  动态SELECT查询。</p>
+undefined
+<p>【训练11】  按名字中包含的字母顺序分组显示雇员信息。</p>
+<p>输入并运行以下程序：</p>
+<pre><code class="sql"><span class="keyword">declare</span> 
+ <span class="keyword">type</span> cur_type <span class="keyword">is</span> <span class="keyword">ref</span> <span class="keyword">cursor</span>;
+ cur cur_type;<span class="comment">--声明为一个未绑定的游标</span>
+ rec scott.emp%rowtype;
+ str varchar2(50);
+ letter char:= 'A';
+<span class="keyword">begin</span>
+         <span class="keyword">loop</span>          
+          <span class="keyword">str</span>:= <span class="string">'select ename from emp where ename like ''%'</span>||letter||<span class="string">'%'''</span>;
+          open cur for str;<span class="comment">--打开游标变量方式1</span>
+          dbms_output.put_line('包含字母'||letter||'的名字：');
+          loop
+           fetch cur into rec.ename;
+           exit when cur%notfound;
+           dbms_output.put_line(rec.ename);
+<span class="keyword">end</span> <span class="keyword">loop</span>;
+  exit when letter='Z';
+  letter:=chr(ascii(letter)+1);
+ <span class="keyword">end</span> <span class="keyword">loop</span>;
+<span class="keyword">end</span>;
+</code></pre>
+</blockquote>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Thanks!❤</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://github.com/aqqje/Personal-repository/raw/master/aqqje/aplaywx.png" alt="梦不若星辰 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://github.com/aqqje/Personal-repository/raw/master/aqqje/appzfb.jpg" alt="梦不若星辰 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    梦不若星辰
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://aqqje.github.com/2017/12/10/oracle学习十三/" title="oracle学习十三">http://aqqje.github.com/2017/12/10/oracle学习十三/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/oracle/" rel="tag"><i class="fa fa-tag"></i> oracle</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/09/DW快捷键/" rel="next" title="DW快捷键">
+                <i class="fa fa-chevron-left"></i> DW快捷键
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/13/易错集(二)/" rel="prev" title="易错集二">
+                易错集二 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg"
+                alt="梦不若星辰" />
+            
+              <p class="site-author-name" itemprop="name">梦不若星辰</p>
+              <p class="site-description motion-element" itemprop="description">记录生活的点点滴滴！</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">68</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/lover-time.html" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/aqqje" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=vMXW29HFjImNiPzNzZLf09E" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-pagelines"></i>
+                推荐阅读
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.zhoujingen.cn/blog/ |" title="敏捷个人" target="_blank">敏捷个人</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="No-Sky.top" title="NO-SKY" target="_blank">NO-SKY</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://macshuo.com/" title="MacTalk" target="_blank">MacTalk</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://coolshell.cn/" title="酷壳" target="_blank">酷壳</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.read.org.cn/" title="战隼" target="_blank">战隼</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.mifengtd.cn/" title="褪墨" target="_blank">褪墨</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://mindhacks.cn/" title="刘未鹏" target="_blank">刘未鹏</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://ddimples.github.io/" title="程小黑" target="_blank">程小黑</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://blog.javachen.com/" title="javaChen" target="_blank">javaChen</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#笔记"><span class="nav-number">1.</span> <span class="nav-text">笔记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IF语句"><span class="nav-number">2.</span> <span class="nav-text">IF语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CASE语句"><span class="nav-number">3.</span> <span class="nav-text">CASE语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#循环"><span class="nav-number">4.</span> <span class="nav-text">循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#游标"><span class="nav-number">5.</span> <span class="nav-text">游标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#游标概念"><span class="nav-number">6.</span> <span class="nav-text">游标概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#隐式游标属性"><span class="nav-number">7.</span> <span class="nav-text">隐式游标属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显式游标"><span class="nav-number">8.</span> <span class="nav-text">显式游标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#游标循环（重点）"><span class="nav-number">9.</span> <span class="nav-text">游标循环（重点）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用游标属性做循环条件"><span class="nav-number">10.</span> <span class="nav-text">利用游标属性做循环条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PL-SQL的基本构成"><span class="nav-number">11.</span> <span class="nav-text">PL/SQL的基本构成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PL-SQL块结构和基本语法要求"><span class="nav-number">12.</span> <span class="nav-text">PL/SQL块结构和基本语法要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输出"><span class="nav-number">13.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型"><span class="nav-number">14.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量定义"><span class="nav-number">15.</span> <span class="nav-text">变量定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#根据表的字段定义变量"><span class="nav-number">16.</span> <span class="nav-text">根据表的字段定义变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结合变量的定义和使用"><span class="nav-number">17.</span> <span class="nav-text">结合变量的定义和使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#记录变量的定义"><span class="nav-number">18.</span> <span class="nav-text">记录变量的定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TABLE类型变量"><span class="nav-number">19.</span> <span class="nav-text">TABLE类型变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运算符和函数"><span class="nav-number">20.</span> <span class="nav-text">运算符和函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结构控制语句"><span class="nav-number">21.</span> <span class="nav-text">结构控制语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支结构"><span class="nav-number">22.</span> <span class="nav-text">分支结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IF-THEN-END-IF形式"><span class="nav-number">23.</span> <span class="nav-text">IF-THEN-END IF形式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IF-THEN-ELSE-END-IF形式"><span class="nav-number">24.</span> <span class="nav-text">IF-THEN-ELSE-END IF形式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IF-THEN-ELSIF-ELSE-END-IF形式"><span class="nav-number">25.</span> <span class="nav-text">IF-THEN-ELSIF-ELSE-END IF形式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择结构"><span class="nav-number">26.</span> <span class="nav-text">选择结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本CASE结构"><span class="nav-number">27.</span> <span class="nav-text">基本CASE结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表达式结构CASE语句"><span class="nav-number">28.</span> <span class="nav-text">表达式结构CASE语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搜索CASE结构"><span class="nav-number">29.</span> <span class="nav-text">搜索CASE结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#循环结构"><span class="nav-number">30.</span> <span class="nav-text">循环结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本LOOP循环"><span class="nav-number">31.</span> <span class="nav-text">基本LOOP循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WHILE-LOOP循环"><span class="nav-number">32.</span> <span class="nav-text">WHILE LOOP循环</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多重循环-了解"><span class="nav-number">33.</span> <span class="nav-text">多重循环(了解)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阶段训练"><span class="nav-number">34.</span> <span class="nav-text">阶段训练</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#游标的概念"><span class="nav-number">35.</span> <span class="nav-text">游标的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#隐式游标"><span class="nav-number">36.</span> <span class="nav-text">隐式游标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显式游标-1"><span class="nav-number">37.</span> <span class="nav-text">显式游标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#游标的定义和操作"><span class="nav-number">38.</span> <span class="nav-text">游标的定义和操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显式游标属性"><span class="nav-number">39.</span> <span class="nav-text">显式游标属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#游标参数的传递"><span class="nav-number">40.</span> <span class="nav-text">游标参数的传递</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态SELECT语句和动态游标的用法"><span class="nav-number">41.</span> <span class="nav-text">动态SELECT语句和动态游标的用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题（一）"><span class="nav-number">42.</span> <span class="nav-text">例题（一）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题（二）"><span class="nav-number">43.</span> <span class="nav-text">例题（二）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#例题（三）"><span class="nav-number">44.</span> <span class="nav-text">## 例题（三）</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">梦不若星辰</span>
+
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://aqqje.github.com/2017/12/10/oracle学习十三/';
+          this.page.identifier = '2017/12/10/oracle学习十三/';
+          this.page.title = 'oracle学习十三';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+  
+    <script type="text/javascript">
+    (function(){
+      var appid = 'cytkDK9yb';
+      var conf = '26dd319189ed255e8b68964a66d7cd40';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      if (width < 960) {
+      window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){
+        window.changyan.api.config({appid:appid,conf:conf})});
+      }
+    })();
+    </script>
+    <script type="text/javascript" src="https://assets.changyan.sohu.com/upload/plugins/plugins.count.js"></script>
+  
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
+  undefined
+  <!--点击爆炸效果 -->
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({});</script></body>
+</html>
