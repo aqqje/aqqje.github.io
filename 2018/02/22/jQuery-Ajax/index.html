@@ -705,7 +705,7 @@
 </ul>
 </li>
 </ul>
-<p>demo_test.txt:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;h2&gt;jQuery and AJAX is FUN!!!&lt;/h2&gt;</span><br><span class="line">&lt;p id=<span class="string">"p1"</span>&gt;This is some text <span class="keyword">in</span> a paragraph.&lt;<span class="regexp">/p&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>demo_test.txt:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;h2&gt;jQuery and AJAX is FUN!!!<span class="xml"><span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span></span><br><span class="line">&lt;p id=<span class="string">"p1"</span>&gt;This is some text <span class="keyword">in</span> a paragraph.&lt;<span class="regexp">/p&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>文件 “demo_test.txt” 的内容加载到指定的 <div> 元素中：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">$(document).ready(function()&#123;</span><br><span class="line">  $(&quot;button&quot;).click(function()&#123;</span><br><span class="line">    $(&quot;#div1&quot;).load(&quot;/statics/demosource/demo_test.txt&quot;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div></p>
 <p>把 “demo_test.txt” 文件中 id=”p1” 的元素的内容，加载到指定的 <div> 元素中：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  $(<span class="string">"button"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">"#div1"</span>).load(<span class="string">"/statics/demosource/demo_test.txt #p1"</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></div></p>
 <p> load() 方法完成后显示一个提示框。如果 load() 方法已成功，则显示”外部内容加载成功！”，而如果失败，则显示错误消息：</p>
@@ -944,7 +944,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">76</span>
+                  <span class="site-state-item-count">77</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -966,7 +966,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">37</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
