@@ -188,7 +188,7 @@
 <meta property="og:image" content="https://github.com/aqqje/Personal-repository/raw/master/cad/tz47.png">
 <meta property="og:image" content="https://github.com/aqqje/Personal-repository/raw/master/cad/tz46.png">
 <meta property="og:image" content="https://github.com/aqqje/Personal-repository/raw/master/cad/tz48.png">
-<meta property="og:updated_time" content="2018-02-25T04:49:19.222Z">
+<meta property="og:updated_time" content="2018-07-09T09:41:23.548Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="天正cad安装教程">
 <meta name="twitter:description" content="此章是关于天正建筑2014和autoCAD 2014的安装教程！">
@@ -841,6 +841,18 @@
 <li>出现以下界面说明你安装成功了！</li>
 </ul>
 <p><img src="https://github.com/aqqje/Personal-repository/raw/master/cad/tz48.png" alt="" title="tz48"><br></p>
+<h2 id="CAD-Error"><a href="#CAD-Error" class="headerlink" title="CAD Error"></a>CAD Error</h2><h1 id="问题一-cad安全系统-软件锁许可管理器-不起作用"><a href="#问题一-cad安全系统-软件锁许可管理器-不起作用" class="headerlink" title="问题一: cad安全系统 软件锁许可管理器 不起作用"></a>问题一: cad安全系统 软件锁许可管理器 不起作用</h1><ul>
+<li><p>解决方法：</p>
+<ol>
+<li>打开c:\programData\FLEXnet【这个文件夹是隐藏的,要把隐藏属性去了】</li>
+<li>删除文件 “FLEXnet” 中的<em>所有文件</em></li>
+<li>使用 win + r 打开快速启动窗口 –&gt; services.msc</li>
+<li>找到服务 “FlexNet licensing service” 启动,并设置属性为自动</li>
+<li>重启CAD</li>
+<li>重新激活（上文有激活方法）</li>
+</ol>
+</li>
+</ul>
 </blockquote>
 
       
@@ -1176,7 +1188,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#激活autoCAD-2014"><span class="nav-number">2.</span> <span class="nav-text">激活autoCAD 2014</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置autoCAD-2014-的信任"><span class="nav-number">3.</span> <span class="nav-text">设置autoCAD 2014 的信任</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装天正建筑2014"><span class="nav-number">4.</span> <span class="nav-text">安装天正建筑2014</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打补丁"><span class="nav-number">5.</span> <span class="nav-text">打补丁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#成功"><span class="nav-number">6.</span> <span class="nav-text">成功</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#激活autoCAD-2014"><span class="nav-number">2.</span> <span class="nav-text">激活autoCAD 2014</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置autoCAD-2014-的信任"><span class="nav-number">3.</span> <span class="nav-text">设置autoCAD 2014 的信任</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装天正建筑2014"><span class="nav-number">4.</span> <span class="nav-text">安装天正建筑2014</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#打补丁"><span class="nav-number">5.</span> <span class="nav-text">打补丁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#成功"><span class="nav-number">6.</span> <span class="nav-text">成功</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CAD-Error"><span class="nav-number">7.</span> <span class="nav-text">CAD Error</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题一-cad安全系统-软件锁许可管理器-不起作用"><span class="nav-number"></span> <span class="nav-text">问题一: cad安全系统 软件锁许可管理器 不起作用</span></a></div>
             
 
           </div>
