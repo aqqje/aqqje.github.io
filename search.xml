@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[【转】dockerDocker入门教程]]></title>
+    <title><![CDATA[dockerDocker入门教程]]></title>
     <url>%2F2018%2F09%2F05%2FDocker%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B%2F</url>
-    <content type="text"><![CDATA[转载dockerDocker入门教程 - 阮一峰]]></content>
+    <content type="text"><![CDATA[Docker 中国官方镜像加速 https://www.docker-cn.com/registry-mirror 其他教程dockerDocker入门教程 - 阮一峰]]></content>
       <tags>
         <tag>docker</tag>
       </tags>
