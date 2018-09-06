@@ -145,8 +145,12 @@
 <meta property="og:description" content="Redis 学习笔记一、简介1、LNoSQL非关系型数据库1not only sql, 是一种非关系型的数据存储，key/value键值对存储。现有Nosql DB 产品： Redis/MongoDB/Memcached/Hbase/Cassandra/ Tokyo Cabinet/Voldemort/Dynomite/Riak/ CouchDB/Hypertable/Flare/Tin/Ligh">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://aqqje.github.com/images/redis/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180815231718.png">
+<meta property="og:image" content="http://aqqje.github.com/images/redis/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180815232412.png">
 <meta property="og:image" content="c:/Users/ADMINI~1/AppData/Local/Temp/1534346808153.png">
-<meta property="og:updated_time" content="2018-09-06T04:19:13.314Z">
+<meta property="og:image" content="http://aqqje.github.com/images/redis/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180815233103.png">
+<meta property="og:image" content="http://aqqje.github.com/images/redis/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180815233252.png">
+<meta property="og:image" content="http://aqqje.github.com/images/redis/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180815233827.png">
+<meta property="og:updated_time" content="2018-09-06T04:23:09.762Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redis 学习笔记.md">
 <meta name="twitter:description" content="Redis 学习笔记一、简介1、LNoSQL非关系型数据库1not only sql, 是一种非关系型的数据存储，key/value键值对存储。现有Nosql DB 产品： Redis/MongoDB/Memcached/Hbase/Cassandra/ Tokyo Cabinet/Voldemort/Dynomite/Riak/ CouchDB/Hypertable/Flare/Tin/Ligh">
@@ -673,17 +677,17 @@
 <h2 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h2><h3 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h3><p> <a href="https://github.com/MicrosoftArchive/redis/releases" target="_blank" rel="noopener">【win7&amp;&amp;win10 】</a></p>
 <p><img src="/images/redis/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180815231718.png" alt=""></p>
 <h4 id="A、mis文件"><a href="#A、mis文件" class="headerlink" title="A、mis文件"></a>A、mis文件</h4><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">一路 next 即可</span><br></pre></td></tr></table></figure>
-<p>![]/images/redis/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180815232412.png)</p>
+<p><img src="/images/redis/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180815232412.png" alt=""></p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">测试</span><br></pre></td></tr></table></figure>
 <p><img src="C:\Users\ADMINI~1\AppData\Local\Temp\1534346808153.png" alt="1534346808153"></p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">设置为windows下的服务</span><br><span class="line"></span><br><span class="line">- redis-server --service-install redis.windows-service.conf --loglevel verbose</span><br></pre></td></tr></table></figure>
-<p>![]/images/redis/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180815233103.png)</p>
+<p><img src="/images/redis/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180815233103.png" alt=""></p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">观察服务列表</span><br></pre></td></tr></table></figure>
-<p>![]/images/redis/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180815233252.png)</p>
+<p><img src="/images/redis/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180815233252.png" alt=""></p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">完成</span><br></pre></td></tr></table></figure>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">常用的redis服务命令。</span><br><span class="line"></span><br><span class="line">卸载服务：redis-server --service-uninstall</span><br><span class="line"></span><br><span class="line">开启服务：redis-server --service-start</span><br><span class="line"></span><br><span class="line">停止服务：redis-server --service-stop</span><br></pre></td></tr></table></figure>
 <h4 id="B、zip文件"><a href="#B、zip文件" class="headerlink" title="B、zip文件"></a>B、zip文件</h4><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- 直接解压</span><br><span class="line"></span><br><span class="line">- 手动配置环境变量</span><br><span class="line"></span><br><span class="line">- 运行 cmd： redis-server.exe redis.windows.conf</span><br></pre></td></tr></table></figure>
-<p>![]/images/redis/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180815233827.png)</p>
+<p><img src="/images/redis/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20180815233827.png" alt=""></p>
 <figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">完成</span><br></pre></td></tr></table></figure>
 <h2 id="三、参考"><a href="#三、参考" class="headerlink" title="三、参考"></a>三、参考</h2><p><a href="https://www.cnblogs.com/sunxuchu/p/5463403.html" target="_blank" rel="noopener">参考【https://www.cnblogs.com/sunxuchu/p/5463403.html】</a></p>
 <p><a href="https://www.cnblogs.com/lezhifang/p/7027903.html" target="_blank" rel="noopener">参考【https://www.cnblogs.com/lezhifang/p/7027903.html】</a></p>
