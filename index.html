@@ -580,6 +580,146 @@
   
   
 
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aqqje.github.com/2019/04/03/mysql-error-1366-incorrect-string-value-xxxx/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="梦不若星辰">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="aqqje's note">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/03/mysql-error-1366-incorrect-string-value-xxxx/" itemprop="url">mysql-error:1366-incorrect string value:xxxx</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-03T23:51:02+08:00">
+                2019-04-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/03/mysql-error-1366-incorrect-string-value-xxxx/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2019/04/03/mysql-error-1366-incorrect-string-value-xxxx/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          问题:mysql-error:1366-incorrect string value:xxxx?1.解决:
+ALTER TABLE user CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+2.拓展1234567891011121314
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/04/03/mysql-error-1366-incorrect-string-value-xxxx/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
   <article class="post post-type-tags" itemscope itemtype="http://schema.org/Article">
   
   
@@ -1539,7 +1679,7 @@ Hyper Text Transfer Protocol 超文本传输协议
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aqqje.github.com/2019/02/12/HTTP-Response笔记/">
+    <link itemprop="mainEntityOfPage" href="http://aqqje.github.com/2019/02/12/mysql数据库类型/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="梦不若星辰">
@@ -1558,7 +1698,7 @@ Hyper Text Transfer Protocol 超文本传输协议
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/12/HTTP-Response笔记/" itemprop="url">response 笔记</a></h1>
+                <a class="post-title-link" href="/2019/02/12/mysql数据库类型/" itemprop="url">MySQL 数据类型 笔记</a></h1>
         
 
         <div class="post-meta">
@@ -1593,8 +1733,8 @@ Hyper Text Transfer Protocol 超文本传输协议
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/javaee/" itemprop="url" rel="index">
-                    <span itemprop="name">javaee</span>
+                  <a href="/categories/sql/" itemprop="url" rel="index">
+                    <span itemprop="name">sql</span>
                   </a>
                 </span>
 
@@ -1611,9 +1751,9 @@ Hyper Text Transfer Protocol 超文本传输协议
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/02/12/HTTP-Response笔记/#comments" itemprop="discussionUrl">
+                <a href="/2019/02/12/mysql数据库类型/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2019/02/12/HTTP-Response笔记/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2019/02/12/mysql数据库类型/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1643,11 +1783,38 @@ Hyper Text Transfer Protocol 超文本传输协议
       
         
           
-          response 笔记1. HTTP协议：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748A. 请求消息：客户端发送给服务器端的数据		* 数据格式：			1. 请求行			
+          MySQL 数据类型一、数值类型
+
+
+类型
+大小
+范围（有符号）
+范围（无符号）
+用途
+
+
+
+
+TINYINT
+1 字节
+(-128，127)
+(0，255)
+小整数值
+
+
+SMALLINT
+2 字节
+(-32 768，32 767)
+(0，65 535)
+大整数值
+
+
+MEDIUMINT
+3 字节
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/02/12/HTTP-Response笔记/#more" rel="contents">
+            <a class="btn" href="/2019/02/12/mysql数据库类型/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1858,7 +2025,7 @@ CAS����˾���һ��war��(\cas\cas-server-x.x.x-release\cas-se
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aqqje.github.com/2019/02/12/Tomcat笔记/">
+    <link itemprop="mainEntityOfPage" href="http://aqqje.github.com/2019/02/12/HTTP-Response笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="梦不若星辰">
@@ -1877,7 +2044,7 @@ CAS����˾���һ��war��(\cas\cas-server-x.x.x-release\cas-se
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/02/12/Tomcat笔记/" itemprop="url">Tomcat & Servlet 笔记</a></h1>
+                <a class="post-title-link" href="/2019/02/12/HTTP-Response笔记/" itemprop="url">response 笔记</a></h1>
         
 
         <div class="post-meta">
@@ -1912,8 +2079,8 @@ CAS����˾���һ��war��(\cas\cas-server-x.x.x-release\cas-se
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
+                  <a href="/categories/javaee/" itemprop="url" rel="index">
+                    <span itemprop="name">javaee</span>
                   </a>
                 </span>
 
@@ -1930,9 +2097,9 @@ CAS����˾���һ��war��(\cas\cas-server-x.x.x-release\cas-se
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/02/12/Tomcat笔记/#comments" itemprop="discussionUrl">
+                <a href="/2019/02/12/HTTP-Response笔记/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2019/02/12/Tomcat笔记/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2019/02/12/HTTP-Response笔记/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -1962,198 +2129,11 @@ CAS����˾���һ��war��(\cas\cas-server-x.x.x-release\cas-se
       
         
           
-          Tomcat &amp; Servlet 笔记1. 软件架构123A. C/S：客户端/服务器端B. B/S：浏览器/服务器端
-2.资源分类12345   A. 静态资源：所有用户访问后，得到的结果都是一样的，称为静态资源.静态资源可以直接被浏览器解析如： html,css,JavaScript  
+          response 笔记1. HTTP协议：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748A. 请求消息：客户端发送给服务器端的数据		* 数据格式：			1. 请求行			
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/02/12/Tomcat笔记/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aqqje.github.com/2019/02/12/mysql数据库类型/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="梦不若星辰">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://github.com/aqqje/Personal-repository/raw/master/aqqje/avater.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="aqqje's note">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/02/12/mysql数据库类型/" itemprop="url">MySQL 数据类型 笔记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-12T20:56:18+08:00">
-                2019-02-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/sql/" itemprop="url" rel="index">
-                    <span itemprop="name">sql</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/02/12/mysql数据库类型/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2019/02/12/mysql数据库类型/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          MySQL 数据类型一、数值类型
-
-
-类型
-大小
-范围（有符号）
-范围（无符号）
-用途
-
-
-
-
-TINYINT
-1 字节
-(-128，127)
-(0，255)
-小整数值
-
-
-SMALLINT
-2 字节
-(-32 768，32 767)
-(0，65 535)
-大整数值
-
-
-MEDIUMINT
-3 字节
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/02/12/mysql数据库类型/#more" rel="contents">
+            <a class="btn" href="/2019/02/12/HTTP-Response笔记/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -2245,7 +2225,7 @@ MEDIUMINT
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">98</span>
+                  <span class="site-state-item-count">99</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
